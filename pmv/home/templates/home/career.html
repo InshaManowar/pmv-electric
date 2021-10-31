@@ -1,0 +1,24 @@
+{% extends "home/base.html" %} {% block content %}
+<section class="wow fadeIn" style="" id="start-your-project">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
+                <div class="position-relative overflow-hidden w-100">
+                    <span class="text-large text-outside-line-full alt-font font-weight-600 text-uppercase">Start a career with us</span>
+                </div>
+            </div>
+        </div>
+        <form id="project-contact-form" method="post">
+            <div class="row">
+                <div class="col-12">
+                    <div id="success-project-contact-form" class="mx-0"></div>
+                    {{form.as_p}}
+
+                </div>
+                <div class="col-12 text-center">
+                    <button id="project-contact-us-button" type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">send message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>{% endblock content %}
