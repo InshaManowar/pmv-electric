@@ -42,7 +42,7 @@ function test3() {
 
 function disp() {
 
-    var sum = 30 * a;
+    var sum = (30 * a) * 12;
     // e = 30 * a;
     document.getElementById("p1").innerHTML = sum.toString();
 
@@ -60,49 +60,16 @@ function disp() {
     // var g = e / 8;
 
 
-    var sum3 = sum1 * b;
-    sum3 = Math.round((sum3 + Number.EPSILON) * 100) / 100
+    var sumnew = ((sum1 * b) - ((e * d) / 100)) * 12;
+    sumnew = Math.round((sumnew + Number.EPSILON) * 100) / 100
         // var h = f / b;
-    document.getElementById("p4").innerHTML = sum3.toString();
+    document.getElementById("p4").innerHTML = sumnew.toString();
 
-
-    var sum4 = (e * d) / 100;
-    sum4 = Math.round((sum4 + Number.EPSILON) * 100) / 100
+    var sumnew1 = ((18.74 * sum1) - ((e * d) / 100)) * 12;
+    sumnew1 = Math.round((sumnew1 + Number.EPSILON) * 100) / 100
         // var h = f / b;
-        // h = h.toFixed(2);
-    document.getElementById("p5").innerHTML = sum4.toString();
+    document.getElementById("p5").innerHTML = sumnew1.toString();
 
-
-    var sum5 = 18.74 * sum1;
-    sum5 = Math.round((sum5 + Number.EPSILON) * 100) / 100
-        // var i = (g / d) / 100;
-    document.getElementById("p6").innerHTML = sum5.toString();
-
-
-    var sum6 = 0.92 * sum2;
-    sum6 = Math.round((sum6 + Number.EPSILON) * 100) / 100
-    document.getElementById("p7").innerHTML = sum6.toString();
-
-
-    var sum7 = sum3 * 12;
-    sum7 = Math.round((sum7 + Number.EPSILON) * 100) / 100
-        // var k = 0.92 / g;
-    document.getElementById("p8").innerHTML = sum7.toString();
-
-
-    var sum8 = sum4 * 12;
-    sum8 = Math.round((sum8 + Number.EPSILON) * 100) / 100
-    document.getElementById("p9").innerHTML = sum8.toString();
-
-
-    var sum9 = sum5 * 12;
-    sum9 = Math.round((sum9 + Number.EPSILON) * 100) / 100;
-    document.getElementById("p10").innerHTML = sum9.toString();
-
-
-    var sum10 = sum6 * 12;
-    sum10 = Math.round((sum10 + Number.EPSILON) * 100) / 100
-    document.getElementById("p11").innerHTML = sum10.toString();
 
 }
 
