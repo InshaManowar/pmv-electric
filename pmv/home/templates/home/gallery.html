@@ -1,0 +1,98 @@
+{% extends "home/base.html" %}
+<!-- start page title section -->{% block content %}
+<section class="wow fadeIn bg-extra-dark-gray padding-35px-tb page-title-small top-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-md-6 text-center text-md-left">
+                <!-- start page title -->
+                <h1 class="alt-font text-white-2 font-weight-600 mb-0 text-uppercase">Image Gallery</h1>
+                <!-- end page title -->
+            </div>
+            <div class="col-xl-4 col-md-6 breadcrumb alt-font text-small justify-content-center justify-content-md-end sm-margin-10px-top">
+                <!-- breadcrumb -->
+                <ul>
+                    <li><a href="#" class="text-dark-gray">Elements</a></li>
+                    <li><a href="#" class="text-dark-gray">General elements</a></li>
+                    <li class="text-dark-gray">Image gallery</li>
+                </ul>
+                <!-- end breadcrumb -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end page title section -->
+<!-- start image gallery style 01 section -->
+<section class="wow fadeIn">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
+                <div class="position-relative overflow-hidden w-100">
+                    <span class="text-extra-large text-outside-line-full alt-font font-weight-600 text-uppercase">Photos</span>
+                </div>
+            </div>
+        </div>
+        <div class="row lightbox-gallery">
+            <div class="col-12 p-0 sm-padding-15px-lr">
+                <ul class="portfolio-grid work-3col hover-option4 gutter-medium">
+                    <li class="grid-sizer"></li>
+
+                    {% for p in photo %}
+                    <li class="grid-item web branding design wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="{{ p.image.url }}" title="Lightbox gallery image title...">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="{{ p.image.url }}" alt="" class="project-img-gallery" /></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main d-flex justify-content-center align-items-center">
+                                        <div class="portfolio-hover-content position-relative">
+                                            <i class="ti-zoom-in text-white-2 fa-2x"></i>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    {% endfor %}
+                    <hr>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<iframe width="560" height="315" src="{{display.video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
+            <div class="position-relative overflow-hidden w-100">
+                <span class="text-extra-large text-outside-line-full alt-font font-weight-600 text-uppercase">Videos</span>
+            </div>
+        </div>
+    </div>
+    <div class="row lightbox-gallery">
+        <div class="col-12 p-0 sm-padding-15px-lr">
+            <ul class="portfolio-grid work-3col hover-option4 gutter-medium">
+                <li class="grid-sizer"></li>
+
+                {% for v in display %}
+                <li class="grid-item web branding design wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- <a href="{{ v.vid }}" title="Lightbox gallery image title..."> -->
+                    <figure>
+                        <div class="portfolio-img bg-extra-dark-gray">
+                            <iframe src="{{ v.video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>
+                            <div class="portfolio-hover-main d-flex justify-content-center align-items-center">
+                                <div class="portfolio-hover-content position-relative">
+                                    <i class="ti-zoom-in text-white-2 fa-2x"></i>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    </a>
+                </li>
+                {% endfor %}
+                <hr>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>{% endblock content %}

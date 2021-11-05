@@ -11,7 +11,6 @@ class CareerForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'name': forms.TextInput(attrs = {'class':'form-control'}),
-            'phone': forms.TextInput(attrs = {'class':'form-control'}),
             'email': forms.EmailInput(attrs = {'class':'form-control'}),
             'position': forms.TextInput(attrs = {'class':'form-control'}),
             'cover_letter': forms.Textarea(attrs = {'class':'form-control'}),

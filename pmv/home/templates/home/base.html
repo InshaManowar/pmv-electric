@@ -48,94 +48,57 @@
 
 <body class=" ">
     <header>
-        <nav class="navbar navbar-default bootsnav background-black header-dark white-link navbar-top navbar-expand-lg ">
-            <div class="container-fluid nav-header-container ">
+        <!-- start navigation -->
+        <nav class="navbar navbar-default bootsnav background-black header-dark white-link navbar-top navbar-expand-lg">
+            <div class="container nav-header-container">
                 <!-- start logo -->
-                <div class="col-auto pl-0 ">
-                    <a href="index.html " title="Pmv " class="logo "><img src="{% static 'home/images/logo.png' %}" class="logo-dark default " alt="Pofo "><img src=" {% static 'home/images/logo.png' %} " data-rjs="images/logo-white@2x.png " alt="Pofo " class="logo-light "></a>
+                <div class="col-auto pl-lg-0">
+                    <a href="{% url 'home:home' %}" title="Pmc" class="logo"><img src="images/logo.png" data-rjs="images/logo@2x.png" class="logo-dark" alt="Pofo"><img src="{% static 'home/images/logo.png' %}" data-rjs="{% static 'home/images/logo.png' %}" alt="Pofo" class="logo-light default"></a>
                 </div>
                 <!-- end logo -->
-                <div class="col accordion-menu pr-0 pr-md-3 ">
-                    <button type="button " class="navbar-toggler collapsed " data-toggle="collapse " data-target="#navbar-collapse-toggle-1 ">
-                        <span class="sr-only ">toggle navigation</span>
-                        <span class="icon-bar "></span>
-                        <span class="icon-bar "></span>
-                        <span class="icon-bar "></span>
-                    </button>
-                    <div class="navbar-collapse collapse justify-content-end " id="navbar-collapse-toggle-1 ">
-                        <ul id="accordion " class="nav navbar-nav navbar-left no-margin alt-font text-normal " data-in="fadeIn " data-out="fadeOut ">
+                <div class="col accordion-menu pr-0 pr-md-3">
+                    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">
+                            <span class="sr-only">toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
+                        <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
                             <!-- start menu item -->
-                            <li class="dropdown megamenu-fw ">
-                                <a href="# ">Home</a>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:home' %}">Home</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
+                                <!-- start sub menu -->
+                            </li>
+                            <!-- end menu item -->
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:home' %}">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
                                 <!-- start sub menu -->
 
                             </li>
-                            <!-- end menu item -->
-                            <li class="dropdown simple-dropdown "><a href="# ">Pages</a><i class="fas fa-angle-down dropdown-toggle " data-toggle="dropdown " aria-hidden="true "></i>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'blog:blog-list' %}">Blog</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
                                 <!-- start sub menu -->
-                                <ul class="dropdown-menu " role="menu ">
-                                    <li class="dropdown "><a class="dropdown-toggle " data-toggle="dropdown " href="# ">About <i class="fas fa-angle-right "></i></a>
-                                        <ul class="dropdown-menu ">
-                                            <li><a href="about-us-simple.html ">About us simple</a></li>
-                                            <li><a href="about-us-classic.html ">About us classic</a></li>
-                                            <li><a href="about-us-modern.html ">About us modern</a></li>
-                                            <li><a href="about-me.html ">About me</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown "><a class="dropdown-toggle " data-toggle="dropdown " href="# ">Services <i class="fas fa-angle-right "></i></a>
-                                        <ul class="dropdown-menu ">
-                                            <li><a href="services-simple.html ">Services simple</a></li>
-                                            <li><a href="services-classic.html ">Services classic</a></li>
-                                            <li><a href="services-modern.html ">Services modern</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown "><a class="dropdown-toggle " data-toggle="dropdown " href="# ">Contact <i class="fas fa-angle-right "></i></a>
-                                        <ul class="dropdown-menu ">
-                                            <li><a href="contact-us-simple.html ">Contact simple</a></li>
-                                            <li><a href="contact-us-classic.html ">Contact classic</a></li>
-                                            <li><a href="contact-us-classic-02.html ">Contact classic – style 02</a></li>
-                                            <li><a href="contact-us-modern.html ">Contact modern</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown "><a class="dropdown-toggle " data-toggle="dropdown " href="# ">Team <i class="fas fa-angle-right "></i></a>
-                                        <ul class="dropdown-menu ">
-                                            <li><a href="team-simple.html ">Team simple</a></li>
-                                            <li><a href="team-classic.html ">Team classic</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown "><a class="dropdown-toggle " data-toggle="dropdown " href="# ">Additional Pages <i class="fas fa-angle-right "></i></a>
-                                        <ul class="dropdown-menu ">
-                                            <li><a href="our-clients.html ">Our clients</a></li>
-                                            <li><a href="404.html ">Error 404</a></li>
-                                            <li><a href="coming-soon.html ">Coming soon</a></li>
-                                            <li><a href="coming-soon-02.html ">Coming soon – style 02</a></li>
-                                            <li><a href="faq.html ">Faq</a></li>
-                                            <li><a href="maintenance.html ">Maintenance</a></li>
-                                            <li><a href="search-result.html ">Search result</a></li>
-                                            <li><a href="pricing.html ">Pricing</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+
                             </li>
-                            <li class="dropdown megamenu-fw ">
-                                <a href="# ">About Us</a>
+                            <li class="dropdown simple-dropdown"><a href="#">Buy</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
+                                <!-- start sub menu -->
+
                             </li>
-                            <li class="dropdown simple-dropdown "><a href="# " title="Blog ">Blog</a>
-                            </li>
+
 
                         </ul>
                     </div>
                 </div>
-                <div class="col-auto pr-0 ">
+                <div class="col-auto pr-lg-0">
 
-                    <div class="header-social-icon d-none d-md-inline-block ">
-                        <a href="https://www.facebook.com/ " title="Facebook " target="_blank "><i class="fab fa-facebook-f " aria-hidden="true "></i></a>
-                        <a href="https://twitter.com/ " title="Twitter " target="_blank "><i class="fab fa-twitter "></i></a>
-                        <a href="https://dribbble.com/ " title="Dribbble " target="_blank "><i class="fab fa-instagram "></i></a>
+                    <div class="header-social-icon d-none d-md-inline-block">
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com/" title="Dribbble" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
+        <!-- end navigation -->
     </header>
     <!-- end header -->
     <!-- start slider section -->

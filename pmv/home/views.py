@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from home.forms import CareerForm
-from .models import CareerRequest
+from .models import CareerRequest,Photos, Video
+from django.views.generic import ListView
 
 # Create your views here.
 def home(request):
@@ -23,3 +24,12 @@ def career_form(request):
 
 def career_confirm(request):
     return render(request, 'home/career_confirm.html')
+
+
+def photos(request):
+    photo = Photos.objects.all()
+    return render(request, 'home/gallery.html', {'photo':photo})
+
+def videos(request):
+    display = Video.objects.all()
+    return render(request, 'home/gallery.html', {'display':display})

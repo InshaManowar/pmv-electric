@@ -2,15 +2,15 @@
 <style>
     .outer-content {
         font-family: Montserrat;
-        font-size: 120%;
+        font-size: 150%;
         line-height: 250%;
         color: rgb(253, 243, 243);
     }
     
     .outer-content-2 {
         font-family: Montserrat;
-        font-size: 90%;
-        line-height: 250%;
+        font-size: 110%;
+        font-style: italic;
         color: rgb(253, 243, 243);
     }
     
@@ -19,6 +19,20 @@
         font-size: 100%;
         line-height: 250%;
         color: rgb(7, 7, 7);
+    }
+    
+    output,
+    .int {
+        font-family: Montserrat;
+        padding: 2%;
+        font-size: larger;
+        color: rgb(239, 244, 247);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        input {
+            width: 70% !important;
+        }
     }
 </style>{% endblock style %}{% block content %}
 <section class="no-padding main-slider height-100 mobile-height wow fadeIn ">
@@ -60,7 +74,6 @@
                     </div>
                 </div>
             </div>
-            <!-- end slider item -->
             <!-- start slider item -->
             <div class="swiper-slide cover-background " style="background-image:url( '{% static 'home/images/carousel3.png' %}'); ">
                 <div class="container position-relative full-screen ">
@@ -88,6 +101,238 @@
         <!-- end slider pagination -->
     </div>
 </section>
+<section class="wow fadeIn bg-light-gray ">
+    <div class="col-12 my-4 text-center text-lg-center md-margin-five-bottom sm-margin-ten-bottom last-paragraph-no-margin ">
+        <span class="text-extra-large text-extra-dark-gray alt-font margin-15px-bottom d-block md-width-100 ">We combine design and technology and technical craft.</span>
+        <p class="md-width-100 ">
+            The purpose built Personal Mobility Vehicle (PMV®️) is the future of urban mobility for intra-city everyday commute. Make (EaS-E®️) your everyday car. </p>
+    </div>
+    <div class="container ">
+
+        <div class="row align-items-center ">
+            <!-- start feature box item -->
+
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn ">
+                <img width="90px " src="{% static 'home/images/1.png ' %}" alt=" ">
+                <p class="alt-font margin-10px-top mb-0 ">
+
+                    EaS-E® Mode: Feet Free Driving</p>
+            </div>
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.2s ">
+                <img width="100px " src="{% static 'home/images/3.png ' %}" alt=" ">
+                <p class="alt-font margin-10px-top mb-0 ">Remote Parking Assist</p>
+            </div>
+            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.2s ">
+                <img width="90px " src="{% static 'home/images/6.png ' %}" alt=" ">
+                <p class="alt-font margin-10px-top mb-0 ">
+
+                    Cruise Control</p>
+            </div>
+            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.2s ">
+                <img width="100px " src="{% static 'home/images/4.png ' %}" alt=" ">
+                <p class="alt-font margin-10px-top mb-0 ">
+
+                    Remote controlled features</p>
+            </div>
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.4s ">
+                <img width="90px " src="{% static 'home/images/2.png ' %}" alt=" ">
+                <p class="alt-font margin-10px-top mb-0 ">Regenerative Braking</p>
+            </div>
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+            <div class="col-12 col-lg-2 col-md-3 text-center wow zoomIn " data-wow-delay="0.6s ">
+                <img width="100px " src="{% static 'home/images/5.png ' %}" alt=" ">
+                <p class="alt-font margin-10px-top mb-0 ">
+
+                    Update using over the Air (OTA) Updates</p>
+            </div>
+        </div>
+        <!-- end feature box item -->
+    </div>
+</section>
+<section class="wow  fadeIn p-0 ">
+    <div class="swiper-auto-height-container position-relative w-100 ">
+        <div class="swiper-wrapper overflow-hidden ">
+            <!--     start slider item -->
+            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider1.png' %}) ">
+                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
+                    <div class="padding-80px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Sustainability</h5>
+                        <p class="width-90 md-width-100 ">The Eco-Friendly and Sustainable - Electric (EaS-E®️), is a fully electric smart car for everyday use. Our motto is towards achieving sustainable long-term personal mobility to address the global challenges of pollution, climate
+                            change, urban congestion and even more recent challenges related to parking.
+                        </p>
+                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white ">Explore services</a> data-endslide="2" </div>
+                </div>
+            </div>
+            <!-- end slider item -->
+            <!--    start slider item -->
+            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider2.png' %}) ">
+                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
+                    <div class="padding-80px-all md-padding-40px-all bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">intuitive and convenient</h5>
+                        <p class="width-90 md-width-100 ">
+                            Make (EaS-E®️) your everyday car. Even its automatic unlocking mechanism is driver specific! Your (EaS-E®️) becomes hassle-free and convenient to drive with no stops at the petrol pump and comes with automatic clutch control! Make (EaS-E®️) your everyday
+                            car. </p>
+                        </p>
+                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white ">Explore services</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end    slider item -->
+            <!--   start slider item -->
+            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider3.png' %}) ">
+                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
+                    <div class="padding-80px-all md-padding-40px-all bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Economics</h5>
+                        <p class="width-90 md-width-100 ">Millions of people drive along in their cars, contribution to pollution. With (EaS-E®️), we at PMV Electric have built a step into the future of daily commute. This vehicle is easy on the pocket, has low maintenance costs and negligible
+                            operational costs. Choose EaS-E®️ and take the first step towards a more positive and greener world to make it future friendly.
+
+                        </p>
+                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white ">Explore services</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end slider item -->
+        </div>
+        <div class="navigation-area ">
+            <div class="swiper-button-next swiper-next-style4 text-white-2 "><i class="fas fa-arrow-up " aria-hidden="true "></i></div>
+            <div class="swiper-button-prev swiper-prev-style4 "><i class="fas fa-arrow-down " aria-hidden="true "></i></div>
+        </div>
+    </div>
+</section>
+<!-- end slider section -->
+<!-- start feature box section -->
+
+
+
+<!-- end parallax section -->
+<!-- start testimonial section -->
+<section class="wow fadeIn " style="background-color: #22221f;">
+
+    <div class="wrapper">
+        <div class="calculator">
+
+            <div class="container ">
+                <div class="row position-relative ">
+                    <div class="col-lg-12">
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <form class="text-center">
+                                    <output class="text-center" id="amount" name="amount" for="vol">30</output>
+                                    <br>
+                                    <span class="int">0</span>
+                                    <input class="range" type="range" id="vol" name="vol" min="0" max="100" value="30" onchange="test()" oninput="amount.value=vol.value">
+                                    <span class="int">100</span>
+                                    <label class="outer-content-2" for="vol">Average Daily Drive Distance (Miles)</label>
+
+                                </form>
+
+                                <form class="text-center my-5">
+                                    <output id="amount2" name="amount" for="vol2">30</output>
+                                    <br>
+                                    <span class="int">15</span>
+                                    <input class="range" type="range" id="vol2" name="vol2" min="15" max="70" value="30" onchange="test2()" oninput="amount2.value=vol2.value">
+                                    <span class="int">70</span>
+                                    <label class="outer-content-2" for="vol2"> Mileage of your Car (Miles/Gallon MPG)</label>
+
+                                </form>
+
+
+                            </div>
+                            <br>
+                            <div class="col-lg-6">
+                                <form class="text-center">
+                                    <output id="amount1" name="amount" for="vol1">4</output>
+                                    <br>
+                                    <span class="int">3</span>
+                                    <input class="range" type="range" id="vol1" step="0.1" name="vol1" min="3" max="5" value="4" onchange="test1()" oninput="amount1.value=vol1.value">
+                                    <span class="int">5</span>
+                                    <label class="outer-content-2" for="vol1">Gasoline Rates in your city ($/Gallon)</label>
+
+                                </form>
+
+                                <form class="text-center my-5">
+                                    <output id="amount3" name="amount" for="vol3">15</output>
+                                    <br>
+                                    <span class="int">10</span>
+                                    <input class="range" type="range" id="vol3" name="vol3" min="10" max="35" value="15" onchange="test3()" oninput="amount3.value=vol3.value">
+                                    <span class="int">35</span>
+                                    <label class="outer-content-2" for="vol3">Electricity rates in your city (cents/KWhr)</label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="bg-transparent wow " style="width: 100vw;">
+                        <div class="container text-center">
+
+                            <div class="row">
+                                <div width=100% class="col-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp">
+                                    <div class="feature-box">
+                                        <div class="content">
+                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value " id="p1">10800</span> <br>
+                                            <span class="text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Drive Distance (Miles)  </span>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end feature box item-->
+                                <!-- feature box item-->
+                                <div width=100% class="col-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="feature-box">
+                                        <div class="content">
+                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size:300%;" class="value" id="p2">120</span>
+                                            <br>
+                                            <span class="text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Cost Saving ($)</span>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div width=100% class="col-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="feature-box">
+                                        <div class="content">
+                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;" class="value" id="p3">200</span>
+                                            <br> <span class="text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual CO2 Saving (Pounds)
+                                                </span>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end feature box item-->
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    </div>
+
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
 <section class="wow fadeIn">
     <div class="container">
         <div class="row align-items-center">
@@ -152,121 +397,10 @@
         </div>
     </div>
 </section>
-
-<section class="wow  fadeIn p-0 ">
-    <div class="swiper-auto-height-container position-relative w-100 ">
-        <div class="swiper-wrapper overflow-hidden ">
-            <!--     start slider item -->
-            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider1.png' %}) ">
-                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class="padding-80px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
-                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Sustainability</h5>
-                        <p class="width-90 md-width-100 ">The Eco-Friendly and Sustainable - Electric (EaS-E®️), is a fully electric smart car for everyday use. Our motto is towards achieving sustainable long-term personal mobility to address the global challenges of pollution, climate
-                            change, urban congestion and even more recent challenges related to parking.
-                        </p>
-                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white ">Explore services</a> data-endslide="2" </div>
-                </div>
-            </div>
-            <!-- end slider item -->
-            <!--    start slider item -->
-            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider2.png' %}) ">
-                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class="padding-80px-all md-padding-40px-all bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
-                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">intuitive and convenient</h5>
-                        <p class="width-90 md-width-100 ">
-                            Make (EaS-E®️) your everyday car. Even its automatic unlocking mechanism is driver specific! Your (EaS-E®️) becomes hassle-free and convenient to drive with no stops at the petrol pump and comes with automatic clutch control! Make (EaS-E®️) your everyday
-                            car. </p>
-                        </p>
-                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white ">Explore services</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end    slider item -->
-            <!--   start slider item -->
-            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider3.png' %}) ">
-                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class="padding-80px-all md-padding-40px-all bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
-                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Economics</h5>
-                        <p class="width-90 md-width-100 ">Millions of people drive along in their cars, contribution to pollution. With (EaS-E®️), we at PMV Electric have built a step into the future of daily commute. This vehicle is easy on the pocket, has low maintenance costs and negligible
-                            operational costs. Choose EaS-E®️ and take the first step towards a more positive and greener world to make it future friendly.
-
-                        </p>
-                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white ">Explore services</a>
-                    </div>
-                </div>
-            </div>
-            <!-- end slider item -->
-        </div>
-        <div class="navigation-area ">
-            <div class="swiper-button-next swiper-next-style4 text-white-2 "><i class="fas fa-arrow-up " aria-hidden="true "></i></div>
-            <div class="swiper-button-prev swiper-prev-style4 "><i class="fas fa-arrow-down " aria-hidden="true "></i></div>
-        </div>
-    </div>
-</section>
-<!-- end slider section -->
-<!-- start feature box section -->
-<section class="wow fadeIn bg-light-gray ">
-    <div class="col-12 my-4 text-center text-lg-center md-margin-five-bottom sm-margin-ten-bottom last-paragraph-no-margin ">
-        <span class="text-extra-large text-extra-dark-gray alt-font margin-15px-bottom d-block md-width-100 ">We combine design and technology and technical craft.</span>
-        <p class="md-width-100 ">
-            The purpose built Personal Mobility Vehicle (PMV®️) is the future of urban mobility for intra-city everyday commute. Make (EaS-E®️) your everyday car. </p>
-    </div>
-    <div class="container ">
-
-        <div class="row align-items-center ">
-            <!-- start feature box item -->
-
-            <!-- end feature box item -->
-            <!-- start feature box item -->
-            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn ">
-                <img width="90px " src="{% static 'home/images/1.png ' %}" alt=" ">
-                <p class="alt-font margin-10px-top mb-0 ">
-
-                    EaS-E® Mode: Feet Free Driving</p>
-            </div>
-            <!-- end feature box item -->
-            <!-- start feature box item -->
-            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.2s ">
-                <img width="100px " src="{% static 'home/images/3.png ' %}" alt=" ">
-                <p class="alt-font margin-10px-top mb-0 ">Remote Parking Assist</p>
-            </div>
-            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.2s ">
-                <img width="90px " src="{% static 'home/images/6.png ' %}" alt=" ">
-                <p class="alt-font margin-10px-top mb-0 ">
-
-                    Cruise Control</p>
-            </div>
-            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.2s ">
-                <img width="100px " src="{% static 'home/images/4.png ' %}" alt=" ">
-                <p class="alt-font margin-10px-top mb-0 ">
-
-                    Remote controlled features</p>
-            </div>
-            <!-- end feature box item -->
-            <!-- start feature box item -->
-            <div class="col-12 col-lg-2 col-md-3 text-center sm-margin-ten-bottom wow zoomIn " data-wow-delay="0.4s ">
-                <img width="90px " src="{% static 'home/images/2.png ' %}" alt=" ">
-                <p class="alt-font margin-10px-top mb-0 ">Regenerative Braking</p>
-            </div>
-            <!-- end feature box item -->
-            <!-- start feature box item -->
-            <div class="col-12 col-lg-2 col-md-3 text-center wow zoomIn " data-wow-delay="0.6s ">
-                <img width="100px " src="{% static 'home/images/5.png ' %}" alt=" ">
-                <p class="alt-font margin-10px-top mb-0 ">
-
-                    Update using over the Air (OTA) Updates</p>
-            </div>
-        </div>
-        <!-- end feature box item -->
-    </div>
-</section>
-
-
 <section class="wow fadeIn parallax " data-stellar-background-ratio="0.4 " style="background-image:url( {% static 'home/images/carousel2.png' %}); ">
     <div class="opacity-full bg-extra-dark-gray "></div>
     <div class="container position-relative ">
         <div class="row align-items-center ">
-            <!-- start feature box item -->
             <div class="col-12 col-lg-6 lg-margin-15px-top md-no-margin-top md-margin-ten-bottom sm-padding-five-lr sm-margin-ten-bottom wow fadeIn last-paragraph-no-margin ">
                 <div class="padding-fourteen-right md-no-padding-right text-center text-lg-left ">
                     <h5 class="alt-font text-white-2 ">A digital studio crafting beautiful experiences.</h5>
@@ -275,8 +409,7 @@
                     <a href="about-us-modern.html " class="margin-35px-top btn btn-small btn-white md-margin-30px-top ">About Company</a>
                 </div>
             </div>
-            <!-- end feature box item -->
-            <!-- start feature box item -->
+
             <div class="col-12 col-lg-3 col-md-6 text-center sm-margin-ten-bottom wow fadeIn " data-wow-delay="0.2s ">
                 <a class="popup-youtube " href="https://www.youtube.com/watch?v=cIXjhkBkUAE ">
                     <img src="{% static 'home/images/800x1022.png' %}" alt=" " class="w-100 ">
@@ -287,161 +420,14 @@
                     </div>
                 </a>
             </div>
-            <!-- end feature box item -->
-            <!-- start feature box item -->
+
             <div class="col-12 col-lg-3 col-md-6 text-center wow fadeIn " data-wow-delay="0.4s ">
                 <img src="{% static 'home/images/800x1022_1.png' %}" alt=" " class="w-100 ">
             </div>
-            <!-- end feature box item -->
         </div>
     </div>
 </section>
-<!-- end parallax section -->
-<!-- start testimonial section -->
-<section class="wow fadeIn " style="background-color: #22221f;">
-    <div class=" text-center margin-100px-bottom sm-margin-40px-bottom">
-        <div class="position-relative overflow-hidden w-100">
-            <span style="color: rgb(214, 214, 214);" class="text-extra-large text-outside-line-full alt-font font-weight-600 text-uppercase">Economic and Environmental Impact</span>
-        </div>
-    </div>
 
-    <div class="wrapper">
-        <div class="calculator">
-
-            <div class="container ">
-                <div class="row position-relative ">
-                    <div class="col-lg-6">
-                        <form class="text-center">
-                            <label class="outer-content-2" for="vol">Average daily drive (Miles):</label>
-                            <br>
-                            <output class="text-center" id="amount" name="amount" for="vol">30</output>
-                            <br>
-                            <span>0</span>
-                            <input class="range" type="range" id="vol" name="vol" min="0" max="100" value="30" onchange="test()" oninput="amount.value=vol.value">
-                            <span>100</span>
-                            <br>
-                        </form>
-                        <hr style="color:white !important">
-
-                        <form class="text-center">
-                            <label class="outer-content-2" for="vol2"> Mileage of your Car (Miles/Gallon MPG)</label>
-                            <br>
-                            <output id="amount2" name="amount" for="vol2">30</output>
-                            <br>
-                            <span>15</span>
-                            <input class="range" type="range" id="vol2" name="vol2" min="15" max="70" value="30" onchange="test2()" oninput="amount2.value=vol2.value">
-                            <span>70</span>
-                        </form>
-
-                        <form class="text-center">
-                            <label class="outer-content-2" for="vol1">Gasoline Rates in your city ($/Gallon):</label>
-                            <br>
-                            <output id="amount1" name="amount" for="vol1">4</output>
-                            <br>
-                            <span>3</span>
-                            <input class="range" type="range" id="vol1" step="0.1" name="vol1" min="3" max="5" value="4" onchange="test1()" oninput="amount1.value=vol1.value">
-                            <span>5</span>
-                        </form>
-
-                        <form class="text-center">
-                            <label class="outer-content-2" for="vol3">Electricity rates in your city (cents/KWhr):</label>
-                            <br>
-                            <output id="amount3" name="amount" for="vol3">15</output>
-                            <br>
-                            <span>10</span>
-
-                            <input class="range" type="range" id="vol3" name="vol3" min="10" max="35" value="15" onchange="test3()" oninput="amount3.value=vol3.value">
-                            <span>35</span>
-
-                        </form>
-
-
-                        <br>
-
-                    </div>
-
-                    <div class="col-lg-6" style="margin-top: 5%;">
-                        <div class="content">
-
-                            <div class="outer-content">
-                                <span>Annual Drive Distance (Miles):  </span>
-                                <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p1">10800</span>
-                                <br>
-                                <span>Annual cost savings ($) </span>
-                                <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p4">120</span>
-                                <br>
-                                <span>Annual CO2 savings ($)</span>
-                                <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p5">16.875</span>
-                                <br>
-                                <!-- <span>Monthly CO2 Emissions from your current car (Pounds)</span>
-                                <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p6">562.2</span>
-                                <br> -->
-                                </span>
-                            </div>
-                            <br> <br> <br>
-                            <!-- <button type="button" class="btn  btn btn-rounded btn-small no-margin-lr" data-toggle="modal" style="background-color: black; color: white;" data-target="#exampleModalCenter">Read more</button> -->
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" style="font-family: Montserrat;" id="exampleModalLongTitle">More specifications</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-                                        </div>
-                                        <div class="modal-body outer-content-3">
-                                            <span>Monthly CO2 Emissions from EaS-E (Pounds)
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p7">103.5</span>
-                                            <br>
-                                            <span>Annual Spend on Gasoline Bills ($)
-                                </span>
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p8">1440</span>
-                                            <br>
-                                            <span>Annual Spend on Electricity Bills ($)            </span>
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p9">202.5</span>
-                                            <br>
-                                            <span>Annual CO2 Emissions from your current car (Pounds)            </span>
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p10">6746.4</span>
-                                            <br>
-                                            <span>Annual CO2 Emissions from EaS-E (Pounds)            </span>
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p11">1242</span>
-                                            <br>
-                                            <span>Gasoline consumed (Gallons/Month) </span>
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p2">30</span>
-                                            <br>
-
-                                            <span>Electricity Consumed (KWhrs/Month)            </span>
-                                            <span style="color: rgba(78, 164, 245, 0.925); font-weight: 800; font-size: large;" class="value" id="p3">112.5</span>
-                                            <br>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn btn-rounded btn-small no-margin-lr" data-dismiss="modal" style="color: white; background-color: black;">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end testimonial section -->
-<!-- start clients slider section -->
-
-<!-- end clients slider section -->
-<!-- start contact section -->
 <section class="wow fadeIn bg-extra-dark-gray ">
     <div class="container ">
         <div class="row ">

@@ -1,2 +1,8 @@
 {% extends "home/base.html" %} {% block content %}
-<h1>your form has been submitted</h1> {% endblock content %}
+
+<div class="col-lg-12 text-center" style="height: 70vh; width: 100vw; margin-top: 20%;">
+
+    <h2>Thanks for reaching out to us, we will get in touch with you soon</h2>
+    <span><a class="btn btn-dark" href="{% url 'home:home' %}">home</a></span>
+    <span><a class="btn btn-dark" href="{% url 'home:home' %}">express interest</a></span>
+</div>{% endblock content %}

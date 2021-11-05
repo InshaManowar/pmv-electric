@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'home',
     'blog',
     'django_summernote',
+    # 'store',
+    # 'stripe'
 
 ]
 
@@ -86,8 +88,12 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -133,3 +139,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 X_FRAME_OPTIONS = "SAMEORIGIN"
+
+STRIPE_PUBLIC_KEY = ""
+STRIPE_SECRET_KEY = ""
+STRIPE_WEBHOOK_SECRET = ""
