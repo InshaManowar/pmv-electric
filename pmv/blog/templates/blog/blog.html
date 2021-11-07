@@ -24,13 +24,13 @@
             <div class="col-12 col-lg-3 col-md-6 grid-item margin-30px-bottom wow fadeInUp text-center text-md-left">
                 <div class="blog-post bg-light-gray inner-match-height">
                     <div class="blog-post-images overflow-hidden position-relative">
-                        <a href="blog-post-layout-01.html">
+                        <a href="{% url 'blog:blog-detail' p.slug %}">
                             <img src="{{ p.image_main.url }}" alt="">
                             <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
                         </a>
                     </div>
                     <div class="post-details padding-40px-all md-padding-20px-all">
-                        <a href="blog-post-layout-01.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block lg-width-100 margin-15px-bottom">{{ p.title }}</a>
+                        <a href="{% url 'blog:blog-detail' p.slug %}" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block lg-width-100 margin-15px-bottom">{{ p.title }}</a>
                         <p>{{ p.snippet|safe }}</p>
                         <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
                         <div class="author">
