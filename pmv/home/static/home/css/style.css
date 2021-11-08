@@ -12247,7 +12247,8 @@ header.sticky nav.navbar.brand-center ul.nav>li>a {
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 5px
+    margin: 0 5px;
+    background-color: white;
 }
 
 .swiper-pagination-bottom .swiper-wrapper {
