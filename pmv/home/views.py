@@ -10,6 +10,9 @@ from django.http import HttpResponse
 def home(request):
     return render (request, 'home/home.html')
 
+def products(request):
+    return render (request, 'home/product.html')
+
 def specs(request):
     return render (request, 'home/specs.html')
 

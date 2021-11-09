@@ -1,0 +1,78 @@
+{% extends "home/base.html" %} {% load static %}
+<!-- start page title section -->{% block content %}
+<section class="wow fadeIn bg-extra-dark-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 extra-small-screen page-title-medium text-center d-flex flex-column justify-content-center">
+                <!-- start page title -->
+                <h1 class="alt-font text-white-2 font-weight-600 m-0 text-uppercase letter-spacing-1">Our products</h1>
+                <!-- end page title -->
+                <!-- start sub title -->
+                <span class="d-block margin-10px-top text-extra-small alt-font text-uppercase">Lorem ipsum dolor sit amet consectetur.</span>
+                <!-- end sub title -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end page title section -->
+<!-- start portfolio section -->
+<section class="wow fadeIn padding-90px-top md-padding-50px-top sm-padding-30px-top">
+
+    <!-- start filter content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-3 p-md-0">
+                <div class="filter-content overflow-hidden">
+                    <ul class="portfolio-grid work-2col hover-option4 gutter-medium">
+                        <li class="grid-sizer"></li>
+                        <!-- start portfolio item -->
+                        <li class="grid-item web branding design wow fadeInUp">
+                            <a href="single-project-page-01.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img src="{% static 'home/images/carousel1.png' %}" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom"></div>
+                                                    <span class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom d-block">EaSe</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small mb-0">Faster, Greener, Smarter</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web branding design wow fadeInUp" data-wow-delay="0.2s">
+                            <a href="single-project-page-02.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img src="{% static 'home/images/carousel2.png' %}" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom"></div>
+                                                    <span class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom d-block">EaSe-2</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small mb-0">Faster, Greener, Smarter</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+
+                        <!-- end portfolio item -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end portfolio section -->
+<!-- start call to action section -->
+{% endblock content %}
