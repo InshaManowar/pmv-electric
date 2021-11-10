@@ -13,6 +13,8 @@ urlpatterns = [
     path('gallery/', views.photos, name ='gallery'  ),
     path('dealership-enquiry/', views.dealer_form, name ='dealer'  ),
     path('products/', views.products, name ='products'  ),
+    path('products/detail/', views.product_detail, name ='products_detail'  ),
+    path('our-mission/', views.mission, name ='mission'  ),
     path('frequently-asked-questions/', views.faqs, name ='faqs'  ),
 
 ]

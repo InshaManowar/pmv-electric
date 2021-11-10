@@ -3,7 +3,6 @@
     .outer-content {
         font-family: Montserrat;
         font-size: 150%;
-        line-height: 250%;
         color: rgb(253, 243, 243);
     }
     
@@ -17,7 +16,6 @@
     .outer-content-3 {
         font-family: Montserrat;
         font-size: 100%;
-        line-height: 250%;
         color: rgb(7, 7, 7);
     }
     
@@ -32,6 +30,24 @@
     @media only screen and (max-width: 768px) {
         input {
             width: 70% !important;
+        }
+        .calci-output {
+            font-family: Montserrat;
+            font-size: 70%;
+            line-height: 150%;
+            color: rgb(253, 243, 243);
+        }
+        .calci-output .written {
+            font-family: Montserrat;
+            font-size: 170%;
+            color: rgb(253, 243, 243);
+        }
+        .calci-wrapper {
+            height: fit-content !important;
+        }
+        .calci-padding {
+            position: relative;
+            top: 5px;
         }
     }
 </style>{% endblock style %}{% block content %}
@@ -50,7 +66,7 @@
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup2">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup2" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-200 mx-auto bg-white text-left modal-popup-main padding-25px-all">
-                                        <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Smarter</span>
+                                        <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Faster</span>
                                         <p class="margin-two">
                                             Far too many single/double occupancy big cars take the road everyday across America. And these big boys hog all the road space & parking space available in the city. So much so, that searching for a parking spot costs a driver 1000-1500$ annually in major
                                             cities across America in wasted time, fuel & emissions.
@@ -78,7 +94,7 @@
                                 <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is smarter than your average car, with advanced benefits like cruise control, remote parking assist & customizable infotainment system!</p>
                                 <div class="btn-dual "><a href="#" target="_blank " style="background-color: white; " class="btn
     btn-rounded btn-small no-margin-lr ">express interest</a>
-                                    <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim wow fadeInUp" data-wow-delay="0.6s" href="#modal-popup2">know more</a>
+                                    <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup2">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup2" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-100 mx-auto bg-white text-left modal-popup-main padding-20px-all">
                                         <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Smarter</span>
@@ -134,7 +150,7 @@
         <!-- end slider pagination -->
     </div>
 </section>
-<section class="wow fadeIn bg-light-gray ">
+<!-- <section class="wow fadeIn bg-light-gray ">
     <div class="col-12 my-4 text-center text-lg-center md-margin-five-bottom sm-margin-ten-bottom last-paragraph-no-margin ">
         <span class="text-extra-large text-extra-dark-gray alt-font margin-15px-bottom d-block md-width-100 ">Sustainable Technology through Innovation</span>
         <p class="md-width-100 ">
@@ -183,7 +199,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="wow  fadeIn p-0 ">
     <div class="swiper-auto-height-container position-relative w-100 ">
         <div class="swiper-wrapper overflow-hidden ">
@@ -233,17 +249,17 @@
     </div>
 </section>
 
-<section class="wow fadeIn " style="background-color: #22221f;">
-    <h3 class="text-center text-extra-light-gray alt-font font-weight-600">Economical and Environmental impact</h3>
+<section class="wow fadeIn calci-wrapper" style="background-color: #22221f; height: 100vh">
+    <h3 class="text-center text-extra-light-gray alt-font font-weight-600">Environmental & Economical Benefits</h3>
     <br><br>
     <div class="wrapper">
         <div class="calculator">
 
-            <div class="container ">
+            <div class="containe-fluid">
                 <div class="row position-relative ">
-                    <div class="col-lg-12">
+                    <div class="col-lg-8">
 
-                        <div class="row">
+                        <div class="row p-0">
 
                             <div class="col-lg-6">
                                 <form class="text-center">
@@ -286,42 +302,43 @@
                                     <span class="int">10</span>
                                     <input class="range" type="range" id="vol3" name="vol3" min="10" max="35" value="15" onchange="test3()" oninput="amount3.value=vol3.value">
                                     <span class="int">35</span>
-                                    <label class="outer-content-2" for="vol3">Electricity Rates in your City  (cents/KWhr)</label>
+                                    <label class="outer-content-2" for="vol3">Electricity Rates in Your City  (cents/KWhr)</label>
                                 </form>
                             </div>
                         </div>
                     </div>
 
-                    <section class="bg-transparent wow " style="width: 100vw;">
-                        <div class="container text-center">
+                    <section class="calci-padding col-lg-4 bg-transparent wow padding-0px-top" style="position:relative; bottom:150px;">
+
+                        <div class="container calci-output text-center">
 
                             <div class="row">
-                                <div width=100% class="col-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp">
+                                <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin ">
                                     <div class="feature-box">
                                         <div class="content">
-                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value " id="p1">10800</span> <br>
-                                            <span class="text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Drive Distance (Miles)  </span>
+                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value" id="p1">10800</span> <br>
+                                            <span class="written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Drive Distance (Miles)  </span>
                                             <br>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div width=100% class="col-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s">
+                                <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin" data-wow-delay="0.2s">
                                     <div class="feature-box">
                                         <div class="content">
                                             <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size:300%;" class="value" id="p2">1237.5</span>
                                             <br>
-                                            <span class="text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Fuel Cost Saving ($)</span>
+                                            <span class="written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Fuel Cost Saving ($)</span>
                                             <br>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div width=100% class="col-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.4s">
+                                <br>
+                                <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin" data-wow-delay="0.4s">
                                     <div class="feature-box">
                                         <div class="content">
                                             <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;" class="value" id="p3">5504.4</span>
-                                            <br> <span class="text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Carbon (CO2) Saving(Pounds)
+                                            <br> <span class=" written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Carbon (CO2) Saving(Pounds)
                                                 </span>
                                             <br>
                                         </div>
@@ -354,65 +371,70 @@
 
 <section class="wow fadeIn">
     <div class="container">
-        <div class="row align-items-center">
-            <div id="why" class="col-12 col-xl-6 col-lg-5 col-md-12 padding-eight-right text-center text-lg-left lg-padding-five-right md-padding-fifteen-lr md-margin-80px-bottom sm-padding-15px-lr sm-margin-50px-bottom wow fadeIn" data-wow-delay="0.2s">
-                <div class="alt-font text-medium-gray margin-15px-bottom text-uppercase text-small">Our services</div>
-                <h4 class="font-weight-600 alt-font text-extra-dark-gray margin-35px-bottom sm-margin-25px-bottom">We are deliver beautiful digital products for you</h4>
-                <p class="width-80 lg-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since when an unknown.</p>
-                <a href="services-classic.html" class="btn btn-small btn-rounded btn-transparent-dark-gray margin-10px-top">View all services</a>
+        <div class="row justify-content-center">
+            <div class="col-12 my-4 text-center text-lg-center md-margin-five-bottom sm-margin-ten-bottom last-paragraph-no-margin ">
+                <span class="text-extra-large text-extra-dark-gray alt-font margin-15px-bottom d-block md-width-100 ">Sustainable Technology through Innovation</span>
+                <p class="md-width-100 ">
+                    The Eco-Friendly and Sustainable - Electric (EaS-E®), is a 3 wheeled fully electric smart microcar for everyday use. It’s purpose built to suit your everyday intracity requirements of office & back, grocery shopping and other errands through the week.
+                    And we strongly believe that a sustainable choice isn’t just the right choice, it’s the only choice for a better future for our children. purpose built Personal Mobility Vehicle (PMV®️) is the future of urban mobility for intra-city
+                    everyday commute. Make (EaS-E®️) your everyday car. </p>
             </div>
-            <div class="col-12 col-xl-6 col-lg-7 col-md-12">
-                <div class="row">
-                    <div class="col-12 col-xl-6 col-md-6 text-center">
-                        <div class="row">
-                            <!-- start feature box item -->
-                            <div class="col-12 margin-30px-bottom wow fadeIn">
-                                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-fifteen-lr padding-twenty-two-tb sm-padding-fifteen-tb last-paragraph-no-margin">
-                                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
-                                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
-                                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
-                                    <div class="feature-box-overlay bg-deep-pink"></div>
-                                </div>
-                            </div>
-                            <!-- end feature box item -->
-                            <!-- start feature box item -->
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.2s">
-                                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-fifteen-lr padding-twenty-two-tb sm-padding-fifteen-tb last-paragraph-no-margin">
-                                    <i class="icon-strategy text-deep-pink icon-large margin-25px-bottom"></i>
-                                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Graphic Design</div>
-                                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
-                                    <div class="feature-box-overlay bg-deep-pink"></div>
-                                </div>
-                            </div>
-                            <!-- end feature box item -->
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-6 col-md-6 text-center">
-                        <div class="row">
-                            <!-- start feature box item -->
-                            <div class="col-12 margin-40px-top margin-30px-bottom sm-margin-30px-top wow fadeIn" data-wow-delay="0.4s">
-                                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-fifteen-lr padding-twenty-two-tb sm-padding-fifteen-tb last-paragraph-no-margin">
-                                    <i class="icon-layers text-deep-pink icon-large margin-25px-bottom"></i>
-                                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Web Interactive</div>
-                                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
-                                    <div class="feature-box-overlay bg-deep-pink"></div>
-                                </div>
-                            </div>
-                            <!-- end feature box item -->
-                            <!-- start feature box item -->
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.6s">
-                                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-fifteen-lr padding-twenty-two-tb sm-padding-fifteen-tb last-paragraph-no-margin">
-                                    <i class="icon-shield text-deep-pink icon-large margin-25px-bottom"></i>
-                                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Powerful Options</div>
-                                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
-                                    <div class="feature-box-overlay bg-deep-pink"></div>
-                                </div>
-                            </div>
-                            <!-- end feature box item -->
-                        </div>
-                    </div>
+        </div>
+        <div class="row lg-text-center">
+            <!-- start feature box item -->
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn">
+                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin">
+                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
+                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
+                    <div class="feature-box-overlay bg-deep-pink"></div>
                 </div>
             </div>
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn">
+                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin">
+                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
+                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
+                    <div class="feature-box-overlay bg-deep-pink"></div>
+                </div>
+            </div>
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn">
+                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin">
+                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
+                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
+                    <div class="feature-box-overlay bg-deep-pink"></div>
+                </div>
+            </div>
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn">
+                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin">
+                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
+                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
+                    <div class="feature-box-overlay bg-deep-pink"></div>
+                </div>
+            </div>
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn">
+                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin">
+                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
+                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
+                    <div class="feature-box-overlay bg-deep-pink"></div>
+                </div>
+            </div>
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn">
+                <div class="feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin">
+                    <i class="icon-hotairballoon text-deep-pink icon-large margin-25px-bottom"></i>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700">Digital Branding</div>
+                    <p>Lorem Ipsum is simply dummy printing typesetting industry.</p>
+                    <div class="feature-box-overlay bg-deep-pink"></div>
+                </div>
+            </div>
+
+            <!-- end feature box item -->
+            <!-- start feature box item -->
+
+            <!-- end feature box item -->
         </div>
     </div>
 </section>
@@ -454,13 +476,13 @@
                 <p class="alt-font text-medium margin-15px-bottom ">Technology expert people analysis</p>
                 <h5 class="alt-font text-white-2 margin-20px-bottom ">Feel free to get in touch with us any convenient way</h5>
 
-                <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
+                <!-- <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
                     <div class="icon-box-holder align-middle d-table-cell position-relative ">
                         <i class="icon-map icon-medium text-deep-pink padding-5px-top "></i>
                         <div class="alt-font text-white-2 ">Postal Address</div>
                         <p>301 The Greenhouse, Custard, Factory, London, E2 8DY.</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
                     <div class="icon-box-holder align-middle d-table-cell position-relative ">
                         <i class="icon-envelope icon-medium text-deep-pink padding-5px-top "></i>
