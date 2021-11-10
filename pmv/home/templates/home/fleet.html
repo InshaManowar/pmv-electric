@@ -1,0 +1,39 @@
+{% extends "home/base.html" %} {% block style %}
+<style>
+    @media only screen and (max-width: 768px) {
+        .wow {
+            width: 100vw !important;
+            margin-left: 0;
+            margin-top: 15% !important;
+            font-size: 110%;
+        }
+    }
+    
+    .wow {
+        width: 50vw;
+        margin: auto;
+    }
+</style> {% endblock style %} {% block content %}
+<section class="wow fadeIn" id="start-your-project">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
+                <div class="position-relative overflow-hidden w-100">
+                    <span class="text-extra-large text-outside-line-full alt-font font-weight-600 text-uppercase"> Fleet Enquiries </span>
+                </div>
+            </div>
+        </div>
+        <form id="project-contact-form" method="post">
+            <div class="row">
+                <div class="col-12">
+                    <div id="success-project-contact-form" class="mx-0"></div>
+                    {% csrf_token %} {{form_fleet.as_p}}
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-transparent-dark-gray btn-large margin-20px-top">send message</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>{% endblock content %}

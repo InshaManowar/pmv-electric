@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import fields, widgets
 from django.forms.models import ModelForm
-from home.models import CareerRequest, Dealer
+from home.models import CareerRequest, Dealer, Fleet
 from django.contrib.admin.widgets import AdminDateWidget
 
 class CareerForm(forms.ModelForm):
@@ -19,6 +19,15 @@ class CareerForm(forms.ModelForm):
 class DealerForm(forms.ModelForm):
     class Meta:
         model = Dealer
+        fields = '__all__'
+        widgets = {
+            'name': forms.TextInput(attrs = {'class':'form-control'}),
+            'email': forms.EmailInput(attrs = {'class':'form-control'}),
+            'message': forms.Textarea(attrs = {'class':'form-control'}),
+        }
+class FleetForm(forms.ModelForm):
+    class Meta:
+        model = Fleet
         fields = '__all__'
         widgets = {
             'name': forms.TextInput(attrs = {'class':'form-control'}),

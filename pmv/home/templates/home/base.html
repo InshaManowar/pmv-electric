@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     <base href="/">
-    <link rel="shortcut icon" href="{% static 'home/images/logo.png' %}">
+    <link rel="shortcut icon" href="{% static 'home/images/logo-two.png' %}">
     <!-- animation -->
     <link rel="stylesheet" href=" {% static 'home/css/animate.css' %}" />
     <!-- bootstrap -->
@@ -189,12 +189,20 @@
                     <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-no-border-right md-margin-30px-bottom text-center text-md-left">
                         <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Additional Links</div>
                         <ul class="list-unstyled">
-                            <li><a class="text-small" href="home-classic-corporate.html">Home Classic Corporate</a></li>
-                            <li><a class="text-small" href="home-creative-business.html">Home Creative Business</a></li>
-                            <li><a class="text-small" href="home-creative-designer.html">Home Creative Designer</a></li>
-                            <li><a class="text-small" href="home-portfolio-minimal.html">Home Portfolio Minimal</a></li>
-                            <li><a class="text-small" href="home-portfolio-parallax.html">Home Portfolio  parallax</a></li>
-                            <li><a class="text-small" href="home-portfolio-personal.html">Home Portfolio Personal</a></li>
+                            <li>
+                                <a class="text-small" href="{% url 'home:mission' %}">Our Mission</a>
+                            </li>
+                            <li>
+                                <a class="text-small" href="{% url 'home:dealer' %}">Dealership Enquiry</a>
+                            </li>
+                            <li>
+                                <a class="text-small" href="{% url 'home:fleet' %}">Fleet Enquiry</a>
+                            </li>
+                            <li><a class="text-small" href="{% url 'home:products' %}">Products</a></li>
+                            <li><a class="text-small" href="{% url 'home:gallery' %}">Gallery</a></li>
+                            <li>
+                                <a class="text-small" href="{% url 'blog:blog-list' %}">Blog</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- end additional links -->

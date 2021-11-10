@@ -27,11 +27,22 @@ class CareerRequest(models.Model):
     cover_letter = models.TextField()
     class Meta:
         app_label = 'home'
+        verbose_name = 'Career query'
+        verbose_name_plural = 'Career queries'
 
 class Photos(models.Model):
     image = models.ImageField(upload_to=upload_review_photo, blank=True, default=None, null=True)
+    class Meta:
+        verbose_name = 'Photos'
+        verbose_name_plural = 'Photos'
+
 class Video(models.Model):
     video = models.TextField( default=None, null=True, blank=True)
+    class Meta:
+        verbose_name = 'Video'
+        verbose_name_plural = 'Videos'
+
+
 
 class Faqs(models.Model):
     question = models.CharField(max_length=255)
@@ -42,3 +53,21 @@ class Dealer(models.Model):
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=11)
     message = models.TextField()
+
+    class Meta:
+        verbose_name = 'Dealer Query'
+        verbose_name_plural = 'Dealers Queries'
+
+
+class Fleet(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    company_name = models.CharField(max_length=255)
+    website = models.CharField(max_length=255)
+    phone = models.CharField(max_length=11)
+    message = models.TextField()
+    class Meta:
+        verbose_name = 'Fleet Query'
+        verbose_name_plural = 'Fleet Queries'
+
+

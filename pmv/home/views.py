@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.forms import CareerForm, DealerForm, ContactForm
+from home.forms import CareerForm, DealerForm, ContactForm,FleetForm
 from .models import CareerRequest,Photos, Video, Faqs
 from django.views.generic import ListView
 from django.core.mail import send_mail, BadHeaderError
@@ -40,9 +40,20 @@ def dealer_form(request):
         form = DealerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect ('home:dealer')
+            return redirect ('home:career_confirm')
     context = {'form_dealer':form_dealer}
     return render(request, 'home/dealer.html', context)
+
+
+def fleet_form(request):
+    form_fleet = FleetForm()
+    if request.method == 'POST':
+        form = FleetForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect ('home:career_confirm')
+    context = {'form_fleet':form_fleet}
+    return render(request, 'home/fleet.html', context)
 
 
 def career_confirm(request):

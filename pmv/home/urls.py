@@ -15,6 +15,7 @@ urlpatterns = [
     path('products/', views.products, name ='products'  ),
     path('products/detail/', views.product_detail, name ='products_detail'  ),
     path('our-mission/', views.mission, name ='mission'  ),
+    path('fleet-request/', views.fleet_form, name ='fleet'  ),
     path('frequently-asked-questions/', views.faqs, name ='faqs'  ),
 
 ]
