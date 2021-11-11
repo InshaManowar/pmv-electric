@@ -17,6 +17,8 @@ def product_detail(request):
     return render (request, 'home/product_detail.html')
 def mission(request):
     return render (request, 'home/missions.html')
+def watchout(request):
+    return render (request, 'home/watchout.html')
 
 def specs(request):
     return render (request, 'home/specs.html')

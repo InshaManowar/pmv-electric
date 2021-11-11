@@ -17,5 +17,6 @@ urlpatterns = [
     path('our-mission/', views.mission, name ='mission'  ),
     path('fleet-request/', views.fleet_form, name ='fleet'  ),
     path('frequently-asked-questions/', views.faqs, name ='faqs'  ),
+    path('watch-out/', views.watchout, name ='watchout'  ),
 
 ]

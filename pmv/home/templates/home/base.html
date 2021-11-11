@@ -8,6 +8,7 @@
     <title>PMV Electric</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     <base href="/">
     <link rel="shortcut icon" href="{% static 'home/images/logo-two.png' %}">
@@ -39,7 +40,7 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="{% static 'home/css/responsive.css' %} " />
     <script type="text/javascript" src="{% static 'home/js/new.js' %} "></script>
-    {% block style %} {% endblock style %}
+    <link rel="stylesheet" href="{% static 'home/fonts/webfonts/Azonix.css' %}"> {% block style %} {% endblock style %}
     <!--[if IE]>
             <script src="js/html5shiv.js "></script>
         <![endif]-->
@@ -72,12 +73,11 @@
                                 <!-- start sub menu -->
                             </li>
                             <!-- end menu item -->
-                            <li class="dropdown simple-dropdown"><a href="{% url 'home:home' %} ">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
+                            <li class="d-lg-none dropdown simple-dropdown"><a href="{% url 'home:home' %} ">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
                                 <!-- start sub menu -->
                                 <ul class="dropdown-menu" role="menu">
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="# ">About us</a>
 
-                                    </li>
+
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:gallery' %} ">Gallery</a>
 
                                     </li>
@@ -103,7 +103,11 @@
                                 <!-- start sub menu -->
 
                             </li>
-                            <li class="dropdown simple-dropdown"><a href="#">Buy</a>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:gallery' %}">Gallery</a>
+                                <!-- start sub menu -->
+
+                            </li>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:products' %}">Buy</a>
                                 <!-- start sub menu -->
 
                             </li>
@@ -134,26 +138,48 @@
             <button class="close-button-menu side-menu-close" id="close-pushmenu"></button>
             <div class="display-table padding-twelve-all height-100 width-100 text-center">
                 <div class="display-table-cell vertical-align-top padding-70px-top position-relative">
-                    <div class="row">
-                        <div class="col-lg-12 margin-70px-bottom">
-                            <img src="{% static 'home/images/logo.png' %}" />
-                        </div>
+                    <ul id="accordion " class="nav navbar-nav navbar-left no-margin alt-font text-dark-gray" style="font-size: 200%; padding: 2%; line-height: 70px;" data-in="fadeIn" data-out="fadeOut">
+                        <!-- start menu item -->
+                        <li class="dropdown megamenu-fw">
+                            <a href="{% url 'home:home' %} ">Home</a>
+                            <!-- start sub menu -->
+                        </li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="{% url 'home:mission' %} ">Our Mission</a>
+                            <!-- start sub menu -->
+                        </li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="{% url 'home:watchout' %} ">Watch Out</a>
+                            <!-- start sub menu -->
+                        </li>
+                        <!-- end menu item -->
 
-                        <div class="col-lg-12">
-                            <h5 class="alt-font text-extra-dark-gray"><span class="d-block font-weight-300 text-dark-gray">The world's most</span><strong>efficient electric vehicle</strong></h5>
-                        </div>
-                        <div class="col-lg-12">
-                            <a href="#" class="btn btn-deep-pink btn-small text-extra-small border-radius-4"><i class="fas fa-play-circle icon-very-small margin-5px-right no-margin-left" aria-hidden="true"></i>Purchase Now</a>
-                        </div>
-                        <div class="col-md-12 margin-100px-top text-center">
-                            <div class="icon-social-medium margin-three-bottom">
-                                <a href="https://www.facebook.com/" target="_blank" class="text-extra-dark-gray text-deep-pink-hover margin-one-lr "><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                                <a href="https://twitter.com/" target="_blank" class="text-extra-dark-gray text-deep-pink-hover margin-one-lr "><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                                <a href="https://dribbble.com/" target="_blank" class="text-extra-dark-gray text-deep-pink-hover margin-one-lr "><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                        <li class="dropdown simple-dropdown"><a href="{% url 'blog:blog-list' %} ">Blog</a>
+                            <!-- start sub menu -->
 
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="dropdown simple-dropdown"><a href="{% url 'home:products' %} ">Products</a>
+                            <!-- start sub menu -->
+
+                        </li>
+
+                        <li class="dropdown simple-dropdown">
+                            <a href="{% url 'home:faqs' %}">FAQs</a>
+                            <!-- start sub menu -->
+
+                        </li>
+                        <li class=" dropdown simple-dropdown ">
+                            <a href="{% url 'home:dealer' %}">Dealership Enquiry</a>
+                            <!-- start sub menu -->
+
+                        </li>
+                        <li class="dropdown simple-dropdown "><a href="{% url 'home:fleet' %}">Fleet Enquiry</a>
+                            <!-- start sub menu -->
+
+                        </li>
+
+
+                    </ul>
                 </div>
             </div>
 
@@ -165,61 +191,61 @@
     {% block content %} {% endblock content %}
 
 
-    <footer class="footer-standard-dark bg-extra-dark-gray">
-        <div class="footer-widget-area padding-five-tb sm-padding-30px-tb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray md-no-border-right md-margin-30px-bottom sm-text-center">
+    <footer class="footer-standard-dark bg-extra-dark-gray ">
+        <div class="footer-widget-area padding-five-tb sm-padding-30px-tb ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray md-no-border-right md-margin-30px-bottom sm-text-center ">
                         <!-- start logo -->
-                        <a href="index.html" class="margin-20px-bottom d-inline-block"><img class="footer-logo" src="{% static 'home/images/logo.png' %}" data-rjs="images/logo-white@2x.png" alt=""></a>
+                        <a href="index.html " class="margin-20px-bottom d-inline-block "><img class="footer-logo " src="{% static 'home/images/logo.png' %} " data-rjs="images/logo-white@2x.png " alt=" "></a>
                         <!-- end logo -->
-                        <p class="text-small width-95 sm-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p class="text-small width-95 sm-width-100 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <!-- start social media -->
-                        <div class="social-icon-style-8 d-inline-block vertical-align-middle">
-                            <ul class="small-icon no-margin-bottom">
-                                <li><a class="facebook text-white-2" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                <li><a class="twitter text-white-2" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a class="google text-white-2" href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a class="instagram text-white-2" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram no-margin-right" aria-hidden="true"></i></a></li>
+                        <div class="social-icon-style-8 d-inline-block vertical-align-middle ">
+                            <ul class="small-icon no-margin-bottom ">
+                                <li><a class="facebook text-white-2 " href="https://www.facebook.com/ " target="_blank "><i class="fab fa-facebook-f " aria-hidden="true "></i></a></li>
+                                <li><a class="twitter text-white-2 " href="https://twitter.com/ " target="_blank "><i class="fab fa-twitter "></i></a></li>
+                                <li><a class="google text-white-2 " href="https://plus.google.com " target="_blank "><i class="fab fa-google-plus-g "></i></a></li>
+                                <li><a class="instagram text-white-2 " href="https://instagram.com/ " target="_blank "><i class="fab fa-instagram no-margin-right " aria-hidden="true "></i></a></li>
                             </ul>
                         </div>
                         <!-- end social media -->
                     </div>
                     <!-- start additional links -->
-                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-no-border-right md-margin-30px-bottom text-center text-md-left">
-                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Additional Links</div>
-                        <ul class="list-unstyled">
+                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-no-border-right md-margin-30px-bottom text-center text-md-left ">
+                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600 ">Additional Links</div>
+                        <ul class="list-unstyled ">
                             <li>
-                                <a class="text-small" href="{% url 'home:mission' %}">Our Mission</a>
+                                <a class="text-small " href="{% url 'home:mission' %} ">Our Mission</a>
                             </li>
                             <li>
-                                <a class="text-small" href="{% url 'home:dealer' %}">Dealership Enquiry</a>
+                                <a class="text-small " href="{% url 'home:dealer' %} ">Dealership Enquiry</a>
                             </li>
                             <li>
-                                <a class="text-small" href="{% url 'home:fleet' %}">Fleet Enquiry</a>
+                                <a class="text-small " href="{% url 'home:fleet' %} ">Fleet Enquiry</a>
                             </li>
-                            <li><a class="text-small" href="{% url 'home:products' %}">Products</a></li>
-                            <li><a class="text-small" href="{% url 'home:gallery' %}">Gallery</a></li>
+                            <li><a class="text-small " href="{% url 'home:products' %} ">Products</a></li>
+                            <li><a class="text-small " href="{% url 'home:gallery' %} ">Gallery</a></li>
                             <li>
-                                <a class="text-small" href="{% url 'blog:blog-list' %}">Blog</a>
+                                <a class="text-small " href="{% url 'blog:blog-list' %} ">Blog</a>
                             </li>
                         </ul>
                     </div>
                     <!-- end additional links -->
                     <!-- start contact information -->
-                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-clear-both md-no-border-right sm-margin-30px-bottom text-center text-md-left">
-                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Contact Info</div>
-                        <!-- <p class="text-small d-block margin-15px-bottom width-80 sm-width-100">POFO Design Agency<br> 301 The Greenhouse, Custard Factory, London, E2 8DY.</p> -->
-                        <div class="text-small">Email: <a href="mailto:sales@domain.com">sales@domain.com</a></div>
-                        <div class="text-small">Phone: +44 (0) 123 456 7890</div>
-                        <a href="contact-us-modern.html" class="text-small text-uppercase text-decoration-underline">View Direction</a>
+                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-clear-both md-no-border-right sm-margin-30px-bottom text-center text-md-left ">
+                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600 ">Contact Info</div>
+                        <!-- <p class="text-small d-block margin-15px-bottom width-80 sm-width-100 ">POFO Design Agency<br> 301 The Greenhouse, Custard Factory, London, E2 8DY.</p> -->
+                        <div class="text-small ">Email: <a href="mailto:sales@domain.com ">sales@domain.com</a></div>
+                        <div class="text-small ">Phone: +44 (0) 123 456 7890</div>
+                        <a href="contact-us-modern.html " class="text-small text-uppercase text-decoration-underline ">View Direction</a>
                     </div>
                     <!-- end contact information -->
                     <!-- start instagram -->
-                    <div class="col-lg-3 col-md-6 widget padding-45px-left md-padding-15px-left text-center text-md-left">
-                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600">Instagram portfolio</div>
-                        <div class="instagram-follow-api">
-                            <ul id="instaFeed-footer"></ul>
+                    <div class="col-lg-3 col-md-6 widget padding-45px-left md-padding-15px-left text-center text-md-left ">
+                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 ">Instagram portfolio</div>
+                        <div class="instagram-follow-api ">
+                            <ul id="instaFeed-footer "></ul>
                         </div>
                     </div>
                     <!-- end instagram -->
@@ -229,53 +255,53 @@
 
     </footer>
 
-    <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
+    <a class="scroll-top-arrow " href="javascript:void(0); "><i class="ti-arrow-up "></i></a>
 
-    <script type="text/javascript" src="{% static 'home/js/jquery.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/modernizr.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/bootstrap.bundle.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/jquery.easing.1.3.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/skrollr.min.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/smooth-scroll.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/jquery.appear.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/modernizr.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/bootstrap.bundle.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.easing.1.3.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/skrollr.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/smooth-scroll.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.appear.js' %} "></script>
     <!-- menu navigation -->
-    <script type="text/javascript" src="{% static 'home/js/bootsnav.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/jquery.nav.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/bootsnav.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.nav.js' %} "></script>
     <!-- animation -->
-    <script type="text/javascript" src="{% static 'home/js/wow.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/wow.min.js' %} "></script>
     <!-- page scroll -->
-    <script type="text/javascript" src=" {% static 'home/js/page-scroll.js' %} "></script>
+    <script type="text/javascript " src=" {% static 'home/js/page-scroll.js' %} "></script>
     <!-- swiper carousel -->
-    <script type="text/javascript" src="{% static 'home/js/swiper.min.js' %}"></script>
+    <script type="text/javascript " src="{% static 'home/js/swiper.min.js' %} "></script>
     <!-- counter -->
-    <script type=" text/javascript" src="{% static 'home/js/jquery.count-to.js' %} "></script>
+    <script type=" text/javascript " src="{% static 'home/js/jquery.count-to.js' %} "></script>
     <!-- parallax -->
-    <script type="text/javascript" src="{% static 'home/js/jquery.stellar.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.stellar.js' %} "></script>
     <!-- magnific popup -->
-    <script type="text/javascript" src="{% static 'home/js/jquery.magnific-popup.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.magnific-popup.min.js' %} "></script>
     <!-- portfolio with shorting tab -->
-    <script type="text/javascript" src="{% static 'home/js/isotope.pkgd.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/isotope.pkgd.min.js' %} "></script>
     <!-- images loaded -->
-    <script type="text/javascript" src="{% static 'home/js/imagesloaded.pkgd.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/imagesloaded.pkgd.min.js' %} "></script>
     <!-- pull menu -->
-    <script type="text/javascript" src="{% static 'home/js/classie.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/hamburger-menu.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/classie.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/hamburger-menu.js' %} "></script>
     <!-- counter -->
-    <script type="text/javascript" src=" {% static 'home/js/counter.js' %} "></script>
+    <script type="text/javascript " src=" {% static 'home/js/counter.js' %} "></script>
     <!-- fit video -->
-    <script type="text/javascript" src="{% static 'home/js/jquery.fitvids.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.fitvids.js' %} "></script>
 
-    <script type="text/javascript" src="{% static 'home/js/skill.bars.jquery.js' %} "></script>
-    <script type="text/javascript" src="{% static 'home/js/justified-gallery.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/skill.bars.jquery.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/justified-gallery.min.js' %} "></script>
     <!--pie chart-->
-    <script type="text/javascript" src="{% static 'home/js/jquery.easypiechart.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/jquery.easypiechart.min.js' %} "></script>
     <!-- retina -->
-    <script type="text/javascript" src="{% static 'home/js/retina.min.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/retina.min.js' %} "></script>
     <!-- revolution -->
-    <script type="text/javascript" src=" {% static 'home/revolution/js/jquery.themepunch.tools.min.js' %} "></script>
-    <script type="text/javascript" src=" {% static 'home/revolution/js/jquery.themepunch.revolution.min.js' %} "></script>
+    <script type="text/javascript " src=" {% static 'home/revolution/js/jquery.themepunch.tools.min.js' %} "></script>
+    <script type="text/javascript " src=" {% static 'home/revolution/js/jquery.themepunch.revolution.min.js' %} "></script>
 
-    <script type="text/javascript" src="{% static 'home/js/main.js' %} "></script>
+    <script type="text/javascript " src="{% static 'home/js/main.js' %} "></script>
 </body>
 
 </html>

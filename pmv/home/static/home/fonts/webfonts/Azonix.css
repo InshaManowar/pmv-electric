@@ -1,0 +1,8 @@
+@font-face
+{
+    font-family: 'Azonix';
+  src: url('Azonix.eot');
+      url('Azonix.eot?#') format('embedded-opentype'),
+      url('Azonix.woff') format('woff'),
+      url('Azonix.ttf') format('truetype');
+}
