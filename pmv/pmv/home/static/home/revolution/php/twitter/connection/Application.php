@@ -39,7 +39,7 @@ class Application extends Base
     protected function _buildHeaders($url,array $parameters = null,$method)
     {
         return $headers = array(
-                    "Authorization: Bearer " . $this->_getBearerToken()
+                   "Authorization: Bearer" . $this->_getBearerToken()
                 );
     }
 
@@ -57,14 +57,14 @@ class Application extends Base
             $token = base64_encode($token);
 
             $headers = array(
-                "Authorization: Basic " . $token
+               "Authorization: Basic" . $token
             );
 
             $options = array (
                 CURLOPT_URL => self::TWITTER_API_AUTH_URL,
                 CURLOPT_HTTPHEADER => $headers,
                 CURLOPT_POST => 1,
-                CURLOPT_POSTFIELDS => "grant_type=client_credentials"
+                CURLOPT_POSTFIELDS =>"grant_type=client_credentials"
             );
 
             $response = $this->_callApi($options);

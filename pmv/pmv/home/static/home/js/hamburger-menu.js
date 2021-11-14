@@ -10,13 +10,13 @@ function bindEvent(el, eventName, eventHandler) {
     }
 }
 
-(function () {
+(function() {
 
     var bodyEl = document.body,
-            //content = document.querySelector( '.content-wrap' ),
-            openbtn = document.getElementById('open-button'),
-            closebtn = document.getElementById('close-button'),
-            isOpen = false;
+        //content = document.querySelector( '.content-wrap' ),
+        openbtn = document.getElementById('open-button'),
+        closebtn = document.getElementById('close-button'),
+        isOpen = false;
 
     function init() {
         initEvents();
@@ -42,19 +42,18 @@ function bindEvent(el, eventName, eventHandler) {
 
         if (isOpen) {
             classie.remove(bodyEl, 'show-menu');
-             if ( $( ".full-width-pull-menu" ).length ) {
-                 classie.remove(bodyEl, 'overflow-hidden');
-                 classie.remove(bodyEl, 'position-fixed');
+            if ($(".full-width-pull-menu").length) {
+                classie.remove(bodyEl, 'overflow-hidden');
+                classie.remove(bodyEl, 'position-fixed');
             }
-        }
-        else {
+        } else {
             classie.add(bodyEl, 'show-menu');
-            
-            if ( $( ".full-width-pull-menu" ).length ) {
+
+            if ($(".full-width-pull-menu").length) {
                 classie.add(bodyEl, 'overflow-hidden');
                 classie.add(bodyEl, 'position-fixed');
             }
-           
+
         }
         isOpen = !isOpen;
     }

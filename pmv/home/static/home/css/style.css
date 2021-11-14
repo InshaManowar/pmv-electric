@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset"utf-8";
 
 /* ----------------------------------
 
@@ -9820,7 +9820,7 @@ header a.logo {
 }
 
 header a.logo img {
-    max-height: 32px;
+    max-height: 40px;
 }
 
 header .left-nav .sidebar-part1 a.logo img {
@@ -18331,7 +18331,7 @@ aside .latest-post li figure {
     top: 100%;
     left: 50%;
     border: solid transparent;
-    content: " ";
+    content: "";
     height: 0;
     width: 0;
     position: absolute;
@@ -18351,7 +18351,7 @@ aside .latest-post li figure {
     top: -29px;
     left: 50%;
     border: solid transparent;
-    content: " ";
+    content: "";
     height: 0;
     width: 0;
     position: absolute;

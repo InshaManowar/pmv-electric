@@ -136,8 +136,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-X_FRAME_OPTIONS = "SAMEORIGIN"
+X_FRAME_OPTIONS ="SAMEORIGIN"
 
-STRIPE_PUBLIC_KEY = ""
-STRIPE_SECRET_KEY = ""
-STRIPE_WEBHOOK_SECRET = ""
+STRIPE_PUBLIC_KEY =""
+STRIPE_SECRET_KEY =""
+STRIPE_WEBHOOK_SECRET =""

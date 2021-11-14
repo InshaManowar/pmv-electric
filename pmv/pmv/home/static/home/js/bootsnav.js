@@ -9,17 +9,17 @@
 //
 // ------------------------------------------------------------------------------ //
 
-(function ($) {
+(function($) {
     "use strict";
 
     var bootsnav = {
-        initialize: function () {
+        initialize: function() {
             this.event();
             this.hoverDropdown();
             this.navbarSticky();
             this.navbarScrollspy();
         },
-        event: function () {
+        event: function() {
 
             // ------------------------------------------------------------------------------ //
             // Variable
@@ -40,13 +40,13 @@
             // ------------------------------------------------------------------------------ //
             if (getNav.hasClass("brand-center")) {
                 var postsArr = new Array(),
-                        index = $("nav.brand-center"),
-                        $postsList = index.find('ul.navbar-nav');
+                    index = $("nav.brand-center"),
+                    $postsList = index.find('ul.navbar-nav');
 
                 index.prepend("<span class='storage-name' style='display:none;'></span>");
 
                 //Create array of all posts in lists
-                index.find('ul.navbar-nav > li').each(function () {
+                index.find('ul.navbar-nav > li').each(function() {
                     if ($(this).hasClass("active")) {
                         var getElement = $("a", this).eq(0).text();
                         $(".storage-name").html(getElement);
@@ -56,10 +56,10 @@
 
                 //Split the array at this point. The original array is altered.
                 var firstList = postsArr.splice(0, Math.round(postsArr.length / 2)),
-                        secondList = postsArr,
-                        ListHTML = '';
+                    secondList = postsArr,
+                    ListHTML = '';
 
-                var createHTML = function (list) {
+                var createHTML = function(list) {
                     ListHTML = '';
                     for (var i = 0; i < list.length; i++) {
                         ListHTML += '<li>' + list[i] + '</li>'
@@ -82,11 +82,11 @@
                 index.find("ul.nav.navbar-right").wrap("<div class='col-half right'></div>");
 
                 //Selection Class
-                index.find('ul.navbar-nav > li').each(function () {
+                index.find('ul.navbar-nav > li').each(function() {
                     var dropDown = $("ul.dropdown-menu", this),
-                    //added for center logo header
-                            simpleMenu = $("ul.simple-dropdown", this),
-                            megaMenu = $("ul.megamenu-content", this);
+                        //added for center logo header
+                        simpleMenu = $("ul.simple-dropdown", this),
+                        megaMenu = $("ul.megamenu-content", this);
                     dropDown.closest("li").addClass("dropdown");
                     simpleMenu.closest("li").addClass("simple-dropdown");
                     megaMenu.closest("li").addClass("megamenu-fw");
@@ -136,14 +136,14 @@
             // ------------------------------------------------------------------------------ //
             if (getNav.hasClass("navbar-mobile")) {
                 // Add Class to body
-                $('.navbar-collapse').on('shown.bs.collapse', function () {
+                $('.navbar-collapse').on('shown.bs.collapse', function() {
                     $("body").addClass("side-right");
                 });
-                $('.navbar-collapse').on('hide.bs.collapse', function () {
+                $('.navbar-collapse').on('hide.bs.collapse', function() {
                     $("body").removeClass("side-right");
                 });
 
-                $(window).on("resize", function () {
+                $(window).on("resize", function() {
                     $("body").removeClass("side-right");
                 });
             }
@@ -152,7 +152,7 @@
             // Navbar Fixed
             // ------------------------------------------------------------------------------ //
             if (getNav.hasClass("no-background")) {
-                $(window).on("scroll", function () {
+                $(window).on("scroll", function() {
                     var scrollTop = $(window).scrollTop();
                     if (scrollTop > 34) {
                         $(".navbar-fixed").removeClass("no-background");
@@ -166,7 +166,7 @@
             // Navbar Fixed
             // ------------------------------------------------------------------------------ //
             if (getNav.hasClass("navbar-transparent")) {
-                $(window).on("scroll", function () {
+                $(window).on("scroll", function() {
                     var scrollTop = $(window).scrollTop();
                     if (scrollTop > 34) {
                         $(".navbar-fixed").removeClass("navbar-transparent");
@@ -179,34 +179,34 @@
             // ------------------------------------------------------------------------------ //
             // Button Cart
             // ------------------------------------------------------------------------------ //
-            $(".btn-cart").on("click", function (e) {
+            $(".btn-cart").on("click", function(e) {
                 e.stopPropagation();
             });
 
             // ------------------------------------------------------------------------------ //
             // Toggle Search
             // ------------------------------------------------------------------------------ //
-            $("nav.navbar.bootsnav .attr-nav").each(function () {
-                $("li.search > a", this).on("click", function (e) {
+            $("nav.navbar.bootsnav .attr-nav").each(function() {
+                $("li.search > a", this).on("click", function(e) {
                     e.preventDefault();
                     $(".top-search").slideToggle();
                 });
             });
-            $(".input-group-addon.close-search").on("click", function () {
+            $(".input-group-addon.close-search").on("click", function() {
                 $(".top-search").slideUp();
             });
 
             // ------------------------------------------------------------------------------ //
             // Toggle Side Menu
             // ------------------------------------------------------------------------------ //
-            $("nav.navbar.bootsnav .attr-nav").each(function () {
-                $("li.side-menu > a", this).on("click", function (e) {
+            $("nav.navbar.bootsnav .attr-nav").each(function() {
+                $("li.side-menu > a", this).on("click", function(e) {
                     e.preventDefault();
                     $("nav.navbar.bootsnav > .side").toggleClass("on");
                     $("body").toggleClass("on-side");
                 });
             });
-            $(".side .close-side").on("click", function (e) {
+            $(".side .close-side").on("click", function(e) {
                 e.preventDefault();
                 $("nav.navbar.bootsnav > .side").removeClass("on");
                 $("body").removeClass("on-side");
@@ -222,12 +222,12 @@
         // ------------------------------------------------------------------------------ //
         // Change dropdown to hover on dekstop
         // ------------------------------------------------------------------------------ //
-        hoverDropdown: function () {
+        hoverDropdown: function() {
             var getNav = $("nav.navbar.bootsnav"),
-                    getWindow = $(window).width(),
-                    getHeight = $(window).height(),
-                    getIn = getNav.find("ul.nav").data("in"),
-                    getOut = getNav.find("ul.nav").data("out");
+                getWindow = $(window).width(),
+                getHeight = $(window).height(),
+                getIn = getNav.find("ul.nav").data("in"),
+                getOut = getNav.find("ul.nav").data("out");
 
             if (getWindow < 991) {
 
@@ -242,13 +242,13 @@
                 $(".navbar-collapse").removeClass("animated");
 
                 // Enable click event
-                $("nav.navbar.bootsnav ul.nav").each(function () {
+                $("nav.navbar.bootsnav ul.nav").each(function() {
                     $(".dropdown-menu", this).addClass("animated");
                     $(".dropdown-menu", this).removeClass(getOut);
 
                     // Dropdown Fade Toggle
                     $("a.dropdown-toggle", this).off('click');
-                    $("a.dropdown-toggle", this).on('click', function (e) {
+                    $("a.dropdown-toggle", this).on('click', function(e) {
                         e.stopPropagation();
                         $(this).closest("li.dropdown").find(".dropdown-menu").first().stop().fadeToggle().toggleClass(getIn);
                         $(this).closest("li.dropdown").first().toggleClass("on");
@@ -256,27 +256,27 @@
                     });
 
                     // Hidden dropdown action
-                    $('li.dropdown', this).each(function () {
+                    $('li.dropdown', this).each(function() {
                         $(this).find(".dropdown-menu").stop().fadeOut('fast');
-                        $(this).on('hidden.bs.dropdown', function () {
+                        $(this).on('hidden.bs.dropdown', function() {
                             $(this).find(".dropdown-menu").stop().fadeOut('fast');
                         });
                         return false;
                     });
 
                     // Megamenu style
-                    $(".megamenu-fw", this).each(function () {
-                        $(".col-menu", this).each(function () {
+                    $(".megamenu-fw", this).each(function() {
+                        $(".col-menu", this).each(function() {
                             $(".content", this).addClass("animated");
                             $(".content", this).stop().fadeOut();
                             $(".title", this).off("click");
-                            $(".title", this).on("click", function () {
+                            $(".title", this).on("click", function() {
                                 $(this).closest(".col-menu").find(".content").stop().fadeToggle('fast').addClass(getIn);
                                 $(this).closest(".col-menu").toggleClass("on");
                                 return false;
                             });
 
-                            $(".content", this).on("click", function (e) {
+                            $(".content", this).on("click", function(e) {
                                 e.stopPropagation();
                             });
                         });
@@ -284,7 +284,7 @@
                 });
 
                 // Hidden dropdown
-                var cleanOpen = function () {
+                var cleanOpen = function() {
                     $('li.dropdown', this).removeClass("on");
                     $(".dropdown-menu", this).stop().fadeOut('fast');
                     $(".dropdown-menu", this).removeClass(getIn);
@@ -294,21 +294,21 @@
                 }
 
                 // Hidden om mouse leave
-                $("nav.navbar.bootsnav").on("mouseleave", function () {
+                $("nav.navbar.bootsnav").on("mouseleave", function() {
                     cleanOpen();
                 });
 
 
                 // Enable click atribute navigation
-                $("nav.navbar.bootsnav .attr-nav").each(function () {
+                $("nav.navbar.bootsnav .attr-nav").each(function() {
                     $(".dropdown-menu", this).removeClass("animated");
                     $("li.dropdown", this).off("mouseenter");
                     $("li.dropdown", this).off("mouseleave");
                     $("a.dropdown-toggle", this).off('click');
-                    $("a.dropdown-toggle", this).on('click', function (e) {
+                    $("a.dropdown-toggle", this).on('click', function(e) {
                         e.stopPropagation();
                         $(this).closest("li.dropdown").find(".dropdown-menu").first().stop().fadeToggle();
-                        $(".navbar-toggle").each(function () {
+                        $(".navbar-toggle").each(function() {
                             $(".fa", this).removeClass("fa-times");
                             $(".fa", this).addClass("fa-bars");
                             $(".navbar-collapse").removeClass("in");
@@ -316,7 +316,7 @@
                         });
                     });
 
-                    $(this).on("mouseleave", function () {
+                    $(this).on("mouseleave", function() {
                         $(".dropdown-menu", this).stop().fadeOut();
                         $("li.dropdown", this).removeClass("on");
                         return false;
@@ -324,9 +324,9 @@
                 });
 
                 // Toggle Bars
-                $(".navbar-toggle").each(function () {
+                $(".navbar-toggle").each(function() {
                     $(this).off("click");
-                    $(this).on("click", function () {
+                    $(this).on("click", function() {
                         $(".fa", this).toggleClass("fa-bars");
                         $(".fa", this).toggleClass("fa-times");
                         cleanOpen();
@@ -340,30 +340,30 @@
                 // Navbar Sidebar
                 if (getNav.hasClass("navbar-sidebar")) {
                     // Hover effect Sidebar Menu
-                    $("nav.navbar.bootsnav ul.nav").each(function () {
+                    $("nav.navbar.bootsnav ul.nav").each(function() {
                         $("a.dropdown-toggle", this).off('click');
-                        $("a.dropdown-toggle", this).on('click', function (e) {
+                        $("a.dropdown-toggle", this).on('click', function(e) {
                             e.stopPropagation();
                         });
 
                         $(".dropdown-menu", this).addClass("animated");
-                        $("li.dropdown", this).on("mouseenter", function () {
+                        $("li.dropdown", this).on("mouseenter", function() {
                             $(".dropdown-menu", this).eq(0).removeClass(getOut);
                             $(".dropdown-menu", this).eq(0).stop().fadeIn('fast').addClass(getIn);
                             $(this).addClass("on");
                             return false;
                         });
 
-                        $(".col-menu").each(function () {
+                        $(".col-menu").each(function() {
                             $(".content", this).addClass("animated");
-                            $(".title", this).on("mouseenter", function () {
+                            $(".title", this).on("mouseenter", function() {
                                 $(this).closest(".col-menu").find(".content").stop().fadeIn('fast').addClass(getIn);
                                 $(this).closest(".col-menu").addClass("on");
                                 return false;
                             });
                         });
 
-                        $(this).on("mouseleave", function () {
+                        $(this).on("mouseleave", function() {
                             $(".dropdown-menu", this).stop().removeClass(getIn);
                             $(".dropdown-menu", this).stop().addClass(getOut).fadeOut('fast');
                             $(".col-menu", this).find(".content").stop().fadeOut('fast').removeClass(getIn);
@@ -376,143 +376,143 @@
                     var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 
                     // Hover effect Default Menu
-                    $("nav.navbar.bootsnav ul.nav").each(function () {
+                    $("nav.navbar.bootsnav ul.nav").each(function() {
                         $("a.dropdown-toggle", this).off('click');
-                        $("a.dropdown-toggle", this).on('click', function (e) {
+                        $("a.dropdown-toggle", this).on('click', function(e) {
                             e.stopPropagation();
                         });
 
-                        $(".megamenu-fw", this).each(function () {
+                        $(".megamenu-fw", this).each(function() {
                             $(".title", this).off("click");
                             $("a.dropdown-toggle", this).off("click");
                             $(".content").removeClass("animated");
                         });
 
                         $(".dropdown-menu", this).addClass("animated");
-                        
-        // user hover on single menu then hide its sibling children menu
-        if( $( '.navbar-left-sidebar' ).length > 0 || $( '.left-nav-sidebar' ).length > 0 ) {
 
-            $("li:not(.dropdown)", this).on("mouseenter", function () {
-                $(this).parent().find('.dropdown-menu').stop().fadeOut('fast');
-            });
-            
-            $( document ).on( 'click', '.side-left-menu-close.active', function(e) {
-                $( this ).removeClass( 'active' );
-             });
-        }
+                        // user hover on single menu then hide its sibling children menu
+                        if ($('.navbar-left-sidebar').length > 0 || $('.left-nav-sidebar').length > 0) {
 
-                        $("li.dropdown", this).on("mouseenter", function () {
+                            $("li:not(.dropdown)", this).on("mouseenter", function() {
+                                $(this).parent().find('.dropdown-menu').stop().fadeOut('fast');
+                            });
+
+                            $(document).on('click', '.side-left-menu-close.active', function(e) {
+                                $(this).removeClass('active');
+                            });
+                        }
+
+                        $("li.dropdown", this).on("mouseenter", function() {
                             var _this = this;
 
-        $( '.side-left-menu-close' ).addClass( 'active' );
-        
-        if( $( '.navbar-left-sidebar' ).length > 0 || $( '.left-nav-sidebar' ).length > 0 ) {
+                            $('.side-left-menu-close').addClass('active');
 
-            $(this).parent().find('.dropdown').removeClass("on");
-            if( $(this).parents('.dropdown-menu').length > 0 ) { // child
-                $(this).parents('.dropdown-menu').find('.dropdown-menu').not( $( '.dropdown-menu', this ) ).stop().fadeOut('fast');
-            } else { // main
-                $(this).parents('.bootsnav .nav').find('.dropdown-menu').not( $( '.dropdown-menu', this ) ).stop().fadeOut('fast');
-                $(":not(.second-level)", this).find('.third-level').stop().fadeOut('fast');
-            }
+                            if ($('.navbar-left-sidebar').length > 0 || $('.left-nav-sidebar').length > 0) {
 
-            if( $(this).parent().hasClass( "second-level" ) ) {
-                $(this).parents( '.navbar-nav' ).addClass( "enter" );
-            } else if( $( this ).parent().hasClass( "enter" ) ) {
-                $( '.navbar-nav' ).removeClass( "enter" );
-            }
-        }
+                                $(this).parent().find('.dropdown').removeClass("on");
+                                if ($(this).parents('.dropdown-menu').length > 0) { // child
+                                    $(this).parents('.dropdown-menu').find('.dropdown-menu').not($('.dropdown-menu', this)).stop().fadeOut('fast');
+                                } else { // main
+                                    $(this).parents('.bootsnav .nav').find('.dropdown-menu').not($('.dropdown-menu', this)).stop().fadeOut('fast');
+                                    $(":not(.second-level)", this).find('.third-level').stop().fadeOut('fast');
+                                }
+
+                                if ($(this).parent().hasClass("second-level")) {
+                                    $(this).parents('.navbar-nav').addClass("enter");
+                                } else if ($(this).parent().hasClass("enter")) {
+                                    $('.navbar-nav').removeClass("enter");
+                                }
+                            }
 
                             $(".dropdown-menu", this).eq(0).removeClass(getOut);
-                            if(isSafari)
+                            if (isSafari)
                                 $(".dropdown-menu", _this).eq(0).stop().fadeIn('fast').addClass(getIn);
                             else
                                 $(".dropdown-menu", _this).eq(0).stop().fadeIn('fast').addClass(getIn);
                             $(this).addClass("on");
-         
-        if( $( '.navbar-left-sidebar' ).length > 0 || $( '.left-nav-sidebar' ).length > 0 ) {
 
-            if( $( '.left-nav-sidebar' ).length > 0 ) {
-                var menu_width = $( '.sidebar-part1' ).outerWidth();
-                    menu_width = menu_width + 20;
-                    menu_width = menu_width + $( '.left-nav-on .navbar-nav' ).outerWidth();
-            } else {
-                var menu_width = $( '.navbar-nav' ).outerWidth();
-            }
+                            if ($('.navbar-left-sidebar').length > 0 || $('.left-nav-sidebar').length > 0) {
 
-            var mainWidth = $(window).width();
-            setTimeout( function() {
+                                if ($('.left-nav-sidebar').length > 0) {
+                                    var menu_width = $('.sidebar-part1').outerWidth();
+                                    menu_width = menu_width + 20;
+                                    menu_width = menu_width + $('.left-nav-on .navbar-nav').outerWidth();
+                                } else {
+                                    var menu_width = $('.navbar-nav').outerWidth();
+                                }
 
-                $( '.dropdown' ).each( function() {
-                    if( $( this ).hasClass( 'on' ) ) {
-                        menu_width = menu_width + $( '.dropdown-menu li', this ).outerWidth();
-                    }
-                });
-                $( '.side-left-menu-close' ).width(mainWidth - menu_width);
-            }, 300 );
-        }
+                                var mainWidth = $(window).width();
+                                setTimeout(function() {
+
+                                    $('.dropdown').each(function() {
+                                        if ($(this).hasClass('on')) {
+                                            menu_width = menu_width + $('.dropdown-menu li', this).outerWidth();
+                                        }
+                                    });
+                                    $('.side-left-menu-close').width(mainWidth - menu_width);
+                                }, 300);
+                            }
                             return false;
                         });
 
-                        $("li.dropdown", this).on("mouseleave", function () {
+                        $("li.dropdown", this).on("mouseleave", function() {
                             $(".dropdown-menu", this).eq(0).removeClass(getIn);
 
-            if ( $(".dropdown-menu", this).css("display") == "none" || !( $( '.navbar-left-sidebar' ).length > 0 || $( '.left-nav-sidebar' ).length > 0 ) || $(this).parents( '.bootsnav .nav' ).hasClass( "enter" ) ) {
+                            if ($(".dropdown-menu", this).css("display") == "none" || !($('.navbar-left-sidebar').length > 0 || $('.left-nav-sidebar').length > 0) || $(this).parents('.bootsnav .nav').hasClass("enter")) {
 
-                            if(isSafari)
-                                $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
-                            else
-                                $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
-                            
-                            $(this).removeClass("on");
-            }
-            
-                            
-                            
-            if( $( '.navbar-left-sidebar' ).length > 0 || $( '.left-nav-sidebar' ).length > 0 ) {
+                                if (isSafari)
+                                    $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
+                                else
+                                    $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
 
-                $( '.side-left-menu-close' ).addClass( 'active' );
+                                $(this).removeClass("on");
+                            }
 
-                if( $( '.left-nav-sidebar' ).length > 0 ) {
-                    var menu_width = $( '.sidebar-part1' ).outerWidth();
-                        menu_width = menu_width + 20;
-                        menu_width = menu_width + $( '.left-nav-on .navbar-nav' ).outerWidth();
-                } else {
-                    var menu_width = $( '.navbar-nav' ).outerWidth();
-                }
 
-                var mainWidth = $(window).width();
-                setTimeout( function() {
 
-                    $( '.dropdown' ).each( function() {
-                        if( $( this ).hasClass( 'on' ) ) {
-                            menu_width = menu_width + $( '.dropdown-menu li', this ).outerWidth();
-                        }
-                    });
-                    $( '.side-left-menu-close' ).width( mainWidth - menu_width );
-                }, 300 );
-            }
+                            if ($('.navbar-left-sidebar').length > 0 || $('.left-nav-sidebar').length > 0) {
+
+                                $('.side-left-menu-close').addClass('active');
+
+                                if ($('.left-nav-sidebar').length > 0) {
+                                    var menu_width = $('.sidebar-part1').outerWidth();
+                                    menu_width = menu_width + 20;
+                                    menu_width = menu_width + $('.left-nav-on .navbar-nav').outerWidth();
+                                } else {
+                                    var menu_width = $('.navbar-nav').outerWidth();
+                                }
+
+                                var mainWidth = $(window).width();
+                                setTimeout(function() {
+
+                                    $('.dropdown').each(function() {
+                                        if ($(this).hasClass('on')) {
+                                            menu_width = menu_width + $('.dropdown-menu li', this).outerWidth();
+                                        }
+                                    });
+                                    $('.side-left-menu-close').width(mainWidth - menu_width);
+                                }, 300);
+                            }
                         });
 
-                        $(this).on("mouseleave", function () {
+                        $(this).on("mouseleave", function() {
                             $(".dropdown-menu", this).removeClass(getIn);
-                            $( '.side-left-menu-close' ).removeClass( 'active' );
-                            
+                            $('.side-left-menu-close').removeClass('active');
+
                             if (isSafari)
                                 $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
                             else
                                 $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
                             $("li.dropdown", this).removeClass("on");
 
-            if( $( '.navbar-left-sidebar' ).length > 0 || $( '.left-nav-sidebar' ).length > 0 ) {
-                if( $( '.bootsnav .nav' ).hasClass( "enter" ) ) {
-                    $( '.bootsnav .nav' ).removeClass( "enter" );
-                } else {
-                    $( '.bootsnav .nav' ).find('.dropdown-menu').fadeOut('fast');
-                }
-            }
-            
+                            if ($('.navbar-left-sidebar').length > 0 || $('.left-nav-sidebar').length > 0) {
+                                if ($('.bootsnav .nav').hasClass("enter")) {
+                                    $('.bootsnav .nav').removeClass("enter");
+                                } else {
+                                    $('.bootsnav .nav').find('.dropdown-menu').fadeOut('fast');
+                                }
+                            }
+
                             return false;
                         });
                     });
@@ -521,27 +521,27 @@
                 // ------------------------------------------------------------------------------ //
                 // Hover effect Atribute Navigation
                 // ------------------------------------------------------------------------------ //
-                $("nav.navbar.bootsnav .attr-nav").each(function () {
+                $("nav.navbar.bootsnav .attr-nav").each(function() {
                     $("a.dropdown-toggle", this).off('click');
-                    $("a.dropdown-toggle", this).on('click', function (e) {
+                    $("a.dropdown-toggle", this).on('click', function(e) {
                         e.stopPropagation();
                     });
 
                     $(".dropdown-menu", this).addClass("animated");
-                    $("li.dropdown", this).on("mouseenter", function () {
+                    $("li.dropdown", this).on("mouseenter", function() {
                         $(".dropdown-menu", this).eq(0).removeClass(getOut);
                         $(".dropdown-menu", this).eq(0).stop().fadeIn('fast').addClass(getIn);
                         $(this).addClass("on");
                         return false;
                     });
 
-                    $("li.dropdown", this).on("mouseleave", function () {
+                    $("li.dropdown", this).on("mouseleave", function() {
                         $(".dropdown-menu", this).eq(0).removeClass(getIn);
                         $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
                         $(this).removeClass("on");
                     });
 
-                    $(this).on("mouseleave", function () {
+                    $(this).on("mouseleave", function() {
                         $(".dropdown-menu", this).removeClass(getIn);
                         $(".dropdown-menu", this).eq(0).stop().fadeOut('fast').addClass(getOut);
                         $("li.dropdown", this).removeClass("on");
@@ -555,17 +555,17 @@
             // ------------------------------------------------------------------------------ //
             if (getNav.hasClass("navbar-full")) {
                 var windowHeight = $(window).height(),
-                        windowWidth = $(window).width();
+                    windowWidth = $(window).width();
 
                 $(".nav-full").css("height", windowHeight + "px");
                 $(".wrap-full-menu").css("height", windowHeight + "px");
                 $(".wrap-full-menu").css("width", windowWidth + "px");
 
                 $(".navbar-collapse").addClass("animated");
-                $(".navbar-toggle").each(function () {
+                $(".navbar-toggle").each(function() {
                     var getId = $(this).data("target");
                     $(this).off("click");
-                    $(this).on("click", function (e) {
+                    $(this).on("click", function(e) {
                         e.preventDefault();
                         $(getId).removeClass(getOut);
                         $(getId).addClass("in");
@@ -573,10 +573,10 @@
                         return false;
                     });
 
-                    $("li.close-full-menu").on("click", function (e) {
+                    $("li.close-full-menu").on("click", function(e) {
                         e.preventDefault();
                         $(getId).addClass(getOut);
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $(getId).removeClass("in");
                             $(getId).removeClass(getIn);
                         }, 500);
@@ -588,9 +588,9 @@
         // ------------------------------------------------------------------------------ //
         // Navbar Sticky
         // ------------------------------------------------------------------------------ //
-        navbarSticky: function () {
+        navbarSticky: function() {
             var getNav = $("nav.navbar.bootsnav"),
-                    navSticky = getNav.hasClass("navbar-sticky");
+                navSticky = getNav.hasClass("navbar-sticky");
 
             if (navSticky) {
 
@@ -600,7 +600,7 @@
 
                 // Windown on scroll
                 var getOffset = $(".wrap-sticky").offset().top;
-                $(window).on("scroll", function () {
+                $(window).on("scroll", function() {
                     var scrollTop = $(window).scrollTop();
                     if (scrollTop > getOffset) {
                         getNav.addClass("sticked");
@@ -613,17 +613,17 @@
         // ------------------------------------------------------------------------------ //
         // Navbar Scrollspy
         // ------------------------------------------------------------------------------ //
-        navbarScrollspy: function () {
+        navbarScrollspy: function() {
             var navScrollSpy = $(".navbar-scrollspy"),
-                    $body = $('body'),
-                    getNav = $('nav.navbar.bootsnav'),
-                    offset = getNav.outerHeight();
+                $body = $('body'),
+                getNav = $('nav.navbar.bootsnav'),
+                offset = getNav.outerHeight();
 
             if (navScrollSpy.length) {
                 $body.scrollspy({ target: '.navbar', offset: offset });
 
                 // Animation Scrollspy
-                $('.scroll').on('click', function (event) {
+                $('.scroll').on('click', function(event) {
                     event.preventDefault();
 
                     // Active link
@@ -634,19 +634,19 @@
                     $(".navbar-collapse").removeClass("in");
 
                     // Toggle Bars
-                    $(".navbar-toggle").each(function () {
+                    $(".navbar-toggle").each(function() {
                         $(".fa", this).removeClass("fa-times");
                         $(".fa", this).addClass("fa-bars");
                     });
 
                     // Scroll
                     var scrollTop = $(window).scrollTop(),
-                            $anchor = $(this).find('a'),
-                            $section = $($anchor.attr('href')).offset().top,
-                            $window = $(window).width(),
-                            $minusDesktop = getNav.data("minus-value-desktop"),
-                            $minusMobile = getNav.data("minus-value-mobile"),
-                            $speed = getNav.data("speed");
+                        $anchor = $(this).find('a'),
+                        $section = $($anchor.attr('href')).offset().top,
+                        $window = $(window).width(),
+                        $minusDesktop = getNav.data("minus-value-desktop"),
+                        $minusMobile = getNav.data("minus-value-mobile"),
+                        $speed = getNav.data("speed");
 
                     if ($window > 992) {
                         var $position = $section - $minusDesktop;
@@ -660,7 +660,7 @@
                 });
 
                 // Activate Navigation
-                var fixSpy = function () {
+                var fixSpy = function() {
                     var data = $body.data('bs.scrollspy');
                     if (data) {
                         offset = getNav.outerHeight();
@@ -672,7 +672,7 @@
 
                 // Activate Navigation on resize
                 var resizeTimer;
-                $(window).on('resize', function () {
+                $(window).on('resize', function() {
                     clearTimeout(resizeTimer);
                     var resizeTimer = setTimeout(fixSpy, 200);
                 });
@@ -681,19 +681,19 @@
     };
 
     // Initialize
-    $(document).ready(function () {
+    $(document).ready(function() {
         bootsnav.initialize();
     });
 
     // Reset on resize
-    $(window).on("resize", function () {
+    $(window).on("resize", function() {
         bootsnav.hoverDropdown();
-        setTimeout(function () {
+        setTimeout(function() {
             bootsnav.navbarSticky();
         }, 500);
 
         // Toggle Bars
-        $(".navbar-toggle").each(function () {
+        $(".navbar-toggle").each(function() {
             $(".fa", this).removeClass("fa-times");
             $(".fa", this).addClass("fa-bars");
             $(this).removeClass("fixed");
@@ -703,4 +703,4 @@
         $(".navbar-collapse").removeClass("bounceIn");
     });
 
-} (jQuery));
+}(jQuery));

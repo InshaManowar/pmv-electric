@@ -85,7 +85,7 @@ class User extends Base
             $sortedParams[] = $key . '=' . $value;
         }
 
-        $signatureBaseString =  $method . "&" . rawurlencode($url) . '&' . rawurlencode(implode('&', $sortedParams));
+        $signatureBaseString =  $method ."&" . rawurlencode($url) . '&' . rawurlencode(implode('&', $sortedParams));
         $compositeKey = rawurlencode($this->_consumerSecret) . '&' . rawurlencode($this->_accessTokenSecret);
         return base64_encode(hash_hmac('sha1', $signatureBaseString, $compositeKey, true));
     }

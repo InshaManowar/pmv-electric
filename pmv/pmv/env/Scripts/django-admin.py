@@ -13,7 +13,7 @@ except ImportError:
         'and use django-admin instead.'
     )
 
-if __name__ == "__main__":
+if __name__ =="__main__":
     warnings.warn(
         'django-admin.py is deprecated in favor of django-admin.',
         RemovedInDjango40Warning,
