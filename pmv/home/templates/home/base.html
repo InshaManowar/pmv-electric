@@ -196,70 +196,39 @@
 
     {% block content %} {% endblock content %}
 
-
-    <footer class="footer-standard-dark bg-extra-dark-gray">
-        <div class="footer-widget-area padding-five-tb sm-padding-30px-tb">
+    <div class="footer-dark">
+        <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray md-no-border-right md-margin-30px-bottom sm-text-center">
-                        <!-- start logo -->
-                        <a href="index.html" class="margin-20px-bottom d-inline-block"><img class="footer-logo" src="{% static 'home/images/logo.png' %}" data-rjs="images/logo-white@2x.png" alt=""></a>
-                        <!-- end logo -->
-                        <p class="text-small width-95 sm-width-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <!-- start social media -->
-                        <div class="social-icon-style-8 d-inline-block vertical-align-middle">
-                            <ul class="small-icon no-margin-bottom">
-                                <li><a class="facebook text-white-2" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                <li><a class="twitter text-white-2" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a class="google text-white-2" href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a class="instagram text-white-2" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram no-margin-right" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- end social media -->
-                    </div>
-                    <!-- start additional links -->
-                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-no-border-right md-margin-30px-bottom text-center text-md-left">
-                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Additional Links</div>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a class="text-small" href="{% url 'home:mission' %}">Our Mission</a>
-                            </li>
-                            <li>
-                                <a class="text-small" href="{% url 'home:dealer' %}">Dealership Enquiry</a>
-                            </li>
-                            <li>
-                                <a class="text-small" href="{% url 'home:fleet' %}">Fleet Enquiry</a>
-                            </li>
-                            <li><a class="text-small" href="{% url 'home:products' %}">Products</a></li>
-                            <li><a class="text-small" href="{% url 'home:gallery' %}">Gallery</a></li>
-                            <li>
-                                <a class="text-small" href="{% url 'blog:blog-list' %}">Blog</a>
-                            </li>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Blogs</a></li>
                         </ul>
                     </div>
-                    <!-- end additional links -->
-                    <!-- start contact information -->
-                    <div class="col-lg-3 col-md-6 widget border-right border-color-medium-dark-gray padding-45px-left md-padding-15px-left md-clear-both md-no-border-right sm-margin-30px-bottom text-center text-md-left">
-                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-10px-bottom font-weight-600">Contact Info</div>
-                        <!-- <p class="text-small d-block margin-15px-bottom width-80 sm-width-100">POFO Design Agency<br> 301 The Greenhouse, Custard Factory, London, E2 8DY.</p> -->
-                        <div class="text-small">Email: <a href="mailto:sales@domain.com">sales@domain.com</a></div>
-                        <div class="text-small">Phone: +44 (0) 123 456 7890</div>
-                        <a href="contact-us-modern.html" class="text-small text-uppercase text-decoration-underline">View Direction</a>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#">Dealership Enquiries</a></li>
+                            <li><a href="#">Fleet Enquiries</a></li>
+                            <li><a href="#">Products</a></li>
+                        </ul>
                     </div>
-                    <!-- end contact information -->
-                    <!-- start instagram -->
-                    <div class="col-lg-3 col-md-6 widget padding-45px-left md-padding-15px-left text-center text-md-left">
-                        <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600">Instagram portfolio</div>
-                        <div class="instagram-follow-api">
-                            <ul id="instaFeed-footer"></ul>
-                        </div>
-                    </div>
-                    <!-- end instagram -->
-                </div>
-            </div>
-        </div>
+                    <div class="col-md-6 item text">
+                        <img src="{% static 'home/images/logo.png' %}" class="logo-footer" alt="logo-pmv">
 
-    </footer>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social"> <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com/" title="Dribbble" target="_blank"><i class="fab fa-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
 
     <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
 
