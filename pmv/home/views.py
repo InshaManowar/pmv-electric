@@ -76,7 +76,7 @@ def faqs(request):
 
 def contactus(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        form = ContactForm(request.POST or None)
         if form.is_valid():
             subject = "Subject Inquiry"
 
@@ -97,6 +97,6 @@ def contactus(request):
                 return HttpResponse('Invalid header found.')
             return redirect ("home:home")
     
-    form = ContactForm(request.POST)
-    return render(request, "home/home.html", {'contact_form':form})
+    form = ContactForm(request.POST or None)
+    return render(request, "home/contact.html", {'contact_form':form})
 

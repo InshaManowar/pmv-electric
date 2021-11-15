@@ -11,6 +11,7 @@ urlpatterns = [
     path('career/', views.career_form, name ='career'  ),
     path('career/thanks/', views.career_confirm, name ='career_confirm'  ),
     path('gallery/', views.photos, name ='gallery'  ),
+    path('contact/', views.contactus, name ='contact'  ),
     path('dealership-enquiry/', views.dealer_form, name ='dealer'  ),
     path('products/', views.products, name ='products'  ),
     path('products/detail/', views.product_detail, name ='products_detail'  ),

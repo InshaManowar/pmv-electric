@@ -31,7 +31,7 @@
     }
     
     body {
-        background-image: url('{% static 'home/images/carousel1.png' %}');
+        background-image: url('{% static 'home/images/carousel3.png' %}');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
@@ -58,6 +58,13 @@
         font-family: Montserrat !important;
     }
     
+    label {
+        color: rgba(255, 255, 255, 0.74) !important;
+        font-size: 100%;
+        font-weight: 400;
+        font-family: Montserrat !important;
+    }
+    
     textarea {
         background-color: rgba(238, 235, 230, 0) !important;
         border-bottom: 2px solid rgba(255, 255, 255, 0.76) !important;
@@ -69,12 +76,28 @@
         color: white !important;
     }
     
+    select {
+        background-color: rgba(238, 235, 230, 0) !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.76) !important;
+        border-top: 2px solid rgba(255, 255, 255, 0.76) !important;
+        border-left: 2px solid rgba(255, 255, 255, 0.76) !important;
+        border-right: 2px solid rgba(255, 255, 255, 0.76) !important;
+        font-family: Montserrat !important;
+        color: white !important;
+    }
+    
+    option {
+        background-color: rgba(238, 235, 230, 0) !important;
+        font-family: Montserrat !important;
+        color: white !important;
+        color: black !important;
+    }
+    
     .form-bg {
         background-color: rgba(0, 0, 0, 0.733);
         padding: 3%;
         margin-top: 8% !important;
         margin-bottom: 8% !important;
-        height: 80vh;
         border-radius: 7px;
         position: relative;
         right: -300px;
@@ -85,7 +108,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
                 <div class="position-relative overflow-hidden w-100">
-                    <span class="text-extra-large alt-font font-weight-600 text-uppercase text-white-2"> Dealership Enquiries </span>
+                    <span class="text-extra-large alt-font font-weight-600 text-uppercase text-white-2">Get in touch</span>
                 </div>
             </div>
         </div>
@@ -95,13 +118,22 @@
             <div class="row">
                 <div class="col-12">
                     <div id="success-project-contact-form" class="mx-0"></div>
-                    {% csrf_token %} {{form_dealer.as_p}}
+                    {% csrf_token %} {{contact_form.as_p}}
                     <div class="col-12 text-center">
                         <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send message</button>
                     </div>
                 </div>
 
             </div>
+            {% if contact_form.errors %} {% for field in contact_form %} {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+            {% endfor %} {% endfor %} {% for error in contact_form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+            {% endfor %} {% endif %}
         </form>
 
     </div>

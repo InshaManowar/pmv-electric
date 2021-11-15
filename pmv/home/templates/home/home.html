@@ -62,7 +62,7 @@
                             <div class="slider-text-middle ">
                                 <h1 style="color: white; font-family:Racing Sans One; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/Faster.png' %}" alt="Faster"></h1>
                                 <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is an urban mobility alternative, its optimum size will help you to cut through traffic & park with ease in the tightest of spots!</p>
-                                <div class="btn-dual "><a href="# " target="_blank " style="background-color: white; " class="btn btn-rounded btn-small no-margin-lr ">express interest</a>
+                                <div class="btn-dual "><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup-faster">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup-faster" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-200 mx-auto bg-white text-left modal-popup-main padding-25px-all">
@@ -92,7 +92,7 @@
                             <div class="slider-text-middle ">
                                 <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/smarter.png' %}" alt="smarter"></h1>
                                 <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is smarter than your average car, with advanced benefits like cruise control, remote parking assist & customizable infotainment system!</p>
-                                <div class="btn-dual "><a href="#" target="_blank " style="background-color: white; " class="btn
+                                <div class="btn-dual "><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
     btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup-smarter">know more</a>
                                     <!-- start modal pop-up -->
@@ -122,13 +122,20 @@
                             <div class="slider-text-middle ">
                                 <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/Greener.png' %}" alt="Greener"></h1>
                                 <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping, your everyday errand hasn’t been greener than this!</p>
-                                <div class="btn-dual "><a href="#" target="_blank " style="background-color: white; " class="btn
+                                <div class="btn-dual "><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
     btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim " data-wow-delay="0.6s" href="#modal-popup3">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup3" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-100 mx-auto bg-white text-left modal-popup-main padding-20px-all">
                                         <span class="text-extra-dark-gray text-left text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Greener</span>
-                                        <p class="margin-two">With almost the lowest KWh/Mile consumed by the EaS-E, the carbon emissions linked to the electricity generation are kept at minimal compared to any other EV on the market.
+                                        <p class="margin-two">
+                                            <p>EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping, your everyday errand hasn’t been greener than this.
+
+
+                                            </p>
+                                            <p>EaS-E not only has zero tail pipe emissions, but it is truly sustainable from the over lifecycle carbon emissions perspective.</p>
+                                            <p>
+                                                With almost the lowest KWh/Mile consumed by the EaS-E, the carbon emissions linked to the electricity generation are kept at minimal compared to any other EV on the market.</p>
                                             <p>To give you a number, the best selling EV cars consumes about 0.25-0.35KWh/Mile, where as the EaS-E will have a less than half of it at around .1-.125 Kwh/Mile. So the EaS-E is more than twice as green compared
                                                 to an average EV car on the American roads.
                                             </p> Also the battery pack manufacturing process is carbon intensive & it contributes largely to the over all lifecycle carbon emissions of the EV car. In most EV cars the battery pack sizes are around 30-60
@@ -215,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            <div href="#modal-popup-i-4" class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn popup-with-zoom-anim ">
+            <div class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn ">
                 <div style="height: auto;" class="box-shadow-custom feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin ">
                     <img width="76px " src="{% static 'home/images/6.png' %} " alt=" ">
                     <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700 ">Cruise Control</div>
@@ -226,7 +233,7 @@
             </div>
             <div href="#modal-popup-i-5" class="my-2 col-12 col-lg-4 col-md-6 sm-margin-30px-bottom wow fadeIn popup-with-zoom-anim ">
                 <div class="box-shadow-custom feature-box-18 bg-light-gray text-center border-radius-8 overflow-hidden z-index-0 position-relative padding-ten-lr padding-five-tb sm-padding-fifteen-tb last-paragraph-no-margin ">
-                    <img width="60px " src="{% static 'home/images/3.png' %} " alt=" ">
+                    <img width="60px " src="{% static 'home/images/parking-area.png' %} " alt=" ">
                     <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom font-weight-700 ">Remote Parking Assist
 
                     </div>
@@ -300,7 +307,7 @@
         </div>
     </div>
 </section> -->
-<section class="wow fadeIn p-0 " data-interval="500 ">
+<section class="wow fadeIn p-0 " data-interval="500 " style="margin-bottom: 5%;">
     <div class="swiper-auto-height-container position-relative w-100 " data-interval="1000 ">
         <div class="swiper-wrapper overflow-hidden " style="transition: 1.5s !important; " data-interval="1000 ">
             <!--     start slider item -->
@@ -411,7 +418,7 @@
                                 <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin ">
                                     <div class="feature-box ">
                                         <div class="content ">
-                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value" id="p1">10800 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 250%;"> miles</span>
+                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value" id="p1">10800 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;">  miles</span>
                                             <br><span class="written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom ">Annual Drive Distance </span>
                                             <br>
                                         </div>
@@ -421,7 +428,7 @@
                                 <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin" data-wow-delay="0.2s">
                                     <div class="feature-box ">
                                         <div class="content ">
-                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size:300%;" class="value" id="p2">1237.5</span><span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 250%;"> $</span>
+                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size:300%;" class="value" id="p2">1237.5</span><span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;"> $</span>
                                             <br>
                                             <span class="written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom">Annual Fuel Cost Saving</span>
                                             <br>
@@ -432,7 +439,7 @@
                                 <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin" data-wow-delay="0.4s">
                                     <div class="feature-box ">
                                         <div class="content ">
-                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;" class="value" id="p3">5504.4</span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 600; font-size: 250%;"> Lbs</span>
+                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;" class="value" id="p3">5504.4 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 600; font-size: 300%;"> Lbs</span>
                                             <br> <span class=" written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom ">Annual Carbon (CO2) Saving
                                                 </span>
                                             <br>
@@ -500,12 +507,12 @@
     <div class="container ">
         <div class="row ">
             <div class="col-12 col-lg-6 padding-ten-right lg-padding-five-right md-padding-15px-right md-margin-five-bottom wow fadeIn ">
-                <p class="alt-font text-medium margin-15px-bottom ">Technology expert people analysis</p>
+                <!-- <p class="alt-font text-medium margin-15px-bottom ">Technology expert people analysis</p> -->
                 <h5 class="alt-font text-white-2 margin-20px-bottom ">Feel free to get in touch with us any convenient way</h5>
 
                 <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
                     <div class="icon-box-holder align-middle d-table-cell position-relative ">
-                        <i class="icon-envelope icon-medium text-deep-pink padding-5px-top "></i>
+                        <i class="fa fa-envelope icon-medium text-deep-pink padding-5px-top "></i>
                         <div class="alt-font text-white-2 ">General Enquiries</div>
                         <p><a href="mailto:info@pmvelectricinc.com ">info@pmvelectricinc.com</a>
                         </p>
@@ -513,7 +520,7 @@
                 </div>
                 <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
                     <div class="icon-box-holder align-middle d-table-cell position-relative ">
-                        <i class="icon-chat icon-medium text-deep-pink padding-5px-top "></i>
+                        <i class="fab fa-whatsapp icon-medium text-deep-pink padding-5px-top "></i>
                         <div class="alt-font text-white-2 ">Business Phone</div>
                         <p>(415) 952 7144</p>
                     </div>
