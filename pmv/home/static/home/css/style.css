@@ -18650,6 +18650,12 @@ aside .latest-post li figure {
         text-align: center;
         padding-bottom: 20px;
     }
+    .image-phone {
+        margin-left: 10% !important;
+    }
+    .tech-specs {
+        margin-top: 15% !important;
+    }
 }
 
 .footer-dark .item.text {

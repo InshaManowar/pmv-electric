@@ -54,7 +54,7 @@
             <div class="container nav-header-container">
                 <!-- start logo -->
                 <div class="col-auto pl-lg-0">
-                    <a href="{% url 'home:home' %}" title="Pmc" class="logo"><img src="{% static 'home/images/logo.png' %}" data-rjs="{% static 'home/images/logo.png' %}" class="logo-dark" alt="PMV"><img src="{% static 'home/images/logo.png' %}" data-rjs="{% static 'home/images/logo.png' %}" alt="PMV" class="logo-light default"></a>
+                    <a href="{% url 'home:home' %}" title="Pmv electric" class="logo"><img src="{% static 'home/images/logo.png' %}" data-rjs="{% static 'home/images/logo.png' %}" class="logo-dark" alt="PMV"><img src="{% static 'home/images/logo.png' %}" data-rjs="{% static 'home/images/logo.png' %}" alt="PMV" class="logo-light default"></a>
                 </div>
                 <!-- end logo -->
 
@@ -78,7 +78,9 @@
                                 <!-- start sub menu -->
                                 <ul class="dropdown-menu" role="menu">
 
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:mission' %}">Mission</a>
 
+                                    </li>
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:gallery' %}">Gallery</a>
 
                                     </li>
@@ -88,17 +90,21 @@
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:dealer' %}">Dealership Enquiry</a>
 
                                     </li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:fleet' %}">Fleet Enquiry</a>
+
+                                    </li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:career' %}">Career</a>
+
+                                    </li>
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:faqs' %}">FAQs</a>
 
                                     </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:products' %}">Products</a>
+                                    <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:products' %}">Products</a> -->
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:mission' %}">Mission</a>
+                            </li>
 
-                                    </li>
 
-                                </ul>
+                            </ul>
                             </li>
                             <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'blog:blog-list' %}">Blog</a>
                                 <!-- start sub menu -->
@@ -108,12 +114,16 @@
                                 <!-- start sub menu -->
 
                             </li>
-                            <li class="dropdown simple-dropdown"><a href="{% url 'home:products' %}">EaS-E</a>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:specs' %}">EaS-E</a>
                                 <!-- start sub menu -->
 
                             </li>
 
-                            <li class="dropdown simple-dropdown"><a href="{% url 'home:products' %}">Reserve</a>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:contact' %}">Reserve</a>
+                                <!-- start sub menu -->
+
+                            </li>
+                            <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'home:contact' %}">Contact</a>
                                 <!-- start sub menu -->
 
                             </li>
@@ -218,19 +228,19 @@
                         <div class="col-md-4 mb-md-0 mb-4 border-left">
                             <h2 class="footer-heading">Discover</h2>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="py-1 d-block">Express Interest</a></li>
-                                <li><a href="#" class="py-1 d-block">Dealership</a></li>
-                                <li><a href="#" class="py-1 d-block">Fleet </a></li>
-                                <li><a href="#" class="py-1 d-block">Technical Specs.</a></li>
+                                <li><a href="{% url 'home:contact' %}" class="py-1 d-block">Express Interest</a></li>
+                                <li><a href="{% url 'home:dealer' %}" class="py-1 d-block">Dealership</a></li>
+                                <li><a href="{% url 'home:fleet' %}" class="py-1 d-block">Fleet </a></li>
+                                <li><a href="{% url 'home:specs' %}" class="py-1 d-block">Technical Specs.</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 mb-md-0 mb-4 border-left">
                             <h2 class="footer-heading">About</h2>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="py-1 d-block">Mission</a></li>
-                                <li><a href="#" class="py-1 d-block">FAQ</a></li>
-                                <li><a href="#" class="py-1 d-block">Careers</a></li>
-                                <li><a href="#" class="py-1 d-block">Blog</a></li>
+                                <li><a href="{% url 'home:mission' %}" class="py-1 d-block">Mission</a></li>
+                                <li><a href="{% url 'home:faqs' %}" class="py-1 d-block">FAQ</a></li>
+                                <li><a href="{% url 'home:career' %}" class="py-1 d-block">Careers</a></li>
+                                <li><a href="{% url 'blog:blog-list' %}" class="py-1 d-block">Blog</a></li>
                             </ul>
                         </div>
 
