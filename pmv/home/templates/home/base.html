@@ -5,7 +5,8 @@
 
 <head>
     <!-- title -->
-    <title>PMV Electric</title>
+    <title>PMV Electric INC</title>
+    {% block title %} {% endblock title %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
@@ -219,39 +220,51 @@
                     <div class="row">
                         <div class="col-md-12 col-lg-8 mb-md-0 mb-4">
                             <h2 class="footer-heading"><a href="#" class="logo">PMV Electric INC</a></h2>
-                            <p>Our mission is to build community & human oriented society, addressing the requirement of everyday personal mobility. We are on a mission to revolutionize the way we travel every day.</p>
+                            <p>Our mission is to revolutionise the way you travel, with Your Everyday Car!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-lg-7">
                     <div class="row">
                         <div class="col-md-4 mb-md-0 mb-4 border-left">
-                            <h2 class="footer-heading">Discover</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="{% url 'home:contact' %}" class="py-1 d-block">Express Interest</a></li>
-                                <li><a href="{% url 'home:dealer' %}" class="py-1 d-block">Dealership</a></li>
-                                <li><a href="{% url 'home:fleet' %}" class="py-1 d-block">Fleet </a></li>
-                                <li><a href="{% url 'home:specs' %}" class="py-1 d-block">Technical Specs.</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 mb-md-0 mb-4 border-left">
                             <h2 class="footer-heading">About</h2>
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'home:mission' %}" class="py-1 d-block">Mission</a></li>
+                                <li><a href="{% url 'home:specs' %}" class="py-1 d-block">Technical Specs.</a></li>
                                 <li><a href="{% url 'home:faqs' %}" class="py-1 d-block">FAQ</a></li>
-                                <li><a href="{% url 'home:career' %}" class="py-1 d-block">Careers</a></li>
+                                <!-- <li><a href="{% url 'home:career' %}" class="py-1 d-block">Careers</a></li> -->
                                 <li><a href="{% url 'blog:blog-list' %}" class="py-1 d-block">Blog</a></li>
                             </ul>
                         </div>
+                        <div class="col-md-4 mb-md-0 mb-4 border-left">
+                            <h2 class="footer-heading">Discover</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="{% url 'home:contact' %}" class="py-1 d-block">Express Interest</a></li>
+                                <li><a href="{% url 'home:dealer' %}" class="py-1 d-block">Dealership Enquiry</a></li>
+                                <li><a href="{% url 'home:fleet' %}" class="py-1 d-block">Fleet Enquiry </a></li>
+                                <li><a href="{% url 'home:career' %}" class="py-1 d-block">Career</a></li>
+                            </ul>
+                        </div>
+
 
                         <div class="col-md-4 mb-md-0 mb-4 border-left">
                             <h2 class="footer-heading">Social</h2>
                             <ul class="list-unstyled">
-                                <li> <span class="text-medium-gray">Facebook  </span><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                <li> <span class="text-medium-gray">Instagram </span><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i style="background-color: ;" class="fab fa-instagram" aria-hidden="true"></i></a>
                                 </li>
-                                <li> <span class="text-medium-gray">Twitter </span> <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <li></li> <span class="text-medium-gray">Instagram </span><a href="https://dribbble.com/" title="Dribbble" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                                <li> <span class="text-medium-gray">Facebook </span><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                                 </li>
+
+                                <li> <span class="text-medium-gray">YouTube  </span><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                </li>
+
+                                <li> <span class="text-medium-gray">Twitter  </span><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+
+                                <li> <span class="text-medium-gray">LinkedIn </span><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -263,10 +276,8 @@
 
                     <p class="copyright">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
+                        Copyright &copy; PMV Electric Pvt. Ltd.
+
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>

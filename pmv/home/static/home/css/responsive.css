@@ -13918,9 +13918,13 @@
     }
     /* btn */
     .btn-dual .btn {
-        margin: 10px auto !important;
-        display: table;
-        min-width: 160px;
+        margin: 4px auto !important;
+        min-width: 100px;
+        display: inline-block;
+        font-size: 70%;
+        text-align: center;
+        padding: 0% !important;
+        width: 120px;
     }
     /* search form style */
     .search-form {

@@ -47,7 +47,58 @@
         }
         .calci-padding {
             position: relative;
-            top: 5px;
+            top: -190px;
+        }
+        .phone-cover {
+            height: 100vh !important;
+        }
+        .phone-slider-text {
+            position: relative;
+            top: 60%;
+            font-size: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .phone-slider-header {
+            position: relative;
+            top: 58%;
+        }
+        .button-phone {
+            width: 40% !important;
+        }
+        .phone-slider {
+            position: relative;
+            bottom: 15%;
+        }
+        .phone-slider-2 {
+            position: relative;
+            bottom: 22%;
+        }
+        .phone-slider-3 {
+            position: relative;
+            bottom: 35%;
+        }
+        .phone-slider-4 {
+            position: relative;
+            bottom: 40%;
+        }
+        .phone-height {
+            height: 120vh !important;
+            ;
+        }
+        .phone-slider-auto {
+            height: 90vh !important;
+        }
+        .phone-slider-auto-text {
+            position: relative;
+            top: 70% !important;
+        }
+        .phone-slider-auto-text-2 {
+            position: relative;
+            top: 73% !important;
+        }
+        .phone-gallery {
+            width: 50% !important;
         }
     }
 </style>{% endblock style %}{% block content %}
@@ -55,14 +106,14 @@
     <div class="swiper-full-screen swiper-container height-100 width-100 black-move ">
         <div class="swiper-wrapper ">
             <!-- start slider item -->
-            <div class="swiper-slide cover-background " style="background-image:url( ' {% static 'home/images/carousel1.png' %}'); ">
+            <div class="swiper-slide cover-background phone-cover" style="background-image:url( ' {% static 'home/images/carousel1.png' %}'); ">
                 <div class="container position-relative full-screen ">
                     <div class="col-md-12 slider-typography text-center text-md-left ">
                         <div class="slider-text-middle-main ">
                             <div class="slider-text-middle ">
-                                <h1 style="color: white; font-family:Racing Sans One; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom "><img class="image-phone" src="{% static 'home/images/Faster.png' %}" alt="Faster"></h1>
-                                <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is an urban mobility alternative, its optimum size will help you to cut through traffic & park with ease in the tightest of spots!</p>
-                                <div class="btn-dual "><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn btn-rounded btn-small no-margin-lr ">express interest</a>
+                                <h1 style="color: white; font-family:Racing Sans One; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom phone-slider-header"><img class="image-phone" src="{% static 'home/images/Faster.png' %}" alt="Faster"></h1>
+                                <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is an urban mobility alternative, its optimum size will help you to cut through traffic & park with ease in the tightest of spots!</p>
+                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn btn-rounded btn-small no-margin-lr button-phone">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup-faster">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup-faster" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-200 mx-auto bg-white text-left modal-popup-main padding-25px-all">
@@ -85,14 +136,14 @@
             </div>
             <!-- end slider item -->
             <!-- start slider item -->
-            <div class="swiper-slide cover-background " style="background-image:url( '{% static 'home/images/carousel2.png' %}'); ">
+            <div class="swiper-slide cover-background phone-cover" style="background-image:url( '{% static 'home/images/carousel2.png' %}'); ">
                 <div class="container position-relative full-screen ">
                     <div class="col-md-12 slider-typography text-center text-md-left ">
                         <div class="slider-text-middle-main ">
                             <div class="slider-text-middle ">
-                                <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/smarter.png' %}" class="image-phone" alt="smarter"></h1>
-                                <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is smarter than your average car, with advanced benefits like cruise control, remote parking assist & customizable infotainment system!</p>
-                                <div class="btn-dual "><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
+                                <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto phone-slider-header sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/smarter.png' %}" class="image-phone" alt="smarter"></h1>
+                                <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is smarter than your average car, with advanced benefits like cruise control, remote parking assist & customizable infotainment system!</p>
+                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
     btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup-smarter">know more</a>
                                     <!-- start modal pop-up -->
@@ -115,31 +166,31 @@
                 </div>
             </div>
             <!-- start slider item -->
-            <div class="swiper-slide cover-background " style="background-image:url( '{% static 'home/images/carousel3.png' %}'); ">
+            <div class="swiper-slide cover-background phone-cover" style="background-image:url( '{% static 'home/images/carousel3.png' %}'); ">
                 <div class="container position-relative full-screen ">
                     <div class="col-md-12 slider-typography text-center text-md-left ">
                         <div class="slider-text-middle-main ">
                             <div class="slider-text-middle ">
-                                <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/Greener.png' %}" class="image-phone" alt="Greener"></h1>
-                                <p style="color: white; " class=" text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping, your everyday errand hasn’t been greener than this!</p>
-                                <div class="btn-dual "><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
+                                <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto phone-slider-header sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/Greener.png' %}" class="image-phone" alt="Greener"></h1>
+                                <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping, your everyday errand hasn’t been greener than this!</p>
+                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
     btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim " data-wow-delay="0.6s" href="#modal-popup3">know more</a>
                                     <!-- start modal pop-up -->
-                                    <div id="modal-popup3" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-100 mx-auto bg-white text-left modal-popup-main padding-20px-all">
+                                    <div id="modal-popup3" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-100 mx-auto bg-white text-left modal-popup-main padding-20px-all width-700px">
                                         <span class="text-extra-dark-gray text-left text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Greener</span>
                                         <p class="margin-two">
-                                            <p>EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping, your everyday errand hasn’t been greener than this.
+                                            <p>EaS-E is greener than most cars on the American roads. Perfect for office & back and grocery shopping, your everyday errand hasn’t been greener than this.
 
 
                                             </p>
                                             <p>EaS-E not only has zero tail pipe emissions, but it is truly sustainable from the over lifecycle carbon emissions perspective.</p>
                                             <p>
-                                                With almost the lowest KWh/Mile consumed by the EaS-E, the carbon emissions linked to the electricity generation are kept at minimal compared to any other EV on the market.</p>
+                                                With almost the lowest KWh/Mile consumed by the EaS-E, the carbon emissions linked to the electricity generation are kept at a minimal compared to any other EV on the market.</p>
                                             <p>To give you a number, the best selling EV cars consumes about 0.25-0.35KWh/Mile, where as the EaS-E will have a less than half of it at around .1-.125 Kwh/Mile. So the EaS-E is more than twice as green compared
                                                 to an average EV car on the American roads.
                                             </p> Also the battery pack manufacturing process is carbon intensive & it contributes largely to the over all lifecycle carbon emissions of the EV car. In most EV cars the battery pack sizes are around 30-60
-                                            Kwhrs, as against 10-12 KWhrs in the EaS-E. So the EaS-E is more than twice as green than most EVs on the road, in terms of carbon emissions from battery pack manufacturing process.
+                                            Kwhrs, as against 10-12 KWhrs in the EaS-E.
                                         </p>
                                         <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
                                     </div>
@@ -307,39 +358,34 @@
         </div>
     </div>
 </section> -->
-<section class="wow fadeIn p-0 " data-interval="500 " style="margin-bottom: 5%;">
+<section class="wow fadeIn p-0 phone-slider-auto" data-interval="500" style="margin-bottom: 5%;">
     <div class="swiper-auto-height-container position-relative w-100 " data-interval="1000 ">
         <div class="swiper-wrapper overflow-hidden " style="transition: 1.5s !important; " data-interval="1000 ">
             <!--     start slider item -->
-            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative" style="background-image:url({% static 'home/images/slider1.png' %});" data-interval="false ">
-                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class="padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
+            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative" style="background-image:url({% static 'home/images/slider1.png' %});" data-interval="false ">
+                <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
+                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 ">Sustainability</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">We only got one planet, Earth, and our everyday travel is causing great damage to it. This is not sustainable, and we must act now. EaS-E is one of the most sustainable alternatives to travel within the city for the everyday requirement.
                             <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>
             </div>
 
-            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider2.png' %}) ">
-                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class="padding-70px-all md-padding-40px-all bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
-                        <h5 class="alt-font text-white-2 width-100 md-width-100 " style="font-size: 185%; width: 100%; ">Intuitive and Convenient</h5>
+            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative" style="background-image:url({% static 'home/images/slider2.png' %});" data-interval="false ">
+                <div class="phone-slider-auto-text-2 position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
+                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Intuitive & Convenient</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">EaS-E is not just sustainable, but it’s also convenient & intuitive to use, with some of the top of the line benefits you will experience convenience of a smart phone in this smart car.
-                            <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a>
-                    </div>
+                            <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>
             </div>
-
-            <div class="swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/slider3.png' %}) ">
-                <div class="position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class="padding-70px-all md-padding-40px-all bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left ">
-                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Economics</h5>
-                        <p class="width-90 md-width-100 text-extra-light-gray ">Besides it being a sustainable alternative that is intuitive & convenient to use, it is also an economical option. With minimal maintenance & over the years due to minimal moving parts, and negligible operational cost, the EaS-E
-                            will suit your budget too.
-
-                        </p>
-                        <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a>
-                    </div>
+            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative" style="background-image:url({% static 'home/images/slider3.png' %});" data-interval="false ">
+                <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
+                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Economical</h5>
+                        <p class="width-90 md-width-100 text-extra-light-gray ">And now the most important part, besides it being a suatinable alternative that is intuitive & convenient to use, it is also an economical option. With minimal maintenance & over the years due to minimal moving parts, and negligible
+                            operational cost, the EaS-E will suit your budget too.
+                            <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>
             </div>
             <!-- end slider item -->
@@ -354,17 +400,17 @@
 <section class="wow fadeIn calci-wrapper " style="background-color: #22221f; height: 100vh ">
     <h3 class="text-center text-extra-light-gray alt-font font-weight-600 ">Environmental & Economical Benefits</h3>
     <br><br>
-    <div class="wrapper ">
+    <div class="wrapper phone-height">
         <div class="calculator ">
 
-            <div class="containe-fluid ">
+            <div class="container-fluid ">
                 <div class="row position-relative ">
                     <div class="col-lg-8 ">
 
                         <div class="row p-0 ">
 
                             <div class="col-lg-6">
-                                <form class="text-center">
+                                <form class="text-center phone-slider">
                                     <output class="text-center" id="amount" name="amount" for="vol">30</output>
                                     <br>
                                     <span class="int">0</span>
@@ -374,7 +420,7 @@
 
                                 </form>
 
-                                <form class="text-center my-5 ">
+                                <form class="text-center my-5 phone-slider-2 ">
                                     <output id="amount2" name="amount" for="vol2 ">30</output>
                                     <br>
                                     <span class="int ">15</span>
@@ -388,7 +434,7 @@
                             </div>
                             <br>
                             <div class="col-lg-6 ">
-                                <form class="text-center">
+                                <form class="text-center phone-slider-3 ">
                                     <output id="amount1" name="amount" for="vol1">4</output>
                                     <br>
                                     <span class="int">3</span>
@@ -398,7 +444,7 @@
 
                                 </form>
 
-                                <form class="text-center my-5 ">
+                                <form class="text-center my-5 phone-slider-4">
                                     <output id="amount3" name="amount" for="vol3">15</output>
                                     <br>
                                     <span class="int ">10</span>
@@ -415,10 +461,10 @@
                         <div class="container calci-output text-center ">
 
                             <div class="row ">
-                                <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin ">
+                                <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin out-box">
                                     <div class="feature-box ">
                                         <div class="content ">
-                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value" id="p1">10800 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;">  miles</span>
+                                            <span style="color: rgba(242, 248, 253, 0.925); font-weight: 800; font-size: 300%;" class="value" id="p1">10800 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;">  Miles</span>
                                             <br><span class="written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom ">Annual Drive Distance </span>
                                             <br>
                                         </div>
@@ -439,7 +485,7 @@
                                 <div width=100% class="col-lg-12 col-md-4 sm-margin-five-bottom last-paragraph-no-margin" data-wow-delay="0.4s">
                                     <div class="feature-box ">
                                         <div class="content ">
-                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;" class="value" id="p3">5504.4 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 600; font-size: 300%;"> Lbs</span>
+                                            <span style="color: rgba(242, 248, 253, 0.925);font-weight: 800; font-size: 300%;" class="value" id="p3">5504.4 </span> <span style="color: rgba(242, 248, 253, 0.925);font-weight: 600; font-size: 300%;"> lbs</span>
                                             <br> <span class=" written text-large alt-font text-capitalize text-white margin-10px-bottom md-margin-5px-bottom ">Annual Carbon (CO2) Saving
                                                 </span>
                                             <br>
@@ -485,19 +531,19 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-3 col-md-6 text-center sm-margin-ten-bottom wow fadeIn " data-wow-delay="0.2s ">
+            <div class="phone-gallery col-lg-3 col-md-6 col-sm-6 text-center  sm-margin-two-bottom wow fadeIn " data-wow-delay="0.2s ">
                 <a class="popup-youtube box-shadow-custom border-radius-7" href="https://www.youtube.com/watch?v=cIXjhkBkUAE ">
-                    <img src="{% static 'home/images/800x1022.png' %} " alt=" " class="w-100 box-shadow-custom border-radius-7">
+                    <img src="{% static 'home/images/800x1022.png' %}" alt="gallery pmv" class="w-100 box-shadow-custom border-radius-7">
                     <div class="icon-play ">
                         <div class="absolute-middle-center width-80 ">
-                            <img src="{% static 'home/images/icon-play.png' %} " alt=" ">
+                            <img src="{% static 'home/images/icon-play.png' %}" alt="pmv gallery">
                         </div>
                     </div>
                 </a>
             </div>
 
-            <div class="col-12 col-lg-3 col-md-6 text-center wow fadeIn " data-wow-delay="0.4s ">
-                <img src="{% static 'home/images/800x1022_1.png' %} " alt="logo " class="w-100 box-shadow-custom border-radius-7">
+            <div class="phone-gallery col-lg-3 col-md-6 col-sm-4 text-center wow fadeIn " data-wow-delay="0.4s ">
+                <img src="{% static 'home/images/800x1022_1.png' %}" alt="logo" class="w-100 box-shadow-custom border-radius-7">
             </div>
         </div>
     </div>
@@ -508,7 +554,7 @@
         <div class="row ">
             <div class="col-12 col-lg-6 padding-ten-right lg-padding-five-right md-padding-15px-right md-margin-five-bottom wow fadeIn ">
                 <!-- <p class="alt-font text-medium margin-15px-bottom ">Technology expert people analysis</p> -->
-                <h5 class="alt-font text-white-2 margin-20px-bottom ">Feel free to get in touch with us any convenient way</h5>
+                <h5 class="alt-font text-white-2 margin-20px-bottom ">Get in touch</h5>
 
                 <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
                     <div class="icon-box-holder align-middle d-table-cell position-relative ">
@@ -521,14 +567,14 @@
                 <div class="icon-box d-table w-100 mx-auto mx-lg-0 last-paragraph-no-margin ">
                     <div class="icon-box-holder align-middle d-table-cell position-relative ">
                         <i class="fab fa-whatsapp icon-medium text-deep-pink padding-5px-top "></i>
-                        <div class="alt-font text-white-2 ">Business Phone</div>
+                        <div class="alt-font text-white-2 ">Whatsapp </div>
                         <p>(415) 952 7144</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 wow fadeIn ">
-                <div class="padding-fifteen-all bg-white border-radius-6 lg-padding-seven-all ">
-                    <div class="text-extra-dark-gray alt-font text-large font-weight-600 margin-30px-bottom ">Looking for an excellent business idea?</div>
+                <div class="padding-ten-all bg-white border-radius-6 lg-padding-seven-all ">
+                    <div class="text-extra-dark-gray alt-font text-large font-weight-600 margin-30px-bottom ">Drop us a message</div>
                     <div>
                         <form id="contact-form " action="javascript:void(0) " method="post ">
                             <div id="success-contact-form " class="mx-0 "></div>

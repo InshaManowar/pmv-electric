@@ -68,16 +68,9 @@ class ContactForm(forms.Form):
     company = forms.CharField(max_length=200)
     email_address = forms.EmailField(max_length = 150)
     phone = forms.CharField(max_length=10)
-    message = forms.CharField(widget = forms.Textarea, max_length = 2000)
+    message = forms.CharField(widget = forms.Textarea, max_length = 2000  )
     class Meta:
         fields = '__all__'
-        widgets = {
-            'name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Name'}),
-            'company_name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Company Name'}),
-            'phone': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Phone'}),
-            'email_address': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}),
-            'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Message'}),
-        }
         labels ={
             'name':'',
             'email':'',
@@ -85,4 +78,12 @@ class ContactForm(forms.Form):
             'company_name':'',
             'phone':'',
         }
+        widgets = {
+            'name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Name'}),
+            'company_name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Company Name'}),
+            'phone': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Phone'}),
+            'email_address': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}),
+            'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Message'}),
+        }
+
         

@@ -11,12 +11,19 @@
             background-color: rgba(0, 0, 0, 0.733);
             padding: 3%;
             border-radius: 7px;
-            height: 70vh !important;
+            height: 80vh !important;
             position: relative;
             right: 0px !important;
             top: 5%;
             margin-bottom: 5% !important;
             bottom: 15%;
+        }
+        .phone-form {
+            position: relative;
+            top: -10px !important;
+        }
+        .btn {
+            margin-bottom: 13% !important;
         }
     }
     
@@ -27,7 +34,13 @@
     }
     
     #project-contact-form {
-        height: 70%;
+        height: 80%;
+    }
+    
+    .phone-form {
+        position: relative;
+        bottom: 65px !important;
+        margin-bottom: 50% !important;
     }
     
     body {
@@ -72,10 +85,10 @@
     .form-bg {
         background-color: rgba(0, 0, 0, 0.733);
         padding: 3%;
-        margin-top: 8% !important;
-        margin-bottom: 8% !important;
+        margin-top: 6% !important;
         border-radius: 7px;
         position: relative;
+        height: 100vh;
         right: -300px;
     }
 </style> {% endblock style %} {% block content %}
@@ -89,14 +102,14 @@
             </div>
         </div>
 
-        <form id="project-contact-form" method="post">
+        <form id="project-contact-form" method="post" class="phone-form">
 
             <div class="row">
                 <div class="col-12">
                     <div id="success-project-contact-form" class="mx-0"></div>
                     {% csrf_token %} {{form_fleet.as_p}}
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send message</button>
+                        <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send enquiry</button>
                     </div>
                 </div>
 

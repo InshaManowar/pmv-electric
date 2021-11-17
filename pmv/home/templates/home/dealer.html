@@ -7,6 +7,10 @@
             margin-top: 15% !important;
             font-size: 110%;
         }
+        .phone-form {
+            position: relative;
+            bottom: 20px !important;
+        }
         .form-bg {
             background-color: rgba(0, 0, 0, 0.733);
             padding: 3%;
@@ -24,6 +28,11 @@
         width: 50vw;
         margin: auto;
         margin-top: 3%;
+    }
+    
+    .phone-form {
+        position: relative;
+        bottom: 65px !important;
     }
     
     #project-contact-form {
@@ -72,9 +81,9 @@
     .form-bg {
         background-color: rgba(0, 0, 0, 0.733);
         padding: 3%;
-        margin-top: 8% !important;
+        margin-top: 7% !important;
         margin-bottom: 8% !important;
-        height: 80vh;
+        height: 85vh;
         border-radius: 7px;
         position: relative;
         right: -300px;
@@ -97,7 +106,7 @@
                     <div id="success-project-contact-form" class="mx-0"></div>
                     {% csrf_token %} {{form_dealer.as_p}}
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send message</button>
+                        <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send enquiry</button>
                     </div>
                 </div>
 

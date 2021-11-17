@@ -1,18 +1,41 @@
-{% extends "home/base.html" %} {% load static %} {% block content %}
-<section class="wow fadeIn">
+{% extends "home/base.html" %} {% load static %} {% block style %}
+
+<style>
+    @media only screen and (max-width: 768px) {
+        .phone-size {
+            position: relative;
+            bottom: 8% !important;
+        }
+        .phone-margin {
+            margin-top: 20% !important;
+            line-height: 10%;
+        }
+    }
+    
+    .phone-size {
+        position: relative;
+        bottom: 2%;
+    }
+    
+    .phone-margin {
+        margin-top: 10%;
+    }
+</style>
+{% endblock style %} {% block content %}
+<section class="wow fadeIn phone-margin" style="padding: 20px 0 !important;">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10 last-paragraph-no-margin text-center">
-            <h2 style="font-size: 4rem;" class="text-extra-dark-gray alt-font font-weight-600">Our <span class="d-block d-md-inline-block" style="color: #527ea5;">Mission</span></h2>
+            <h2 style="font-size: 7rem; line-height: 90%;" class="text-extra-dark-gray alt-font font-weight-600">Our <span class="d-block d-md-inline-block" style="color: #38aa03;">Mission</span></h2>
 
         </div>
     </div>
 </section>
 
-<section class="wow fadeIn">
+<section class="wow fadeIn phone-size">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-10 mx-auto text-center text-md-left">
-                <h5 class="alt-font text-extra-dark-gray">What you get by <strong>achieving your goals is not as important</strong> as what you become by achieving your goals.</h5>
+                <h5 class="alt-font text-extra-dark-gray">The Future is <strong>Electric </strong> </h5>
                 <p class="text-center text-md-justify text-medium line-height-28 sm-line-height-26">Climate change & global warming are the biggest challenge of our times. And the way we travel everyday in our cars is one of the biggest contributor to climate change. The ugly signs of climate change are already visible with the increase
                     in extreme weather related incidences just in the last few years. However not all is lost yet, we can still reverse this trend, but we must act now & decisively to reduce the carbon foot print associated how we travel everyday. Going
                     Electric with our everyday personal travel will surely go a long way in our battle against imminent climate change issue.
@@ -29,7 +52,7 @@
             <div class="col-12 col-lg-6 position-relative md-height-550px sm-height-350px cover-background wow slideInLeft" data-wow-duration="900ms" style="background-image: url({% static 'home/images/mission1.png' %});">
             </div>
             <div class="col-12 col-lg-6 last-paragraph-no-margin padding-eight-lr padding-seven-tb md-padding-twelve-lr md-padding-ten-tb sm-padding-15px-lr text-center text-lg-left wow slideInRight" data-wow-duration="900ms">
-                <h5 class="alt-font text-light-gray">There is no passion to be found playing small - in settling for a <strong>life that is less</strong> than the one you are capable of living.</h5>
+                <h5 class="alt-font text-light-gray">The Future is <strong> Sustainable</strong></h5>
                 <p class="text-center text-light-gray text-md-justify">Let’s be honest, solo driving a 3500-4500 Pound Electric car with a range of 300-400 miles per charge, to our office 15-20 miles away every day, isn’t a sustainable way to travel. While we all agree that the future is electric, we must
                     also be practical to the ground realties of our electric grid supply. With the bulk of the electricity still being generated from fossil fuels, the electric car isn’t as green as you think. So to build a truly green electric car, we
                     must right size the electric car, to suit the bulk of the requirement, which is the everyday use. The everyday use of the car is solo, and small distances. </p>
@@ -44,10 +67,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-10 mx-auto text-center text-md-left">
-                <h5 class="alt-font text-extra-dark-gray">What you get by <strong>achieving your goals is not as important</strong> as what you become by achieving your goals.</h5>
-                <p class="text-center text-md-justify text-medium line-height-28 sm-line-height-26">Climate change & global warming are the biggest challenge of our times. And the way we travel everyday in our cars is one of the biggest contributor to climate change. The ugly signs of climate change are already visible with the increase
-                    in extreme weather related incidences just in the last few years. However not all is lost yet, we can still reverse this trend, but we must act now & decisively to reduce the carbon foot print associated how we travel everyday. Going
-                    Electric with our everyday personal travel will surely go a long way in our battle against imminent climate change issue.
+                <h5 class="alt-font text-extra-dark-gray">The Future is<strong> EaS-E</strong></h5>
+                <p class="text-center text-md-justify text-medium line-height-28 sm-line-height-26">Our mission is to build community & human oriented society, addressing the requirement of everyday personal mobility. We are on a mission to revolutionize the way we travel every day. The mission stems from our goal to leave the world
+                    a better place than we found it, for our children. We will be doing a great disservice to our children if we had it any other way. EaS-E with the right size of the car, and the right range to address the everyday requirement is better
+                    positioned to satisfy the everyday personal mobility requirement sustainably than the 3500-4500 pound, 300-400 Miles range electric car.
                 </p>
 
             </div>
