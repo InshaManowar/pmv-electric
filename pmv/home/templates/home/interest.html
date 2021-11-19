@@ -1,0 +1,120 @@
+{% extends "home/base.html" %} {% block style %} {% load static %}
+<style>
+    @media only screen and (max-width: 768px) {
+        .wow {
+            width: 100vw !important;
+            margin-left: 0;
+            margin-top: 15% !important;
+            font-size: 110%;
+        }
+        .form-bg {
+            background-color: rgba(0, 0, 0, 0.733);
+            padding: 3%;
+            border-radius: 7px;
+            height: 80vh !important;
+            position: relative;
+            right: 0px !important;
+            top: 5%;
+            margin-bottom: 5% !important;
+            bottom: 15%;
+        }
+        .phone-form {
+            position: relative;
+            top: -10px !important;
+        }
+        .btn {
+            margin-bottom: 13% !important;
+        }
+    }
+    
+    .wow {
+        width: 50vw;
+        margin: auto;
+        margin-top: 3%;
+    }
+    
+    #project-contact-form {
+        height: 80%;
+    }
+    
+    .phone-form {
+        position: relative;
+        bottom: 65px !important;
+        margin-bottom: 50% !important;
+    }
+    
+    body {
+        background-image: url('{% static 'home/images/carousel2.png' %}');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    
+    input {
+        background-color: rgba(238, 235, 230, 0) !important;
+        border-bottom: 2px solid white !important;
+        border-top: none !important;
+        color: white !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+    
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.795) !important;
+        font-size: 100%;
+        font-family: Montserrat !important;
+    }
+    
+    textarea::placeholder {
+        color: rgba(255, 255, 255, 0.74) !important;
+        font-size: 100%;
+        font-family: Montserrat !important;
+    }
+    
+    textarea {
+        background-color: rgba(238, 235, 230, 0) !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.76) !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        font-family: Montserrat !important;
+        height: 100px !important;
+        color: white !important;
+    }
+    
+    .form-bg {
+        background-color: rgba(0, 0, 0, 0.733);
+        padding: 3%;
+        margin-top: 6% !important;
+        border-radius: 7px;
+        position: relative;
+        height: 100vh;
+        right: -300px;
+    }
+</style> {% endblock style %} {% block content %}
+<section class="wow fadeIn form-bg " id="start-your-project">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
+                <div class="position-relative overflow-hidden w-100">
+                    <span class="text-extra-large alt-font font-weight-600 text-uppercase text-white-2"> Express Interest </span>
+                </div>
+            </div>
+        </div>
+
+        <form id="project-contact-form" method="post" class="phone-form">
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="success-project-contact-form" class="mx-0"></div>
+                    {% csrf_token %} {{form_interest.as_p}}
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send message</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</section>{% endblock content %}

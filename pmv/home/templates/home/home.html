@@ -1,4 +1,9 @@
 {% extends "home/base.html" %} {% load static %} {% block style %}
+<script>
+    $(function() {
+        $("#popModal").modal('show');
+    });
+</script>
 <style>
     .outer-content {
         font-family: Montserrat;
@@ -101,7 +106,13 @@
             width: 50% !important;
         }
     }
-</style>{% endblock style %}{% block content %}
+</style>
+<script>
+    $(window).load(function() {
+        $('#myModal').modal('show');
+    });
+</script>
+{% endblock style %}{% block content %}
 <section class="no-padding main-slider height-100 mobile-height wow fadeIn ">
     <div class="swiper-full-screen swiper-container height-100 width-100 black-move ">
         <div class="swiper-wrapper ">
@@ -109,11 +120,11 @@
             <div class="swiper-slide cover-background phone-cover" style="background-image:url( ' {% static 'home/images/carousel1.png' %}'); ">
                 <div class="container position-relative full-screen ">
                     <div class="col-md-12 slider-typography text-center text-md-left ">
-                        <div class="slider-text-middle-main ">
+                        <div class="slider-text-middle-main " style="position: relative; top: 11%;">
                             <div class="slider-text-middle ">
                                 <h1 style="color: white; font-family:Racing Sans One; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto sm-width-100 sm-margin-15px-bottom phone-slider-header"><img class="image-phone" src="{% static 'home/images/Faster.png' %}" alt="Faster"></h1>
                                 <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is an urban mobility alternative, its optimum size will help you to cut through traffic & park with ease in the tightest of spots!</p>
-                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn btn-rounded btn-small no-margin-lr button-phone">express interest</a>
+                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:interest' %}" style="background-color: white; " class="btn btn-rounded btn-small no-margin-lr button-phone">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup-faster">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup-faster" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-200 mx-auto bg-white text-left modal-popup-main padding-25px-all">
@@ -122,11 +133,9 @@
                                             Far too many single/double occupancy big cars take the road everyday across America. And these big boys hog all the road space & parking space available in the city. So much so, that searching for a parking spot costs a driver 1000-1500$ annually in major
                                             cities across America in wasted time, fuel & emissions.
                                             <p>The overall Annual figure of wasted dollars finding a parking space in cities in America is a staggering 72 Billion Dollars. </p> With the purpose built EaS-E & its optimum size for the everyday use, you will
-                                            cut through traffic at a faster pace & also park faster at the tightest spot available, helping you save time & dollars
-
-
+                                            cut through traffic at a faster pace & also park faster at the tightest spot available, helping you save time & dollars.
                                         </p>
-                                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -139,11 +148,11 @@
             <div class="swiper-slide cover-background phone-cover" style="background-image:url( '{% static 'home/images/carousel2.png' %}'); ">
                 <div class="container position-relative full-screen ">
                     <div class="col-md-12 slider-typography text-center text-md-left ">
-                        <div class="slider-text-middle-main ">
+                        <div class="slider-text-middle-main " style="position: relative; top: 11%;">
                             <div class="slider-text-middle ">
                                 <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto phone-slider-header sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/smarter.png' %}" class="image-phone" alt="smarter"></h1>
                                 <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is smarter than your average car, with advanced benefits like cruise control, remote parking assist & customizable infotainment system!</p>
-                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
+                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:interest' %}" style="background-color: white; " class="btn
     btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim" data-wow-delay="0.6s" href="#modal-popup-smarter">know more</a>
                                     <!-- start modal pop-up -->
@@ -157,7 +166,7 @@
                                             <p>You can customize the look of the infotainment system to your liking at the simple touch of the button.</p>
 
                                         </p>
-                                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -165,25 +174,43 @@
                     </div>
                 </div>
             </div>
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
             <!-- start slider item -->
             <div class="swiper-slide cover-background phone-cover" style="background-image:url( '{% static 'home/images/carousel3.png' %}'); ">
                 <div class="container position-relative full-screen ">
                     <div class="col-md-12 slider-typography text-center text-md-left ">
-                        <div class="slider-text-middle-main ">
+                        <div class="slider-text-middle-main " style="position: relative; top: 11%;">
                             <div class="slider-text-middle ">
                                 <h1 style="color: white; " class="alt-font font-weight-700 letter-spacing-minus-1 line-height-80 width-55 margin-35px-bottom lg-width-60 md-width-70 lg-line-height-auto phone-slider-header sm-width-100 sm-margin-15px-bottom "><img src="{% static 'home/images/Greener.png' %}" class="image-phone" alt="Greener"></h1>
-                                <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping, your everyday errand hasn’t been greener than this!</p>
-                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:contact' %}" target="_blank " style="background-color: white; " class="btn
-    btn-rounded btn-small no-margin-lr ">express interest</a>
+                                <p style="color: white; " class="phone-slider-text text-large margin-four-bottom width-40 lg-width-50 md-width-60 sm-width-100 sm-margin-15px-bottom ">EaS-E is greener than most cars on American roads, perfect for office & back, grocery shopping. Your everyday errand hasn’t been greener than this!</p>
+                                <div class="btn-dual phone-slider-text"><a href="{% url 'home:interest' %}" style="background-color: white;" class="btn btn-rounded btn-small no-margin-lr ">express interest</a>
                                     <a class="btn btn-medium btn-rounded btn-transparent-white popup-with-move-anim " data-wow-delay="0.6s" href="#modal-popup3">know more</a>
                                     <!-- start modal pop-up -->
                                     <div id="modal-popup3" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-12 width-100 mx-auto bg-white text-left modal-popup-main padding-20px-all width-700px">
                                         <span class="text-extra-dark-gray text-left text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Greener</span>
                                         <p class="margin-two">
-                                            <p>EaS-E is greener than most cars on the American roads. Perfect for office & back and grocery shopping, your everyday errand hasn’t been greener than this.
 
-
-                                            </p>
                                             <p>EaS-E not only has zero tail pipe emissions, but it is truly sustainable from the over lifecycle carbon emissions perspective.</p>
                                             <p>
                                                 With almost the lowest KWh/Mile consumed by the EaS-E, the carbon emissions linked to the electricity generation are kept at a minimal compared to any other EV on the market.</p>
@@ -192,7 +219,7 @@
                                             </p> Also the battery pack manufacturing process is carbon intensive & it contributes largely to the over all lifecycle carbon emissions of the EV car. In most EV cars the battery pack sizes are around 30-60
                                             Kwhrs, as against 10-12 KWhrs in the EaS-E.
                                         </p>
-                                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Back</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +256,7 @@
                     <div id="modal-popup-i" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main padding-50px-all">
                         <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Eas-E Mode: Feet Free Driving In Traffic</span>
                         <p class="margin-four">Use steering mounted buttons to drive the car forward at max speed of 15 Mph & brake using steering mounted buttons for feet free driving experience.</p>
-                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Back</a> -->
                     </div>
                 </div>
             </div>
@@ -242,7 +269,7 @@
                     <div id="modal-popup-i-1" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main padding-50px-all">
                         <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Regenerative Braking</span>
                         <p class="margin-four">The EaS-E has regenerative braking that slows down the car while recharging the batteries by converting the kinetic energy of the car into electrical energy. It boosts the range of the EaS-E.</p>
-                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Back</a> -->
                     </div>
                 </div>
             </div>
@@ -256,7 +283,7 @@
                         <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Remote Controlled AC, lights, windows, and horn</span>
                         <p class="margin-four">Connect remotely to your EaS-E using an app in your phone, to get vitals of the EaS-E & also switch on & off some of the controls. You can remotely pre cool your cabin by switching on the Aircon, or control the windows to accept
                             a delivery right into your car remotely. Get the EaS-E to honk remotely to find your parked location in a big parking lot.</p>
-                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Back</a> -->
                     </div>
                 </div>
             </div>
@@ -269,7 +296,7 @@
                     <div id="modal-popup-i-3" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main padding-50px-all">
                         <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Keep Your Vehicle Upto-Date With Over The Air (OTA) Updates</span>
                         <p class="margin-four"> Your EaS-E comes with over the air software updates to keep your car, up to date with latest software. This would include better connectivity & functionality besides improvement in range & performance. </p>
-                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Back</a> -->
                     </div>
                 </div>
             </div>
@@ -296,7 +323,7 @@
                             1 Mph speed while you control the EaS-E from outside with full visibility of the EaS-E from all sides.
 
                         </p>
-                        <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                        <!-- <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Back</a> -->
                     </div>
                 </div>
             </div>
@@ -365,7 +392,7 @@
             <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative" style="background-image:url({% static 'home/images/slider1.png' %});" data-interval="false ">
                 <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
                     <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
-                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Sustainability</h5>
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Sustainable</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">We only got one planet, Earth, and our everyday travel is causing great damage to it. This is not sustainable, and we must act now. EaS-E is one of the most sustainable alternatives to travel within the city for the everyday requirement.
                             <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>
@@ -374,7 +401,7 @@
             <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative" style="background-image:url({% static 'home/images/slider2.png' %});" data-interval="false ">
                 <div class="phone-slider-auto-text-2 position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
                     <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
-                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Intuitive & Convenient</h5>
+                        <h5 class="alt-font text-white-2 width-90 md-width-100 ">Intuitive</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">EaS-E is not just sustainable, but it’s also convenient & intuitive to use, with some of the top of the line benefits you will experience convenience of a smart phone in this smart car.
                             <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>
@@ -383,7 +410,7 @@
                 <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
                     <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 ">Economical</h5>
-                        <p class="width-90 md-width-100 text-extra-light-gray ">And now the most important part, besides it being a suatinable alternative that is intuitive & convenient to use, it is also an economical option. With minimal maintenance & over the years due to minimal moving parts, and negligible
+                        <p class="width-90 md-width-100 text-extra-light-gray ">And now the most important part, besides it being a suatinable alternative that is intuitive & convenient to use, it is also an economical option. With minimal maintenance over the years due to minimal moving parts, and negligible
                             operational cost, the EaS-E will suit your budget too.
                             <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>

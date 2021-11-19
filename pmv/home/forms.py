@@ -1,8 +1,9 @@
 from django import forms
 from django.forms import fields, widgets
 from django.forms.models import ModelForm
-from home.models import CareerRequest, Dealer, Fleet
+from home.models import CareerRequest, Dealer, Fleet, Interest, Order
 from django.contrib.admin.widgets import AdminDateWidget
+
 
 class CareerForm(forms.ModelForm):
 
@@ -42,6 +43,43 @@ class DealerForm(forms.ModelForm):
                         'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
 
             'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Your message'}),
+        }
+class InterestForm(forms.ModelForm):
+    class Meta:
+        model = Interest
+        fields = '__all__'
+        labels ={
+            'name':'',
+            'email':'',
+            'message':'',
+            'phone':'',
+            'pin_code':'',
+            'location':'',
+        }
+        widgets = {
+            'name': forms.TextInput(attrs = {'class':'form-control','placeholder':'Name'}),
+            'location': forms.TextInput(attrs = {'class':'form-control','placeholder':'Location'}),
+            'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
+            'pin_code': forms.TextInput(attrs = {'class':'form-control','placeholder':'Pin Code'}),
+            'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email id'}),
+                        'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
+
+            'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Your message'}),
+        }
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = '__all__'
+     
+        widgets = {
+            'first_name': forms.TextInput(attrs = {'class':'form-control','placeholder':'First Name'}),
+            'last_name': forms.TextInput(attrs = {'class':'form-control','placeholder':'Last Name'}),
+            'company_name': forms.TextInput(attrs = {'class':'form-control','placeholder':'Company Name'}),
+            'city': forms.TextInput(attrs = {'class':'form-control','placeholder':'City'}),
+            'postcode': forms.TextInput(attrs = {'class':'form-control','placeholder':'Postal code/zip code'}),
+            'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
+            'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email id'}),
+            'order_notes': forms.Textarea(attrs = {'class':'form-control','placeholder':'Order notes (if any)'}),
         }
 class FleetForm(forms.ModelForm):
     class Meta:
