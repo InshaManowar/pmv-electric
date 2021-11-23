@@ -6,7 +6,7 @@ from embed_video.admin import AdminVideoMixin
 from .models import Item
 # Register your models here.
 
-class CareerRequestAdmin(ImportExportModelAdmin):
+class CareerRequestAdmin(admin.ModelAdmin):
     list_display = ('name','email', 'interest')
 admin.site.register(CareerRequest, CareerRequestAdmin)
 

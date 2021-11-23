@@ -12,6 +12,14 @@ career = (
     ('Sales', 'Sales')
 )
 
+contact_subject = (
+    ('Accounts', 'Accounts'),
+    ('Administration', 'Administration'),
+    ('Human Resources', 'Human Resources'),
+    ('Technical', 'Technical'),
+    ('Sales', 'Sales')
+)
+
 country = (
     ('USA', "United States of America"),
 )
@@ -61,6 +69,15 @@ class Dealer(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=11)
+    message = models.TextField()
+
+    class Meta:
+        verbose_name = 'Dealer Query'
+        verbose_name_plural = 'Dealers enquiries'
+class Contact(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    subject = models.CharField(max_length=255, choices=contact_subject, default=None, blank=True)
     message = models.TextField()
 
     class Meta:

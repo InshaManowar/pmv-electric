@@ -119,9 +119,36 @@ def interest_form(request):
     context = {'form_interest':form_interest}
     return render(request, 'home/interest.html', context)
 
+def contact_form(request):
+    form_contact = ContactForm()
+    if request.method == 'POST':
+        form_interest = ContactForm(request.POST)
+        if form_contact.is_valid():
+            form_contact.save()
+            subject = 'Someone expressed interest!'
+            body = {
+                'name': form_interest.cleaned_data['name'], 
+			    'email': form_interest.cleaned_data['email'], 
+			    'subject':form_interest.cleaned_data['subject'],
+                'message':form_interest.cleaned_data['message'], 
+                }
+            message = "\n".join(body.values())
+        
+            recipient = str(form_interest['email'].value())
+            
+            try:
+                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect ('home:career_confirm')
+    context = {'form_contact':form_contact}
+    return render(request, 'home/contact.html', context)
+
 
 def career_confirm(request):
     return render(request, 'home/career_confirm.html')
+
+
 def faqs(request):
     return render(request, 'home/faq.html')
 
@@ -131,31 +158,31 @@ def gallery(request):
     return render(request, 'home/gallery.html', {'photo':photo, 'obj':obj})
 
 
-def contactus(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST or None)
-        if form.is_valid():
-            subject = "Subject Inquiry"
+# def contactus(request):
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST or None)
+#         if form.is_valid():
+#             subject = "Subject Inquiry"
 
-            body = {
-                'name': form.cleaned_data['name'], 
-			    'company': form.cleaned_data['company'], 
-			    'email': form.cleaned_data['email_address'], 
-			    'message':form.cleaned_data['message'], 
-			    'phone':form.cleaned_data['phone'], 
-                }
+#             body = {
+#                 'name': form.cleaned_data['name'], 
+# 			    'company': form.cleaned_data['company'], 
+# 			    'email': form.cleaned_data['email_address'], 
+# 			    'message':form.cleaned_data['message'], 
+# 			    'phone':form.cleaned_data['phone'], 
+#                 }
 
-            message = "\n".join(body.values())
-            recipient = str(form['email_address'].value())
+#             message = "\n".join(body.values())
+#             recipient = str(form['email_address'].value())
             
-            try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect ("home:home")
+#             try:
+#                 send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+#             except BadHeaderError:
+#                 return HttpResponse('Invalid header found.')
+#             return redirect ("home:home")
     
-    form = ContactForm(request.POST or None)
-    return render(request, "home/home.html", {'contact_form':form})
+#     form = ContactForm(request.POST or None)
+#     return render(request, "home/home.html", {'contact_form':form})
 
 
 
