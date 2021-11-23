@@ -11,7 +11,7 @@ class CareerRequestAdmin(admin.ModelAdmin):
 admin.site.register(CareerRequest, CareerRequestAdmin)
 
 class PhotoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('image',)
     
 admin.site.register(Photos, PhotoAdmin)
 
