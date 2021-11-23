@@ -1,5 +1,5 @@
 var a = parseInt(30);
-var b = parseFloat(4.0);
+var b = parseInt(4.0);
 var c = parseInt(30);
 var d = parseInt(15);
 
@@ -14,7 +14,7 @@ function test() {
 
 function test1() {
     console.log("test1")
-    b = parseFloat(vol1.value);
+    b = parseInt(vol1.value);
     console.log(b)
     disp();
 

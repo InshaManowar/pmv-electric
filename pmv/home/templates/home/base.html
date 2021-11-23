@@ -5,7 +5,7 @@
 
 <head>
     <!-- title -->
-    <title>PMV Electric INC</title>
+    <title>PMV Electric Inc</title>
     {% block title %} {% endblock title %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -72,37 +72,57 @@
                             <!-- start menu item -->
                             <li class="dropdown megamenu-fw">
                                 <a href="{% url 'home:home' %}">Home</a>
-                                <!-- start sub menu -->
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:mission' %}" class=" d-lg-none "> Our Mission</a>
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href=" {% url 'home:gallery' %}" class=" d-lg-none ">Gallery</a>
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href=" {% url 'home:specs' %}" class=" d-lg-none ">Technical Specification</a>
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:dealer' %}" class=" d-lg-none ">Dealership Enquiry</a>
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:fleet' %}" class=" d-lg-none ">Fleet Enquiry</a>
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:career' %}" class=" d-lg-none ">Career</a>
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:faqs' %}" class=" d-lg-none ">FAQs</a>
                             </li>
                             <!-- end menu item -->
-                            <li class="d-lg-none dropdown simple-dropdown"><a href="{% url 'home:home' %}">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i>
-                                <!-- start sub menu -->
-                                <ul class="dropdown-menu" role="menu">
+                            <!-- <li class="d-lg-none dropdown simple-dropdown"><a href="{% url 'home:home' %}">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i> -->
+                            <!-- start sub menu -->
+                            <ul class="dropdown-menu" role="menu">
 
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:mission' %}">Mission</a>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:mission' %}">Our Mission</a>
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:gallery' %}">Gallery</a>
+                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:gallery' %}">Gallery</a>
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:specs' %}">Technical Specification</a>
+                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:specs' %}">Technical Specification</a>
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:dealer' %}">Dealership Enquiry</a>
+                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:dealer' %}">Dealership Enquiry</a>
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:fleet' %}">Fleet Enquiry</a>
+                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:fleet' %}">Fleet Enquiry</a>
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:career' %}">Career</a>
+                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:career' %}">Career</a>
 
-                                    </li>
-                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:faqs' %}">FAQs</a>
+                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:faqs' %}">FAQs</a>
 
-                                    </li>
-                                    <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:products' %}">Products</a> -->
+                                </li>
+                                <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:products' %}">Products</a> -->
 
-                            </li>
+                                </li>
 
 
                             </ul>
@@ -229,7 +249,7 @@
                         <div class="col-md-4 mb-md-0 mb-4 border-left">
                             <h2 class="footer-heading">About</h2>
                             <ul class="list-unstyled">
-                                <li><a href="{% url 'home:mission' %}" class="py-1 d-block">Mission</a></li>
+                                <li><a href="{% url 'home:mission' %}" class="py-1 d-block"> Our Mission</a></li>
                                 <li><a href="{% url 'home:specs' %}" class="py-1 d-block">Technical Specs.</a></li>
                                 <li><a href="{% url 'home:faqs' %}" class="py-1 d-block">FAQ</a></li>
                                 <!-- <li><a href="{% url 'home:career' %}" class="py-1 d-block">Careers</a></li> -->
@@ -237,7 +257,7 @@
                             </ul>
                         </div>
                         <div class="col-md-4 mb-md-0 mb-4 border-left">
-                            <h2 class="footer-heading">Discover</h2>
+                            <h2 class="footer-heading">Connect</h2>
                             <ul class="list-unstyled">
                                 <li><a href="{% url 'home:contact' %}" class="py-1 d-block">Express Interest</a></li>
                                 <li><a href="{% url 'home:dealer' %}" class="py-1 d-block">Dealership Enquiry</a></li>
@@ -276,7 +296,7 @@
 
                     <p class="copyright">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy; PMV Electric Inc Pvt. Ltd.
+                        Copyright &copy; PMV Electric Inc
 
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>

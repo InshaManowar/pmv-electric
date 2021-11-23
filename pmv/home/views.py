@@ -122,15 +122,13 @@ def interest_form(request):
 
 def career_confirm(request):
     return render(request, 'home/career_confirm.html')
+def faqs(request):
+    return render(request, 'home/faq.html')
 
 def gallery(request):
     photo = Photos.objects.all()
     obj = Item.objects.all()
     return render(request, 'home/gallery.html', {'photo':photo, 'obj':obj})
-
-def faqs(request):
-    faq = Faqs.objects.all()
-    return render(request, 'home/faq.html', {'faq':faq})
 
 
 def contactus(request):
@@ -157,7 +155,7 @@ def contactus(request):
             return redirect ("home:home")
     
     form = ContactForm(request.POST or None)
-    return render(request, "home/contact.html", {'contact_form':form})
+    return render(request, "home/home.html", {'contact_form':form})
 
 
 
