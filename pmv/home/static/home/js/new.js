@@ -43,12 +43,12 @@ function disp() {
     document.getElementById("p1").innerHTML = sum.toString();
 
     var sumnew = ((((30 * a) * 12) / c) * b) - ((sum * (d / 100)) / 8);
-    sumnew = Math.round((sumnew + Number.EPSILON) * 100) / 100;
+    sumnew = Math.round(sumnew);
     document.getElementById("p2").innerHTML = sumnew.toString();
 
 
     var sumnew1 = ((18.74 * sum) / c) - ((sum * 0.92) / 8);
-    sumnew1 = Math.round((sumnew1 + Number.EPSILON) * 100) / 100;
+    sumnew1 = Math.round(sumnew1);
     document.getElementById("p3").innerHTML = sumnew1.toString();
 
 }

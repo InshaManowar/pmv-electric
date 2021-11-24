@@ -19,6 +19,7 @@ urlpatterns = [
     path('products/detail/', views.product_detail, name ='products_detail'  ),
     path('our-mission/', views.mission, name ='mission'  ),
     path('fleet-request/', views.fleet_form, name ='fleet'  ),
+    path('reserve-now/', views.reserver_car, name ='reserve'  ),
     path('frequently-asked-questions/', views.faqs, name ='faqs'  ),
     path('watch-out/', views.watchout, name ='watchout'  ),
 

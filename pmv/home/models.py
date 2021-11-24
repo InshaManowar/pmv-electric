@@ -4,15 +4,15 @@ from django.db.models.fields import TextField
 from embed_video.fields import EmbedVideoField
 
 
-career = (
-    ('Accounts', 'Accounts'),
-    ('Administration', 'Administration'),
-    ('Human Resources', 'Human Resources'),
-    ('Technical', 'Technical'),
-    ('Sales', 'Sales')
+contact_subject = (
+    ('Customer Enquiry', 'Customer Enquiry'),
+    ('Vendor Enquiry', 'Vendor Enquiry'),
+    ('Press Coverage', 'Press Coverage'),
+    ('Investors', 'Investors'),
+    ('Others', 'Others')
 )
 
-contact_subject = (
+career = (
     ('Accounts', 'Accounts'),
     ('Administration', 'Administration'),
     ('Human Resources', 'Human Resources'),
