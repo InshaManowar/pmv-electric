@@ -117,7 +117,7 @@ class ContactForm(forms.ModelForm):
             'name':'',
             'email':'',
             'message':'',
-            'subject':'subject',
+            'subject':'Subject',
            
         }
 

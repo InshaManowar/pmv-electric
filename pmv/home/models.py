@@ -81,8 +81,8 @@ class Contact(models.Model):
     message = models.TextField()
 
     class Meta:
-        verbose_name = 'Dealer Query'
-        verbose_name_plural = 'Dealers enquiries'
+        verbose_name = 'Contact us'
+        verbose_name_plural ='Contact us'
 class Interest(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)

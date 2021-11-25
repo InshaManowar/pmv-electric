@@ -120,6 +120,31 @@
     .text-bg {
         background-color: black;
     }
+    
+    .phone-slider-auto {
+        height: 70vh !important;
+    }
+    
+    .size-fix {
+        height: 44vh;
+    }
+    
+    textarea {
+        height: 50px !important;
+    }
+    
+    select {
+        background-color: rgba(238, 235, 230, 0) !important;
+        font-family: Montserrat !important;
+        color: rgb(29, 27, 27) !important;
+    }
+    
+    label {
+        color: rgba(143, 140, 140, 0.74) !important;
+        font-size: 100%;
+        font-weight: 500;
+        font-family: Roboto !important;
+    }
 </style>
 <script>
     $(window).load(function() {
@@ -356,7 +381,7 @@
             <!--     start slider item -->
             <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/sustainable.png' %});" data-interval="false">
                 <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left " data-interval="false ">
+                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left  size-fix" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 text-uppercase">Sustainable</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">We only got one planet, Earth, and our everyday travel is causing great damage to it. This is not sustainable, and we must act now. EaS-E is one of the most sustainable alternatives to travel within the city for everyday requirements.
                             <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
@@ -365,7 +390,7 @@
 
             <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/intuitive.png' %});" data-interval="false">
                 <div class="phone-slider-auto-text-2 position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left " data-interval="false ">
+                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left  size-fix" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 text-uppercase">Intuitive</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">EaS-E is not just sustainable, but also convenient & intuitive to use, with some top-of-the-line benefits you will experience the convenience of a smartphone in this smart car.
 
@@ -374,7 +399,7 @@
             </div>
             <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/economical.png' %});" data-interval="false">
                 <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
-                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left " data-interval="false ">
+                    <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left size-fix" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 text-uppercase">Economical</h5>
                         <p class="width-90 md-width-100 text-extra-light-gray ">And now the most important part, besides it being a sustainable alternative that is intuitive & convenient to use, it is also an economical option. With minimal maintenance over the years due to minimal moving parts and negligible
                             operational cost, the EaS-E will suit your budget too.
@@ -414,7 +439,7 @@
             <!-- start information item -->
             <div class="col-12 col-lg-4 p-0 image-hover-style-3 h-100 last-paragraph-no-margin bg-light-gray">
                 <div class="feature-box-wrap">
-                    <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px" style="background-image:url({% static 'home/images/sustainable.png' %});"></div>
+                    <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px" style="background-image:url({% static 'home/images/intuitive.png' %});"></div>
                     <div class="w-100 small-screen sm-height-300px d-table arrow-top">
                         <div class="d-table-cell align-middle padding-eighteen-lr lg-padding-twelve-lr text-center md-padding-ten-lr sm-padding-seven-all">
                             <h6 class="text-extra-dark-gray alt-font width-95 mx-auto md-width-100 sm-margin-15px-bottom text-uppercase">Intuitive</h6>
@@ -436,7 +461,7 @@
                             <span class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block margin-40px-top sm-margin-20px-top"></span>
                         </div>
                     </div>
-                    <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px" style="background-image:url({% static 'home/images/intuitive.png' %});"></div>
+                    <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px" style="background-image:url({% static 'home/images/economical.png' %});"></div>
                 </div>
             </div>
             <!-- end information item -->
@@ -623,13 +648,18 @@
                 <div class="padding-ten-all bg-white border-radius-6 lg-padding-seven-all ">
                     <div class="text-extra-dark-gray alt-font text-large font-weight-600 margin-30px-bottom ">Drop us a message</div>
                     <div>
-                        <form id="contact-form " action="javascript:void(0) " method="post ">
-                            <div id="success-contact-form " class="mx-0 "></div>
-                            <input type="text " name="name " id="name " placeholder="Name* " class="input-bg ">
-                            <input type="text " name="email " id="email " placeholder="E-mail* " class="input-bg ">
-                            <input type="text " name="subject " id="subject " placeholder="Subject " class="input-bg ">
-                            <textarea name="comment " id="comment " placeholder="Your Message " class="input-bg "></textarea>
-                            <button id="contact-us-button " type="submit " class="btn btn-small border-radius-4 btn-black ">send message</button>
+                        <form id="project-contact-form" method="post">
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="success-project-contact-form" class="mx-0"></div>
+                                    {% csrf_token %} {{form_contact.as_p}}
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-transparent-black btn-large margin-20px-top">send enquiry</button>
+                                    </div>
+                                </div>
+
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ def watchout(request):
 def specs(request):
     return render (request, 'home/specs.html')
 def reserver_car(request):
-    return render (request, 'home/reserve-car.html')
+    return render (request, 'home/shop/index.html')
 
 def career_form(request):
     form = CareerForm()
@@ -112,7 +112,6 @@ def interest_form(request):
             message = "\n".join(body.values())
         
             recipient = str(form_interest['email'].value())
-            
             try:
                 send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
             except BadHeaderError:
@@ -121,23 +120,23 @@ def interest_form(request):
     context = {'form_interest':form_interest}
     return render(request, 'home/interest.html', context)
 
+
 def contact_form(request):
     form_contact = ContactForm()
     if request.method == 'POST':
-        form_interest = ContactForm(request.POST)
+        form_contact = ContactForm(request.POST)
         if form_contact.is_valid():
             form_contact.save()
             subject = 'Someone expressed interest!'
             body = {
-                'name': form_interest.cleaned_data['name'], 
-			    'email': form_interest.cleaned_data['email'], 
-			    'subject':form_interest.cleaned_data['subject'],
-                'message':form_interest.cleaned_data['message'], 
+                'name': form_contact.cleaned_data['name'], 
+			    'email': form_contact.cleaned_data['email'], 
+                'message':form_contact.cleaned_data['message'], 
+                'subject':form_contact.cleaned_data['subject'], 
                 }
             message = "\n".join(body.values())
         
-            recipient = str(form_interest['email'].value())
-            
+            recipient = str(form_contact['email'].value())
             try:
                 send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
             except BadHeaderError:
@@ -145,6 +144,31 @@ def contact_form(request):
             return redirect ('home:career_confirm')
     context = {'form_contact':form_contact}
     return render(request, 'home/contact.html', context)
+
+
+def contact_form_home(request):
+    form_contact = ContactForm()
+    if request.method == 'POST':
+        form_contact = ContactForm(request.POST)
+        if form_contact.is_valid():
+            form_contact.save()
+            subject = 'Someone expressed interest!'
+            body = {
+                'name': form_contact.cleaned_data['name'], 
+			    'email': form_contact.cleaned_data['email'], 
+                'message':form_contact.cleaned_data['message'], 
+                'subject':form_contact.cleaned_data['subject'], 
+                }
+            message = "\n".join(body.values())
+        
+            recipient = str(form_contact['email'].value())
+            try:
+                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect ('home:career_confirm')
+    context = {'form_contact':form_contact}
+    return render(request, 'home/home.html', context)
 
 
 def career_confirm(request):
