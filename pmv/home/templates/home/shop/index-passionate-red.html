@@ -1,21 +1,20 @@
- {% load static %}
+ {% extends "home/base.html" %} {% load static %}
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tutorial</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <!-- CSS -->
-    <link href="{% static 'home/css/style-reserve.css' %}" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
+{% block style %}
 
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutorial</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<!-- CSS -->
+<link href="{% static 'home/css/style-reserve.css' %}" rel="stylesheet">
+<meta name="robots" content="noindex,follow" /> {% endblock style %} {% block content %}
 
 <body>
-    <main class="container">
+    <main class="container" style="height: 100vh !important; margin-top: 6%;">
 
         <!-- Left Column / Headphones Image -->
         <div class="left-column">
@@ -45,15 +44,17 @@
 
                     <div class="color-choose">
                         <div>
-                            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                            <input data-image="red" type="radio" id="red" name="color" value="red" onclick="redfunc()">
+
                             <label for="red"><span></span></label>
                         </div>
                         <div>
-                            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                            <input data-image="blue" type="radio" id="blue" name="color" value="blue" onclick="bluefunc()">
+
                             <label for="blue"><span></span></label>
                         </div>
                         <div>
-                            <input data-image="black" type="radio" id="black" name="color" value="black">
+                            <input data-image="black" type="radio" id="black" name="color" value="black" onclick="blackfunc()">
                             <label for="black"><span></span></label>
                         </div>
                     </div>
@@ -62,8 +63,8 @@
 
             <!-- Product Pricing -->
             <div class="product-price">
-                <span>100$</span>
-                <a href="#" class="cart-btn">Reserve now</a>
+                <span>$ 100</span>
+                <button onclick="submitfunc()" href="#" class="cart-btn">Reserve now</button>
             </div>
         </div>
     </main>
@@ -74,3 +75,4 @@
 </body>
 
 </html>
+{% endblock content %}

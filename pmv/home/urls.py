@@ -19,8 +19,9 @@ urlpatterns = [
     path('products/detail/', views.product_detail, name ='products_detail'  ),
     path('our-mission/', views.mission, name ='mission'  ),
     path('fleet-request/', views.fleet_form, name ='fleet'  ),
-    path('reserve-now/', views.reserver_car, name ='reserve'  ),
+    path('reserve-now/red', views.reserve_car_red, name ='reserve_red'  ),
     path('frequently-asked-questions/', views.faqs, name ='faqs'  ),
     path('watch-out/', views.watchout, name ='watchout'  ),
+    path('reserve-now/success', views.payment_success, name ='success'  ),
 
 ]

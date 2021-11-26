@@ -19,8 +19,14 @@ def watchout(request):
     return render (request, 'home/watchout.html')
 def specs(request):
     return render (request, 'home/specs.html')
-def reserver_car(request):
-    return render (request, 'home/shop/index.html')
+def reserve_car_red(request):
+    return render (request, 'home/shop/index-passionate-red.html')
+def payment_success(request):
+    return render (request, 'home/shop/payment_success.html')
+
+
+
+
 
 def career_form(request):
     form = CareerForm()

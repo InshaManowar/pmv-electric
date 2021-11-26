@@ -130,3 +130,7 @@ class Order(models.Model):
         verbose_name_plural = 'Orders'
 
 
+class Shop(models.Model):
+    red_link = models.CharField(max_length=255, blank=False) 
+    black_link = models.CharField(max_length=255, blank=False) 
+    blue_link = models.CharField(max_length=255, blank=False) 
