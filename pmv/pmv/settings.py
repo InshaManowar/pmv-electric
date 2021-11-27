@@ -114,8 +114,8 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False 
 EMAIL_HOST = 'smtp.gmail.com' 
 EMAIL_PORT = 587  
-EMAIL_HOST_USER = 'sociio.organisation@gmail.com' 
-EMAIL_HOST_PASSWORD = 'ziaxoinuwsjsubyq' 
+EMAIL_HOST_USER = 'inshamanowar.dev@gmail.com' 
+EMAIL_HOST_PASSWORD = 'uevwmsuwpixzpqvz' 
 
 
 # Internationalization

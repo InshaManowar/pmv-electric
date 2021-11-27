@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.forms import CareerForm, DealerForm, ContactForm,FleetForm, InterestForm, OrderForm
+from home.forms import CareerForm, DealerForm, ContactForm,FleetForm, InterestForm, OrderForm, ReserveForm
 from .models import CareerRequest,Photos, Item
 from django.views.generic import ListView
 from django.core.mail import send_mail, BadHeaderError
@@ -19,8 +19,10 @@ def watchout(request):
     return render (request, 'home/watchout.html')
 def specs(request):
     return render (request, 'home/specs.html')
-def reserve_car_red(request):
+
+def reserve_car(request):
     return render (request, 'home/shop/index-passionate-red.html')
+
 def payment_success(request):
     return render (request, 'home/shop/payment_success.html')
 
@@ -40,13 +42,33 @@ def career_form(request):
             recipient = str(form['email'].value())
             
             try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')
     context = {'form':form}
     return render(request, 'home/career.html', context)
 
+
+
+def reserve_form(request):
+    form_reserve = ReserveForm()
+    if request.method == 'POST':
+        form = ReserveForm(request.POST)
+        if form.is_valid():
+            form.save()
+            subject = 'New Customer'
+            
+            message = "you have a new customer"
+            recepient = str(form['email'].value())
+            
+            try:
+                send_mail(subject, message, recepient, ['inshamanowar.dev@gmail.com']) 
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect ('home:reserve')
+    context = {'form_reserve':form_reserve}
+    return render(request, 'home/shop/customer_detail.html', context)
 
 def dealer_form(request):
     form_dealer = DealerForm()
@@ -65,7 +87,7 @@ def dealer_form(request):
             recepient = str(form['email'].value())
             
             try:
-                send_mail(subject, message, recepient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recepient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')
@@ -93,7 +115,7 @@ def fleet_form(request):
             recipient = str(form_fleet['email'].value())
             
             try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')
@@ -119,7 +141,7 @@ def interest_form(request):
         
             recipient = str(form_interest['email'].value())
             try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')
@@ -144,7 +166,7 @@ def contact_form(request):
         
             recipient = str(form_contact['email'].value())
             try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')
@@ -169,7 +191,7 @@ def contact_form_home(request):
         
             recipient = str(form_contact['email'].value())
             try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')
@@ -208,7 +230,7 @@ def gallery(request):
 #             recipient = str(form['email_address'].value())
             
 #             try:
-#                 send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+#                 send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
 #             except BadHeaderError:
 #                 return HttpResponse('Invalid header found.')
 #             return redirect ("home:home")
@@ -242,7 +264,7 @@ def order_form(request):
             recipient = str(form_order['email'].value())
             
             try:
-                send_mail(subject, message, recipient, ['sociio.organisation@gmail.com']) 
+                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect ('home:career_confirm')

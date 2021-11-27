@@ -25,10 +25,24 @@ function redfunc() {
 
 function submitfunc() {
     if (colour == 1) {
-        window.location.href = "http://www.w3schools.com";
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
     } else if (colour == 2) {
-        window.location.href = "http://www.google.com";
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 3) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 4) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 5) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 6) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 7) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 8) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
+    } else if (colour == 9) {
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
     } else {
-        window.location.href = "http://www.yahoo.com";
+        window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
     }
 }

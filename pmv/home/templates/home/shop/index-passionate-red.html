@@ -11,64 +11,128 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <!-- CSS -->
 <link href="{% static 'home/css/style-reserve.css' %}" rel="stylesheet">
-<meta name="robots" content="noindex,follow" /> {% endblock style %} {% block content %}
+<style>
+    @media only screen and (max-width: 768px) {
+        .phone-container {
+            margin-top: 50% !important;
+        }
+        .reserve-image {
+            position: relative;
+            margin: auto;
+            width: 100% !important;
+        }
+        .reserve-product {
+            margin-top: 55%;
+            margin-bottom: 50% !important;
+        }
+    }
+</style>
+{% endblock style %} {% block content %}
 
 <body>
-    <main class="container" style="height: 100vh !important; margin-top: 6%;">
 
-        <!-- Left Column / Headphones Image -->
-        <div class="left-column">
-            <img data-image="black" src="{% static 'home/images/black.png' %}" alt="">
-            <img data-image="blue" src="{% static 'home/images/beige.png' %}" alt="">
-            <img data-image="red" class="active" src="{% static 'home/images/orange.png' %}" alt="">
-        </div>
-
-
-        <!-- Right Column -->
-        <div class="right-column">
-
-            <!-- Product Description -->
-            <div class="product-description">
-                <span>Electric Vehicle</span>
-                <h1>Eas-E</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut, ipsa corrupti, porro modi, facere vitae praesentium deserunt necessitatibus labore odio? Error, ea. Ea illum fugit consequuntur voluptatum vero sunt!</p>
+    <div class="container-fluid">
+        <main class="phone-container row" style="height: 100vh !important; margin-top: 6%;">
+            <div class="left-column col-lg-6 col-sm-12">
+                <img data-image="red" class="active reserve-image" src="{% static 'home/images/red.png' %}" alt="passionate red">
+                <img class='reserve-image' data-image="black" src="{% static 'home/images/black.png' %}" alt="pure black">
+                <img class='reserve-image' data-image="blue" src="{% static 'home/images/blue.png' %}" alt="majestic blue">
+                <img class='reserve-image' data-image="orange" src="{% static 'home/images/orange.png' %}" alt="peppy orange">
+                <img class='reserve-image' data-image="beige" src="{% static 'home/images/beige.png' %}" alt="">
+                <img class='reserve-image' data-image="silver" src="{% static 'home/images/silver.png' %}" alt="sparkle silver">
+                <img class='reserve-image' data-image="yellow" src="{% static 'home/images/yellow.png' %}" alt="">
+                <img class='reserve-image' data-image="brown" src="{% static 'home/images/brown.png' %}" alt="">
+                <img class='reserve-image' data-image="green" src="{% static 'home/images/green.png' %}" alt="">
+                <img class='reserve-image' data-image="white" src="{% static 'home/images/white.png' %}" alt="">
             </div>
 
-            <!-- Product Configuration -->
-            <div class="product-configuration">
 
-                <!-- Product Color -->
-                <div class="product-color">
-                    <span>Color</span>
+            <div class="col-lg-6 reserve-product">
 
-                    <div class="color-choose">
-                        <div>
-                            <input data-image="red" type="radio" id="red" name="color" value="red" onclick="redfunc()">
+                <div class="product-description">
+                    <span>Electric Vehicle</span>
+                    <h1>Eas-E</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut, ipsa corrupti, porro modi, facere vitae praesentium deserunt necessitatibus labore odio? Error, ea. Ea illum fugit consequuntur voluptatum vero sunt!</p>
+                </div>
 
-                            <label for="red"><span></span></label>
-                        </div>
-                        <div>
-                            <input data-image="blue" type="radio" id="blue" name="color" value="blue" onclick="bluefunc()">
+                <!-- Product Configuration -->
+                <div class="product-configuration">
 
-                            <label for="blue"><span></span></label>
-                        </div>
-                        <div>
-                            <input data-image="black" type="radio" id="black" name="color" value="black" onclick="blackfunc()">
-                            <label for="black"><span></span></label>
+                    <!-- Product Color -->
+                    <div class="product-color">
+                        <span>Color</span>
+
+                        <div class="color-choose">
+                            <div>
+                                <input data-image="red" type="radio" id="red" name="color" value="red" onclick="redfunc()">
+
+                                <label for="red"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="blue" type="radio" id="blue" name="color" value="blue" onclick="bluefunc()">
+
+                                <label for="blue"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="black" type="radio" id="black" name="color" value="black" onclick="blackfunc()">
+                                <label for="black"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="orange" type="radio" id="orange" name="color" value="black" onclick="orangefunc()">
+                                <label for="orange"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="beige" type="radio" id="beige" name="color" value="black" onclick="beigefunc()">
+                                <label for="beige"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="silver" type="radio" id="silver" name="color" value="black" onclick="silverfunc()">
+                                <label for="silver"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="yellow" type="radio" id="yellow" name="color" value="black" onclick="yellowunc()">
+                                <label for="yellow"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="brown" type="radio" id="brown" name="color" value="black" onclick="brownfunc()">
+                                <label for="brown"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="green" type="radio" id="green" name="color" value="black" onclick="greenfunc()">
+                                <label for="green"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="white" type="radio" id="white" name="color" value="black" onclick="whitefunc()">
+                                <label for="white"><span></span></label>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <span>kindly go through our <a class="popup-with-zoom-anim " data-wow-delay="0.6s" href="#modal-popup2">sales policy</a> before proceeding to order</span>
+                <br>
+                <div id="modal-popup2" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main padding-50px-all">
+                    <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Modal dialog</span>
+                    <p class="margin-four">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <a class="btn btn-medium btn-rounded btn-dark-gray popup-modal-dismiss" href="#">Dismiss</a>
+                </div>
+                <br>
+                <br>
+
+                <!-- start form -->
+
+                <button onclick="submitfunc()" type="submit" class="btn btn-medium btn-rounded btn-transparent-dark-gray">Reserve now</button>
+
+                <!-- end form -->
+
+                <!-- Product Pricing -->
+
             </div>
 
-            <!-- Product Pricing -->
-            <div class="product-price">
-                <span>$ 100</span>
-                <button onclick="submitfunc()" href="#" class="cart-btn">Reserve now</button>
-            </div>
-        </div>
-    </main>
+        </main>
 
+    </div>
+    </div>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
     <script src="{% static 'home/js/script-reserve.js' %}" charset="utf-8"></script>

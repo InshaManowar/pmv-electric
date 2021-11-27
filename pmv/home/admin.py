@@ -1,6 +1,6 @@
 from django.contrib import admin
 from import_export.admin import ImportExportModelAdmin
-from .models import CareerRequest, Contact, Dealer, Photos, Fleet, Interest, Shop
+from .models import CareerRequest, Contact, Dealer, Photos, Fleet, Interest, Reserve
 
 from embed_video.admin import AdminVideoMixin
 from .models import Item
@@ -9,6 +9,9 @@ from .models import Item
 class CareerRequestAdmin(admin.ModelAdmin):
     list_display = ('name','email', 'interest')
 admin.site.register(CareerRequest, CareerRequestAdmin)
+class ReserveAdmin(admin.ModelAdmin):
+    list_display = ('name','email',)
+admin.site.register(Reserve, ReserveAdmin)
 
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ('image',)
@@ -19,10 +22,7 @@ class DealerAdmin(admin.ModelAdmin):
     list_display = ('name','email', 'phone')
 
 admin.site.register(Dealer, DealerAdmin)
-class ShopAdmin(admin.ModelAdmin):
-    pass
 
-admin.site.register(Shop, ShopAdmin)
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('name','email', 'subject')

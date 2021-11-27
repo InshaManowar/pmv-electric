@@ -1,6 +1,6 @@
 from typing import Text
 from django.db import models
-from django.db.models.fields import TextField
+from django.db.models.fields import EmailField, TextField
 from embed_video.fields import EmbedVideoField
 
 
@@ -130,7 +130,8 @@ class Order(models.Model):
         verbose_name_plural = 'Orders'
 
 
-class Shop(models.Model):
-    red_link = models.CharField(max_length=255, blank=False) 
-    black_link = models.CharField(max_length=255, blank=False) 
-    blue_link = models.CharField(max_length=255, blank=False) 
+class Reserve(models.Model):
+    name = models.CharField(max_length=255, blank=False)
+    email = models.EmailField(blank=False)
+
+    

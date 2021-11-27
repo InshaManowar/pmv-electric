@@ -1,8 +1,9 @@
 from django import forms
 from django.forms import fields, widgets
 from django.forms.models import ModelForm
-from home.models import CareerRequest, Dealer, Fleet, Interest, Order, Contact
+from home.models import CareerRequest, Dealer, Fleet, Interest, Order, Contact, Reserve
 from django.contrib.admin.widgets import AdminDateWidget
+
 
 
 class CareerForm(forms.ModelForm):
@@ -119,6 +120,21 @@ class ContactForm(forms.ModelForm):
             'message':'',
             'subject':'Subject',
            
+        }
+
+        
+class ReserveForm(forms.ModelForm):
+    class Meta:
+        model = Reserve
+        fields = '__all__'
+        widgets = {
+            'name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Name'}),
+            'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}),
+        }
+        labels ={
+            'name':'',
+            'email':'',
+
         }
 
         
