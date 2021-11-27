@@ -126,7 +126,7 @@
     }
     
     .size-fix {
-        height: 70%;
+        height: 100%;
     }
     
     textarea {
@@ -155,6 +155,11 @@
         position: absolute;
         top: 100px !important;
     }
+    
+    .sustain-text {
+        position: relative;
+        bottom: 70px;
+    }
 </style>
 <script>
     $(window).load(function() {
@@ -162,7 +167,7 @@
     });
 </script>
 {% endblock style %}{% block content %}
-<section class="no-padding main-slider height-100 mobile-height wow fadeIn ">
+<section class="no-padding main-slider height-100 mobile-height wow fadeIn">
     <div class="swiper-full-screen swiper-container height-100 width-100 black-move ">
         <div class="swiper-wrapper ">
             <!-- start slider item -->
@@ -288,8 +293,8 @@
 <section class="wow fadeIn ">
     <div class="container ">
         <div class="row justify-content-center ">
-            <div class="col-12 my-4 text-center text-lg-center md-margin-five-bottom sm-margin-ten-bottom last-paragraph-no-margin ">
-                <span class="text-extra-large text-extra-dark-gray alt-font margin-15px-bottom d-block md-width-100 ">Sustainable Technology through Innovation</span>
+            <div class="col-12 my-4 text-center text-lg-center md-margin-five-bottom sm-margin-ten-bottom last-paragraph-no-margin sustain-text">
+                <span class="text-extra-large text-extra-dark-gray alt-font margin-15px-bottom d-block md-width font-weight-600" style="font-size: x-large;">Sustainable Technology through Innovation</span>
                 <p class="md-width-100 ">
                     The Eco-Friendly and Sustainable - Electric (EaS-E®), is a 3 wheeled fully electric smart micro-car for everyday use. It’s purpose-built to suit your everyday intracity requirements of office & back, grocery shopping, and other errands throughout the
                     week.
@@ -385,7 +390,7 @@
         </div>
     </div>
 </section>
-<section class="wow fadeIn p-0 phone-slider-auto d-none d-lg-block" data-interval="500 " style="margin-bottom: 5%; ">
+<section class="wow fadeIn p-0 phone-slider-auto d-none d-lg-block" data-interval="500" style="margin-bottom: 5%;">
     <div class="swiper-auto-height-container position-relative w-100 " data-interval="1000 ">
         <div class="swiper-wrapper overflow-hidden " style="transition: 1.5s !important; " data-interval="1000 ">
             <!--     start slider item -->
