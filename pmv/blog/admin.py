@@ -6,6 +6,9 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 
+
+
+
 class BlogAdmin(SummernoteModelAdmin):
     list_display = ('author', 'publish_date', 'title')
     list_filter = ('title', 'author')
@@ -13,5 +16,7 @@ class BlogAdmin(SummernoteModelAdmin):
     summernote_fields =('snippet', 'content',)
 
     
+
+
 
 admin.site.register(Blog, BlogAdmin)

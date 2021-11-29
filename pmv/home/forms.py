@@ -5,7 +5,7 @@ from home.models import CareerRequest, Dealer, Fleet, Interest, Order, Contact, 
 from django.contrib.admin.widgets import AdminDateWidget
 
 
-
+from django.db.models.fields import BLANK_CHOICE_DASH
 class CareerForm(forms.ModelForm):
 
     class Meta:
@@ -110,16 +110,23 @@ class ContactForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Name'}),
-            'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}),
+            'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}), 
 
             'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Message'}),
         }
+
+        SAMPLE_STRINGS = [('', 'My empty label'), 'aa', 'ab', 'bb', 'c0']
+
+        subject = forms.ChoiceField(choices=BLANK_CHOICE_DASH + SAMPLE_STRINGS, label='', required=True)
+
         labels ={
             'name':'',
             'email':'',
             'message':'',
             'subject':'Subject',
-           
+        }
+        placeholder ={
+            'subject' : 'subject',
         }
 
         
