@@ -20,6 +20,7 @@ urlpatterns = [
     path('fleet-request/', views.fleet_form, name ='fleet'),
     path('reserve-now', views.reserve_car, name ='reserve'),
     path('your-details', views.reserve_form, name ='details'),
+    path('terms-conditions', views.tnc, name ='tnc'),
     path('frequently-asked-questions/', views.faqs, name ='faqs'),
     path('watch-out/', views.watchout, name ='watchout'),
     path('reserve-now/success', views.payment_success, name ='success'),

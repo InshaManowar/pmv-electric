@@ -41,6 +41,7 @@
     
     body {
         background-image: url('{% static 'home/images/career.png' %}');
+        background-size: cover !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
@@ -81,7 +82,7 @@
         border-left: none !important;
         border-right: none !important;
         font-family: Montserrat !important;
-        height: 100px !important;
+        height: 40px !important;
         color: white !important;
     }
     
@@ -102,17 +103,21 @@
         color: black !important;
     }
     
+    .phone-form {
+        margin-top: -5% !important;
+    }
+    
     .form-bg {
         background-color: rgba(0, 0, 0, 0.733);
         padding: 3%;
-        margin-top: 6% !important;
+        margin-top: 8% !important;
         margin-bottom: 8% !important;
         border-radius: 7px;
         position: relative;
         right: -300px;
     }
 </style> {% endblock style %} {% block content %}
-<section class="wow fadeIn form-bg " id="start-your-project">
+<section class="wow fadeIn form-bg" id="start-your-project">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-7 text-center margin-100px-bottom sm-margin-40px-bottom">
@@ -122,14 +127,14 @@
             </div>
         </div>
 
-        <form class="phone-form" id="project-contact-form" method="post">
+        <form class="phone-form" id="project-contact-form" method="post" enctype="multipart/form-data">
 
             <div class="row">
-                <div class="col-12">
-                    <div id="success-project-contact-form" class="mx-0"></div>
+                <div class="col-12 ">
+                    <div id="success-project-contact-form " class="mx-0 "></div>
                     {% csrf_token %} {{form.as_p}}
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-transparent-white btn-large margin-20px-top">send message</button>
+                    <div class="col-12 text-center ">
+                        <button type="submit" class="btn btn-transparent-white btn-large margin-2px-top ">send message</button>
                     </div>
                 </div>
 

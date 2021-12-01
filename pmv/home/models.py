@@ -3,6 +3,10 @@ from django.db import models
 from django.db.models.fields import EmailField, TextField
 from embed_video.fields import EmbedVideoField
 
+def upload_location(instance, filename):
+	file_path = 'career/{name}-{filename}'.format(
+     name=str(instance.name), filename=filename)
+	return file_path
 
 contact_subject = (
     ('Customer Enquiry', 'Customer Enquiry'),
@@ -34,6 +38,8 @@ about_us = (
     ('Self Research/Browsing', "Self Research/Browsing"),
     ('Conference', "Conference"),
 )
+
+
 def upload_review_photo(instance, filename, *kwargs):
     file_path ='{filename}'.format(filename=filename)
     return file_path
@@ -47,6 +53,8 @@ class CareerRequest(models.Model):
     interest = models.CharField(max_length=255, choices=career, default=None)
     position = models.CharField(max_length=255)
     cover_letter = models.TextField()
+    resume = models.FileField(upload_to=upload_location, default=None)
+
     class Meta:
         app_label = 'home'
         verbose_name = 'Career query'
@@ -77,7 +85,7 @@ class Dealer(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    subject = models.CharField(max_length=255, choices=contact_subject, default=None, blank=True)
+    subject = models.CharField(max_length=255, choices=contact_subject, default=None)
     message = models.TextField()
 
     class Meta:

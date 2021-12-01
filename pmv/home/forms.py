@@ -21,7 +21,7 @@ class CareerForm(forms.ModelForm):
         }
         widgets = {
             'name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Name'}),
-                                    'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
+            'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
 
             'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}),
             'position': forms.TextInput(attrs = {'class':'form-control','placeholder':'Position'}),
@@ -115,20 +115,15 @@ class ContactForm(forms.ModelForm):
             'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Message'}),
         }
 
-        SAMPLE_STRINGS = [('', 'My empty label'), 'aa', 'ab', 'bb', 'c0']
-
-        subject = forms.ChoiceField(choices=BLANK_CHOICE_DASH + SAMPLE_STRINGS, label='', required=True)
+   
 
         labels ={
             'name':'',
             'email':'',
             'message':'',
-            'subject':'Subject',
+            'subject':''
         }
-        placeholder ={
-            'subject' : 'subject',
-        }
-
+   
         
 class ReserveForm(forms.ModelForm):
     class Meta:

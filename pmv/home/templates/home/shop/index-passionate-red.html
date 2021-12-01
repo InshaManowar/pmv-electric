@@ -12,9 +12,24 @@
 <!-- CSS -->
 <link href="{% static 'home/css/style-reserve.css' %}" rel="stylesheet">
 <style>
+    #wb {
+        width: 15px;
+        height: 25px;
+        float: left;
+    }
+    
+    #somelabel {
+        float: left;
+        display: inline;
+        padding-left: 2px;
+    }
+    
     @media only screen and (max-width: 768px) {
         .phone-container {
             margin-top: 50% !important;
+        }
+        .scroll-div {
+            width: 90vw !important;
         }
         .reserve-image {
             position: relative;
@@ -25,13 +40,17 @@
             margin-top: 55%;
             margin-bottom: 50% !important;
         }
+        .body-page {
+            height: 100% !important;
+            margin-bottom: 100%;
+        }
     }
 </style>
 {% endblock style %} {% block content %}
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid body-page">
         <main class="phone-container row" style="height: 100vh !important; margin-top: 6%;">
             <div class="left-column col-lg-6 col-sm-12">
                 <img data-image="red" class="active reserve-image" src="{% static 'home/images/red.png' %}" alt="passionate red">
@@ -109,8 +128,70 @@
                         </div>
                     </div>
                 </div>
-                <span>kindly go through our <a class="popup-with-zoom-anim " data-wow-delay="0.6s" href="#modal-popup2">sales policy</a> before proceeding to order</span>
-                <br>
+                <div>
+                    <input id="wb" type="checkbox" />
+                    <label for="wb" id="somelabel">Please go through our <a style="color: cornflowerblue;" href="{% url 'home:tnc' %}">terms and conditions</a> below: </label>
+                </div>
+                <div class="scroll-div" style="height:120px;width:550px;border:solid 2px rgb(24, 72, 161);overflow:scroll;overflow-x:hidden;overflow-y:scroll;">
+                    <p style="height:200px;">
+                        <b>                        Pre-Order Terms & Conditions
+                        </b> Please review the EaS-E 2 PRE ORDER AGREEMENT or RESERVATION AGREEMENT below:
+                        <hr> 1. EaS-E 2 Vehicle Reservation: Thank you for the Reservation! This document will serve as your Reservation Agreement with PMV ELECTRIC Pvt. Ltd.
+                        <hr> 2. Effective Date: Your Reservation is considered effective immediately following the receipt of your Reservation Payment.
+                        <hr> 3. Reservation Policy: By making this Reservation, you have secured the approximate priority within your region for taking delivery of your EaS-E 2.
+                        <hr> 4. Order Process: While this Reservation secures the approximate delivery priority within your region, it does not constitute the purchase or order of a vehicle. PMV ELECTRIC Pvt. Ltd. will notify you by email when production
+                        is set to begin for your region/city. At that time, we will ask you to configure your EaS-E 2. PMV ELECTRIC Pvt. Ltd. will then create an order for your vehicle and you will receive a Purchase Agreement indicating the purchase
+                        price of the vehicle, plus estimates of any applicable taxes, duties, transport and delivery charges, and any other applicable fees. If you proceed with the order, we will apply your Reservation Payment towards the order payment.
+                        Until you enter into a Purchase Agreement, your Reservation may be cancelled at any time, in which case you will receive a full refund of your Reservation Payment.
+                        <hr> 5. Acknowledgements; Non-Transferable Until such time as you execute a Purchase Agreement, we will hold your Reservation Payment together with the Reservation Payments from other customers like you. You understand that we will
+                        not hold your Reservation Payment in an escrow or trust fund or pay any interest on your Reservation Payment. Your reservation is not transferable or assignable to another party without the prior written approval of PMV ELECTRIC
+                        Pvt. Ltd.
+                        <hr> 6. Personal Details We may in the future ask you to provide additional information in order to perform our obligations under these terms and conditions. We will maintain your personal information in accordance with our Privacy
+                        Policy.
+                        <hr> 7. EaS-E 2 Reservation Agreement This Reservation Agreement between the person or entity identified below (referred to as “you”) and PMV ELECTRIC Pvt. Ltd., an ---------------------------------------------------------------------------------------------------
+                        is for your reservation of an EaS-E 2.
+                        <hr> 1. Reservation By entering into this Reservation Agreement you hereby confirm that you wish to reserve a PMV ELECTRIC Pvt. Ltd. Please see www.pmvelectric.com for vehicle specifications and options.
+                        <hr> 2. Nature of Agreement; Non-Binding Reservation Payment The Reservation Payment is NON-REFUNDABLE, to the extent permitted by applicable law. This Agreement does not constitute an agreement for the sale of a EaS-E 2 and does not
+                        lock in pricing, a production slot, or an estimated delivery date. You are under no obligation to purchase a EaS-E 2 from us and we are under no obligation to sell a EaS-E 2 to you. If and when we notify you of the availability
+                        of a EaS-E 2 and you wish to proceed with the purchase of a EaS-E 2, such sale and purchase will be governed by a separate and legally binding Purchase Agreement between you and PMV ELECTRIC Pvt. Ltd. In the event a purchase is
+                        made, your Reservation Payment will be credited against the purchase price.
+                        <hr> 3. Effective Date; Reservation Process This Agreement is formed and becomes effective when we receive your Reservation Payment in the amount and form stated in the Payment Instructions provided to you in connection with this Agreement.
+                        You may execute this Agreement by acknowledging and accepting this Agreement via physical or online means. You may make your Reservation Payment by any means described on the Checkout page in the online payment process. Once this
+                        Agreement becomes effective, you will be placed on the reservations list and will receive communications about our program.
+                        <hr> 4. Reservation Payment Amount
+
+                        <hr> _________________________________________ Reservation Payment entitles you to priority purchase and delivery of a EaS-E 2. You will be removed from the prepayment reservation queue and placed into the payment reservation queue.
+                        <hr> 5. Order Process When the start of production of your reservation nears, we will ask you to confirm your option selections and provide full details regarding the legal purchaser of the vehicle. PMV ELECTRIC Pvt. Ltd. will create
+                        an order for your vehicle containing the information provided by you, and a Purchase Agreement indicating the estimated purchase price of your vehicle, taking into account the price of the model and edition and any options included
+                        or that you select, plus estimates of any applicable taxes, duties, transport and delivery charges, and any other applicable fees. PMV ELECTRIC Pvt. Ltd. will then submit to you the order and the Purchase Agreement for your review.
+                        If you wish to proceed and purchase the vehicle, you must sign and return the Purchase Agreement together with any amounts that are then required to be paid. Production of your vehicle will then be commenced and your additional
+                        deposit payable under the Purchase Agreement will be held by PMV ELECTRIC Pvt. Ltd. as a non-refundable deposit (to the extent permitted by applicable law). These procedures may be subject to change.
+                        <hr> 6. Purchase Price Base vehicle and/or option pricing may not be available at the time of your reservation and, if pricing is available, it is subject to change until agreed upon in an executed Purchase Agreement.
+                        <hr> 7. Deferral and Non-Transferability If you do not wish to enter into a Purchase Agreement at the time you are contacted by PMV ELECTRIC Pvt. Ltd., you have the option to relinquish your reservation sequence position and defer
+                        to a later position to be determined by PMV ELECTRIC Pvt. Ltd. (only one deferral is permitted). If you do not communicate your decision to PMV ELECTRIC Pvt. Ltd. within ten (10) days of notification, you will automatically be
+                        granted such a deferral. This Agreement is not transferable or assignable to another party without the prior written approval of a PMV ELECTRIC Pvt. Ltd. authorized representative.
+                        <hr> 8. Priority PMV ELECTRIC Pvt. Ltd. will establish your reservation sequence position based upon your position in the original prepayment reservation queue, location, the date of receipt of a fully executed Reservation Agreement
+                        and your payment, and the terms of Sec. 4 above. We may decline reservations to avoid over-subscription or as we deem appropriate in our sole discretion. If your reservation is declined, you will be notified and your reservation
+                        payment will be refunded.
+                        <hr> 9. Your Details From time to time we will ask you to provide information to enable us to perform our obligations under this Agreement. The personal information we collect from you will include the information provided in the signature
+                        page of this Agreement or online when you complete the reservation process. We will treat all your personal information as confidential (though we reserve the right to disclose this information in the circumstances set out below).
+                        We will keep it securely and we will fully comply with our obligations under applicable data protection and privacy laws. You hereby give us your consent to use your personal information and other information you provide so PMV
+                        ELECTRIC Pvt. Ltd. can process your reservation and conduct administration, prepare the order and Purchase Agreement, and inform you of any marketing information. We may share this information with other group companies (but not
+                        with third parties) for these purposes. From time to time, we may contact you by mail, telephone, email, text and fax for the above purposes and you agree you will not consider any of the above as being a breach of any of your
+                        rights under any data privacy, data protection or privacy law. You can opt out of receiving marketing information from us at any time and you may contact us for more information. However, we will still use your information to process
+                        your reservation. You may ask for a copy of your information and you may correct any inaccuracies. We will be the responsible party for the management of your personal information. If you wish to make a request with regard to your
+                        personal information, please visit our website at PMV ELECTRIC Pvt. Ltd.
+                        <hr> 10. Limitation of Liability To the maximum extent permitted by applicable law, we make no warranty of any kind in connection with this Agreement or its subject matter. Under no circumstances will we be held liable for any indirect
+                        or consequential loss or damage, including any and all (a) loss of opportunity (including loss of contract or right to offer or tender); (b) lost opportunity cost; (c) loss of business; (d) reduction or damage of goodwill; (e)
+                        damage to name or reputation (f) loss or corruption of data, and regardless of whether any or all of these circumstances are considered to be indirect or consequential losses or damage, in contract, tort (including negligence),
+                        under any statute or law otherwise arising out of our breach of this Agreement, even if we have been advised of the possibility of occurrences which would or might lead to such loss or damages. If we are held liable for any damages
+                        related to your reservation or this Agreement, your sole and exclusive remedy will be limited to reimbursement of the Reservation Payment paid to us.
+                        <hr> 11. Acknowledgments YOU UNDERSTAND THAT EaS-E 2 MAY NOT HAVE COMPLETED THE DEVELOPMENT OF THE VEHICLE OR BEGUN MANUFACTURING THE VEHICLE AT THE TIME OF YOUR RESERVATION. WE WILL NOT HOLD YOUR RESERVATION PAYMENT SEPARATELY OR
+                        IN AN ESCROW OR TRUST FUND OR PAY ANY INTEREST ON RESERVATION PAYMENTS, EXCEPT TO THE EXTENT REQUIRED BY LAW.
+                        <hr> 12. Governing Law and Jurisdiction This Agreement is governed by the local laws as per the country legislation. Without regard to its conflict of law’s provisions. Both parties consent to the exclusive jurisdiction and venue of
+                        the available law.
+                    </p>
+                </div> <br>
                 <div id="modal-popup2" class="zoom-anim-dialog mfp-hide col-xl-3 col-lg-6 col-md-7 col-11 mx-auto bg-white text-center modal-popup-main padding-50px-all">
                     <span class="text-extra-dark-gray text-uppercase alt-font text-extra-large font-weight-600 margin-15px-bottom d-block">Modal dialog</span>
                     <p class="margin-four">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>

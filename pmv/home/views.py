@@ -22,6 +22,8 @@ def specs(request):
 
 def reserve_car(request):
     return render (request, 'home/shop/index-passionate-red.html')
+def tnc(request):
+    return render (request, 'home/tnc.html')
 
 def payment_success(request):
     return render (request, 'home/shop/payment_success.html')
@@ -34,11 +36,17 @@ def career_form(request):
     form = CareerForm()
     if request.method == 'POST':
         #print('Printing POST:', request.POST)
-        form = CareerForm(request.POST)
+        form = CareerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             subject = 'Career Request'
-            message = "You have received a new career request"
+            body = {
+            'name': form.cleaned_data['name'], 
+            'email': form.cleaned_data['email'], 
+            'phone':form.cleaned_data['phone'], 
+            'position':form.cleaned_data['position'], 
+                }
+            message = "\n".join(body.values())
             recipient = str(form['email'].value())
             
             try:
@@ -58,8 +66,11 @@ def reserve_form(request):
         if form.is_valid():
             form.save()
             subject = 'New Customer'
-            
-            message = "you have a new customer"
+            body = {
+            'name': form.cleaned_data['name'], 
+            'email': form.cleaned_data['email'], 
+                }
+            message = "\n".join(body.values())
             recepient = str(form['email'].value())
             
             try:
