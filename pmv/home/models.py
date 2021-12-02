@@ -85,7 +85,7 @@ class Dealer(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    subject = models.CharField(max_length=255, choices=contact_subject, default=None)
+    subject = models.CharField(max_length=255, choices=contact_subject, blank=True, default=None)
     message = models.TextField()
 
     class Meta:
@@ -118,24 +118,7 @@ class Fleet(models.Model):
 
 
 
-class Order(models.Model):
-    first_name = models.CharField(max_length=255, blank=False)
-    last_name = models.CharField(max_length=255,blank=False)
-    company_name = models.CharField(max_length=255,blank=False)
-    country = models.CharField(max_length=255, choices=country, default=None,blank=True)
-    city = models.CharField(max_length=255,blank=False)
-    state = models.CharField(max_length=11,blank=False)
-    postcode = models.CharField(max_length=255,blank=False)
-    phone = models.CharField(max_length=255,blank=False)
-    email = models.CharField(max_length=255,blank=False)
-    order_notes = models.TextField(blank=True)
-    about_us = models.CharField(max_length=255, choices=about_us, default=None, blank=True)
-    t_c = models.BooleanField(blank=False, default=False)
-    confirm = models.BooleanField(blank=False, default=False)
-    class Meta:
-        app_label = 'home'
-        verbose_name = 'Orders'
-        verbose_name_plural = 'Orders'
+
 
 
 class Reserve(models.Model):

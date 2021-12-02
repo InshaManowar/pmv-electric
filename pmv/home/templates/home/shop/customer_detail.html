@@ -1,20 +1,43 @@
-{% extends "home/base.html" %} {% load static %} {% block content %}
+{% extends "home/base.html" %} {% load static %} {% block content %} {% load static %}
+<style>
+    input {
+        background-color: transparent !important;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .phone-margin {
+            margin-top: 10% !important;
+        }
+    }
+</style>
+<section class="wow fadeIn bg-extra-dark-gray">
+    <div class="container phone-margin">
+        <div class="row">
+            <div class="col-12 col-xl-5 col-lg-6 d-flex align-items-center md-margin-five-bottom text-center text-lg-left sm-no-margin-top wow fadeIn" data-wow-delay="0.4s">
+                <div class="lg-padding-15px-lr sm-padding-five-lr sm-padding-ten-bottom w-100">
+                    <span class="alt-font text-medium-gray d-block margin-10px-bottom"></span>
+                    <h6 class="text-light-gray alt-font width-90 md-width-100">Pre-order your EaS-e 2</h6>
+                    <form method="post">
+                        <div>
+                            {% csrf_token %} {{ form_reserve.as_p }}
 
-
-<div class="container-fluid" style="margin-top: 10%;">
-    <div class="row">
-
-        <form method="post" class=" col-lg-6 p-0 mx-auto">
-            <div class="padding-fifteen-all bg-white border-radius-6 lg-padding-seven-all">
-                <div class="text-extra-dark-gray alt-font text-large font-weight-600 margin-30px-bottom">Reserve your EaS-E now!</div>
-                <div>
-                    {% csrf_token %} {{ form_reserve.as_p }}
-
-                    <button id="contact-us-button" type="submit" class="btn btn-small border-radius-4 btn-black">Proceed to choose color</button>
+                            <button id="contact-us-button" type="submit" class="btn btn-small border-radius-4 btn-white">Proceed to choose color</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </form>
+            <div class="col-12 col-lg-3 offset-xl-1 text-center md-margin-five-bottom wow fadeIn">
+                <img src="{% static 'home/images/buy.png' %}" alt="" class="w-100">
+            </div>
+            <div class="col-lg-3 text-left wow fadeIn" data-wow-delay="0.2s">
+                <div class="d-flex align-items-start flex-column justify-content-center text-white-2 bg-deep-pink padding-35px-lr lg-padding-15px-all md-padding-30px-all last-paragraph-no-margin h-100">
+                    <div class="text-large margin-15px-bottom width-100">Starting at $20,000 </div>
+                    <div class="text-large margin-15px-bottom width-100">Reserve now for $100 </div>
+                    <p class="width-100">Lorem Ipsum and dummy text of the printing & typesetting is industry lorem is Ipsum been industry's standard dummy text ever since lorem Ipsum is simply dummys.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 {% endblock content %}

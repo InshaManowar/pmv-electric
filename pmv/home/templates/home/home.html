@@ -40,6 +40,9 @@
         input {
             width: 70% !important;
         }
+        .economical {
+            background-position: 100px 5px !important;
+        }
         .calci-output {
             font-family: Montserrat;
             font-size: 70%;
@@ -144,10 +147,11 @@
     }
     
     label {
-        color: rgba(143, 140, 140, 0.74) !important;
-        font-size: 100%;
-        font-weight: 500;
-        font-family: Roboto !important;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #717579;
+        font-family: Roboto;
     }
     
     .calci-header {
@@ -406,7 +410,7 @@
                 </div>
             </div>
 
-            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/intuitive.png' %});" data-interval="false">
+            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/intuitive.png' %}); background-size: 100% !important;" data-interval="false">
                 <div class="phone-slider-auto-text-2 position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
                     <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left  size-fix" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 text-uppercase">Intuitive</h5>
@@ -415,7 +419,7 @@
                             <a href="javascript:void(0); " class="margin-35px-top md-margin-15px-top btn btn-small btn-white d-none ">Explore services</a></div>
                 </div>
             </div>
-            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative " style="background-image:url({% static 'home/images/economical.png' %});" data-interval="false">
+            <div class="phone-slider-auto swiper-slide padding-100px-all sm-padding-20px-all cover-background position-relative economical" style="background-image:url({% static 'home/images/economical.png' %});" data-interval="false">
                 <div class="phone-slider-auto-text position-relative width-40 lg-width-60 md-width-85 sm-width-100 d-inline-block slide-banner last-paragraph-no-margin ">
                     <div class=" padding-70px-all md-padding-40px-all sm-width-100 bg-black-opacity sm-padding-fifteen-tb sm-padding-30px-all text-center text-md-left size-fix" data-interval="false ">
                         <h5 class="alt-font text-white-2 width-90 md-width-100 text-uppercase">Economical</h5>

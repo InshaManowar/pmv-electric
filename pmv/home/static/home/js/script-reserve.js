@@ -46,3 +46,7 @@ function submitfunc() {
         window.location.href = "https://buy.stripe.com/test_8wM3cs4UUfkCcdaeUW";
     }
 }
+
+function savefunc() {
+    console.log('success')
+}

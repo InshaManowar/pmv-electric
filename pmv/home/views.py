@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.forms import CareerForm, DealerForm, ContactForm,FleetForm, InterestForm, OrderForm, ReserveForm
+from home.forms import CareerForm, DealerForm, ContactForm,FleetForm, InterestForm,  ReserveForm
 from .models import CareerRequest,Photos, Item
 from django.views.generic import ListView
 from django.core.mail import send_mail, BadHeaderError
@@ -250,35 +250,11 @@ def gallery(request):
 #     return render(request, "home/home.html", {'contact_form':form})
 
 
+def error_404(request, exception):
+        data = {}
+        return render(request,'404.html', data)
 
-def order_form(request):
-    form_order = OrderForm()
-    if request.method == 'POST':
-        form_order = OrderForm(request.POST)
-        if form_order.is_valid():
-            form_order.save()
-            subject = 'You have a new order'
-            body = {
-                'first_name': form_order.cleaned_data['first_name'], 
-                'last_name': form_order.cleaned_data['last_name'], 
-                'company_name': form_order.cleaned_data['company_name'], 
-			    'email': form_order.cleaned_data['email'], 
-			    'country': form_order.cleaned_data['country'], 
-			    'state': form_order.cleaned_data['state'], 
-			    'city': form_order.cleaned_data['city'], 
-			    'postcode': form_order.cleaned_data['postcode'], 
-			    'phone':form_order.cleaned_data['phone'], 
-                'order_notes':form_order.cleaned_data['order_notes'], 
-                }
-            message = "\n".join(body.values())
-        
-            recipient = str(form_order['email'].value())
-            
-            try:
-                send_mail(subject, message, recipient, ['inshamanowar.dev@gmail.com']) 
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect ('home:career_confirm')
-    context = {'form_order':form_order}
-    return render(request, 'home/checkout.html', context)
-
+def error_500(request, *args):
+        data = {}
+        return render(request,'500.html', data)
+    

@@ -19,7 +19,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls.conf import include
 from home import views
+from django.conf.urls import handler404, handler500
+import home
 
+admin.site.site_header = 'PMV Electric'
+admin.site_site_title = 'PMV Electric'
+admin.site.index_title = 'PMV Electric Administration'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,3 +37,6 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+handler404 = home.views.error_404
+handler500 = home.views.error_500
