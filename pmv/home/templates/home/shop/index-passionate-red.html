@@ -63,6 +63,50 @@
                 <img class='reserve-image' data-image="brown" src="{% static 'home/images/brown.png' %}" alt="">
                 <img class='reserve-image' data-image="green" src="{% static 'home/images/green.png' %}" alt="">
                 <img class='reserve-image' data-image="white" src="{% static 'home/images/white.png' %}" alt="">
+                <div class="color-choose" style="position: absolute; top:65%; margin-left: 7%;">
+                    <div>
+                        <input data-image="silver" type="radio" id="silver" name="color" value="silver" onclick="silverfunc()">
+
+                        <label for="silver"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="red" type="radio" id="red" name="color" value="red" onclick="redfunc()">
+
+                        <label for="red"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="orange" type="radio" id="orange" name="color" value="orange" onclick="orangefunc()">
+                        <label for="orange"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="yellow" type="radio" id="yellow" name="color" value="yellow" onclick="yellowfunc()">
+                        <label for="yellow"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="black" type="radio" id="black" name="color" value="black" onclick="blackfunc()">
+                        <label for="black"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="green" type="radio" id="green" name="color" value="green" onclick="greenfunc()">
+                        <label for="green"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="blue" type="radio" id="blue" name="color" value="blue" onclick="bluefunc()">
+                        <label for="blue"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="brown" type="radio" id="brown" name="color" value="brown" onclick="brownfunc()">
+                        <label for="brown"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="beige" type="radio" id="beige" name="color" value="beige" onclick="beigefunc()">
+                        <label for="beige"><span></span></label>
+                    </div>
+                    <div>
+                        <input data-image="white" type="radio" id="white" name="color" value="black" onclick="whitefunc()">
+                        <label for="white"><span></span></label>
+                    </div>
+                </div>
             </div>
 
 
@@ -71,7 +115,7 @@
                 <div class="product-description">
                     <span>Electric Vehicle</span>
                     <h1>Eas-E</h1>
-                    <span style="font-size: 30px;">$13,999</span> <br>
+                    <span style="font-size: 25px;"> Starting at <b> $13,999</b> </span> <span style="font-size: 25px; margin-left: 7%;">Due today  <b>$100</b> </span> <br>
                     <br>
                     <p>
                         Our car EaS-E 2®️ is a fully electric 2 seater smart car. EaS-E 2®️ is a step towards sustainable mobility and will pose as a solution to the global climate change issues. This vehicle built by PMV will be an integral part of the future of intercity daily
@@ -82,7 +126,7 @@
                 <div class="product-configuration">
 
                     <!-- Product Color -->
-                    <div class="product-color">
+                    <div class="product-color d-lg-none">
                         <span>Color</span>
 
                         <div class="color-choose">

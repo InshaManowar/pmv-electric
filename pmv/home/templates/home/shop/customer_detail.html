@@ -28,17 +28,21 @@
     }
 </style>
 
-<section class="wow fadeIn bg-extra-dark-gray phone-section" style="background-image: url({% static 'home/images/buy-1.png' %}) ; background-size:100%; height:120%; background-repeat:none; ">
-    <h1 class="text-center phone-margin" style="font-family: Montserrat; ">Pre-order your <span style="color: rgb(53, 105, 1);">EaS-e 2</span></h1>
+<section class="wow fadeIn bg-extra-dark-gray phone-section" style="background-image: url({% static 'home/images/buy-car.png' %}) ; background-size:100%; height:120%; background-repeat:none; ">
     <div class=" container phone-margin">
         <div class="d-lg-none col-12 col-lg-6  align-items-center md-margin-five-bottom">
             <img src="{% static 'home/images/buy-1-phone.png' %}" alt="">
         </div>
         <div class="row">
-            <div class="form-margin col-12 col-xl-5 col-lg-6 d-flex align-items-center md-margin-five-bottom text-center text-lg-left sm-no-margin-top wow fadeIn bg-charcoal-gray" data-wow-delay="0.4s " style="padding: 5%; margin-top: 5%; border-radius: 7px;">
-                <div class="lg-padding-15px-lr sm-padding-five-lr sm-padding-ten-bottom w-100 ">
+
+            <div class="form-margin col-12 col-xl-5 col-lg-6 d-flex align-items-center md-margin-five-bottom text-center text-lg-left sm-no-margin-top wow fadeIn " data-wow-delay="0.4s " style="padding: 5%; margin-top: -5%; border-radius: 7px;">
+
+                <div class="lg-padding-10px-lr sm-padding-five-lr sm-padding-ten-bottom w-100 ">
                     <span class="alt-font text-medium-gray d-block margin-10px-bottom"></span>
-                    <form method="post">
+                    <p class="text-extra-dark-gray text-center" style="font-size: 300%; font-family: Montserrat; line-height: 100%;">Preorder your <b>EaS-e</b> </p>
+
+                    <span class="text-extra-dark-gray text-center bg-charcoal-gray text-light-gray" style="font-size: 130%; font-family: Montserrat; line-height: 100%; margin: 1%; padding: 1.5%;">Starting at <b>$13,999</b> </span > <span class="text-extra-dark-gray text-center bg-charcoal-gray text-light-gray" style="font-size: 130%; font-family: Montserrat; line-height: 100%; margin: 1%; margin-bottom: 3% !important; padding: 1.5%;">Due today <b>$100</b> </span>
+                    <form method="post" class="bg-charcoal-gray" style="padding: 10%; margin-top: 3%; border-radius: 4px;">
                         <div>
                             {% csrf_token %} {{ form_reserve.as_p }}
 
