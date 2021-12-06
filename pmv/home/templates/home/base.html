@@ -77,12 +77,25 @@
                             <li class="dropdown megamenu-fw">
                                 <a href="{% url 'home:mission' %}" class=" d-lg-none "> Our Mission</a>
                             </li>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:specs' %}">EaS-E</a>
+                                <!-- start sub menu -->
+
+                            </li>
+                            <li class="dropdown simple-dropdown"><a href="{% url 'home:details' %}">Reserve</a>
+                                <!-- start sub menu -->
+
+                            </li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="{% url 'home:faqs' %}" class=" d-lg-none ">FAQs</a>
+                            </li>
                             <li class="dropdown megamenu-fw">
                                 <a href=" {% url 'home:gallery' %}" class=" d-lg-none ">Gallery</a>
                             </li>
-                            <li class="dropdown megamenu-fw">
-                                <a href=" {% url 'home:specs' %}" class=" d-lg-none ">Technical Specification</a>
+                            <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'blog:blog-list' %}">Blog</a>
+                                <!-- start sub menu -->
+
                             </li>
+
                             <li class="dropdown megamenu-fw">
                                 <a href="{% url 'home:dealer' %}" class=" d-lg-none ">Dealership Enquiry</a>
                             </li>
@@ -92,9 +105,7 @@
                             <li class="dropdown megamenu-fw">
                                 <a href="{% url 'home:career' %}" class=" d-lg-none ">Career</a>
                             </li>
-                            <li class="dropdown megamenu-fw">
-                                <a href="{% url 'home:faqs' %}" class=" d-lg-none ">FAQs</a>
-                            </li>
+
                             <!-- end menu item -->
                             <!-- <li class="d-lg-none dropdown simple-dropdown"><a href="{% url 'home:home' %}">Pages</a><i class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown" aria-hidden="true"></i> -->
                             <!-- start sub menu -->
@@ -103,6 +114,7 @@
                                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home:mission' %}">Our Mission</a>
 
                                 </li>
+
                                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" {% url 'home:gallery' %}">Gallery</a>
 
                                 </li>
@@ -128,24 +140,9 @@
 
                             </ul>
                             </li>
-                            <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'blog:blog-list' %}">Blog</a>
-                                <!-- start sub menu -->
 
-                            </li>
-                            <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'home:gallery' %}">Gallery</a>
-                                <!-- start sub menu -->
 
-                            </li>
-                            <li class="dropdown simple-dropdown"><a href="{% url 'home:specs' %}">EaS-E</a>
-                                <!-- start sub menu -->
-
-                            </li>
-
-                            <li class="dropdown simple-dropdown"><a href="{% url 'home:details' %}">Reserve</a>
-                                <!-- start sub menu -->
-
-                            </li>
-                            <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'home:contact' %}">Contact</a>
+                            <li class="dropdown d-lg-none simple-dropdown"><a href="{% url 'home:contact' %}">Contact us</a>
                                 <!-- start sub menu -->
 
                             </li>
