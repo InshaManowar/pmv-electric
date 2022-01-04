@@ -22,7 +22,6 @@ class CareerForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs = {'class':'form-control', 'placeholder':'Name'}),
             'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
-
             'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email'}),
             'position': forms.TextInput(attrs = {'class':'form-control','placeholder':'Position'}),
             'cover_letter': forms.Textarea(attrs = {'class':'form-control','placeholder':'Cover Letter'}),
@@ -41,8 +40,7 @@ class DealerForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs = {'class':'form-control','placeholder':'Name'}),
             'email': forms.EmailInput(attrs = {'class':'form-control','placeholder':'Email id'}),
-                        'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
-
+            'phone': forms.TextInput(attrs = {'class':'form-control','placeholder':'Phone'}),
             'message': forms.Textarea(attrs = {'class':'form-control','placeholder':'Your message'}),
         }
 class InterestForm(forms.ModelForm):
